@@ -1,0 +1,62 @@
+#ifndef BOYAA_SOCKET_HANDLER_H_20110312
+#define BOYAA_SOCKET_HANDLER_H_20110312
+
+#include "PacketBase.h"
+#include "wtypedef.h"
+#include <stdint.h>
+
+#ifdef TCP_BUFFER_SIZE
+	#define RECV_BUFFER TCP_BUFFER_SIZE //4096
+#else
+	#define RECV_BUFFER 4096
+#endif
+
+#define CONNECTION_TYPE_CLIENT	0
+
+class SocketHandler:public PacketParser<NETInputPacket>
+{
+public:
+	SocketHandler();
+	SocketHandler(int sockt_fd, bool parse_protocal = true, bool encrypt = true, int conn_type = 0);
+	~SocketHandler();
+
+public:
+	int handle_read();
+	int handle_output();
+	int handle_close();
+
+	int fd() { return m_sock_fd; }
+	static void handle_timeout();
+	
+	void SetClosed(bool b) { m_is_closed = b; }
+	bool IsServerClosed() { return m_is_closed;}
+
+	int SendPacketVarErr(void);
+	int OnParser(char *buf, int nLen);
+	virtual int  OnPacketComplete(NETInputPacket *);
+
+	void clean(bool IsClosefd);//��������Դ
+	void assign(int sockt_fd, bool parse_protocal = true, bool encrypt = true, int conn_type = 0); //���¹���
+public:
+	static BYTE	m_SendByteMap[256];		//字节映射表
+	static BYTE	m_RecvByteMap[256];		//字节映射表
+	static WORD EncryptBuffer(NETOutputPacket *pPacket);
+	static int  CrevasseBuffer(NETInputPacket *pPacket);
+	static BYTE MapSendByte(BYTE const cbData);
+	static BYTE MapRecvByte(BYTE const cbData);
+	
+	int send_packet(NETOutputPacket *pPacket);
+	void build_package(NETOutputPacket* pOutPack, short nCmdType, const char* pszFmt, ...);
+private:
+	int  m_sock_fd;
+	char m_recvbuf[RECV_BUFFER];
+	
+	bool m_encrypt;
+	bool m_parse_protocal;	//是否由Server解析协议
+	int  m_conn_flag;		//连接标识, 通过flag来区别连接类型, 如为0表示客户端连接，可用其他数字区别大厅，后端连接
+
+	bool m_is_closed;
+};
+
+#endif
+

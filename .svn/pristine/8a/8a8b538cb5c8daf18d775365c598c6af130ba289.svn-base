@@ -1,0 +1,79 @@
+
+#set the final compile target
+TARGET = gameserver
+
+PREFIX_BIN =
+
+#set the c compile
+CC=gcc
+
+ifeq ($(OUTPUT), debug)
+CFLAGS= -g -O2 -Wall 
+else
+CFLAGS= -O2 -Wall 
+endif
+
+#set the cpp compile
+CXX=g++
+
+COREFLAG= -D HEADER_SIZE=9 -D TCP_BUFFER_SIZE=32768 -D BeginHandlerNums=100
+
+ifeq ($(OUTPUT), debug)
+CPPFLAGS = -g -O2 -Wall $(COREFLAG) 
+else
+CPPFLAGS = -O2 -Wall $(COREFLAG) 
+endif
+
+#print:
+#	echo $(OUTPUT)
+#	echo $(CFLAGS)
+#	echo $(CPPFLAGS)
+	
+
+LIBS = -ldl -lm  -lpthread -lmysqlclient -lm `mysql_config --cflags --libs` -lrt -luuid -lmemcached #-ltolua++5.1
+LINKFLAGS = -Wl,-E -g
+
+#set the include dirs
+INCLUDEDIRS = ./ /usr/local/mysql/include/ ../../lib/include/hiredis ../../lib/include/
+INCLUDES = $(foreach tmp, $(INCLUDEDIRS), -I $(tmp))
+
+#set my source dirs
+MYSOURCEDIRS = ./ 
+#LIBFILES = ./hiredis/dict.c ./hiredis/net.c ./hiredis/async.c ./hiredis/hiredis.c ./hiredis/sds.c
+
+SOURCEDIRS = $(MYSOURCEDIRS)
+
+
+C_SOURCES = $(foreach tmp, $(SOURCEDIRS), $(wildcard $(tmp)*.c))
+C_OBJS = $(patsubst %.c, %.o, $(C_SOURCES))
+
+
+CPP_SOURCES = $(foreach tmp, $(SOURCEDIRS), $(wildcard $(tmp)*.cpp))
+CPP_OBJS = $(patsubst %.cpp, %.o, $(CPP_SOURCES))
+
+CC_SOURCES = $(foreach tmp, $(SOURCEDIRS), $(wildcard $(tmp)*.cc))
+CC_OBJS = $(patsubst %.cc, %.o, $(CC_SOURCES))
+
+OTHERS_C_OBJS = ../../lib/libtolua++.a ../../lib/libhiredis.a ../../lib/libluajit-5.1.a
+
+.c.o:
+	$(CC) -c -o $*.o $(CFLAGS) $(INCLUDES) $*.c
+.cpp.o:
+	$(CXX) -c -o $*.o $(CPPFLAGS) $(INCLUDES) $*.cpp
+.cc.o:
+	$(CXX) -c -o $*.o $(CPPFLAGS) $(INCLUDES) $*.cc
+
+compile: $(CPP_OBJS) $(C_OBJS) $(CC_OBJS) $(OTHERS_C_OBJS) 
+	$(CXX) $(LINKFLAGS) -o $(TARGET) $^ $(LIBS)
+
+clean:
+	rm -f $(CPP_OBJS) $(C_OBJS)
+	rm -f $(TARGET)
+
+install: $(TARGET)
+	cp $(TARGET) $(PREFIX_BIN)
+
+uninstall:
+	rm -f $(PREFIX)/$(PREFIX_BIN)
+
+rebuild: clean

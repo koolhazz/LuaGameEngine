@@ -1,0 +1,431 @@
+#include "net.h"
+#include "timer.h"
+#include "llist.h"
+#include "log.h"
+#include "lua_interface.h"
+
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <arpa/inet.h>
+#include <netinet/tcp.h>
+
+#define EVENT_TOTAL_COUNT	256	
+#define CHECK_POINT_TIMES   10
+
+static int 
+_set_linger_socket(int fd) {
+	struct linger so_linger;
+	
+	so_linger.l_onoff = 1;
+	so_linger.l_linger = 0; //寮哄埗鍏抽棴
+	
+	int ret = setsockopt(fd, SOL_SOCKET, SO_LINGER, &so_linger, sizeof so_linger);
+	
+	return ret;
+}
+
+static int  
+_set_non_block(int fd)
+{
+	unsigned long argp = 1;
+	ioctl(fd, FIONBIO, &argp);
+
+	bool bNoDelay = true;
+	setsockopt(fd, IPPROTO_TCP, TCP_NODELAY, (char*)&bNoDelay, sizeof(bNoDelay));	
+	return 0;
+}
+
+static int
+_set_defer_accept(int fd) 
+{
+	unsigned int timeout = 10;
+
+	int ret = setsockopt(fd, IPPROTO_TCP, TCP_DEFER_ACCEPT, (char*)&timeout, sizeof timeout);
+
+	return ret;
+}
+
+#define FreeHandler(h, b) 	\
+	(h)->clean(b)
+
+#define FreeStaleSocket(h, f) 	\
+	if (f != (h)->fd()) { 		\
+		::close((h)->fd());  	\
+	}
+
+#define sinsert(e) 		m_HandlerCloseSet.insert(e)
+#define sbegin 			m_HandlerCloseSet.begin()
+#define send 			m_HandlerCloseSet.end()
+#define serase(e)		m_HandlerCloseSet.erase(e)
+
+#define hclosed(h)		h->SetClosed(true)
+
+#define merase(k)		m_Handlers.erase(k)
+#define minsert(fd, p)	m_Handlers[(fd)] = (p)
+
+#define lpop(p)					\
+	p = *(m_FreeHandlers.begin()); \
+	m_FreeHandlers.erase(m_FreeHandlers.begin())
+	
+#define lpush(p)		m_FreeHandlers.insert(p)
+
+#define lfactor			10
+#define lincream()	do {																	\
+		for(int i = 0; i < lfactor; i++) {														\
+			SocketHandler* p = new SocketHandler(-1, true, true, CONNECTION_TYPE_CLIENT); 	\
+			lpush(p);																		\
+		} 																					\
+	} while(0)
+	
+Net::Net(unsigned short _nums)
+	:m_listen_fd(0),
+	m_Handlers(HandlerMap_t(0)),
+	m_FreeHandlers(FreeHandlerList_t(0)),
+	m_running(false),
+	m_epoll_fd(0),
+	m_epev_arr(0)
+{
+	lincream();	
+}
+
+Net::~Net() 
+{
+	if (m_epev_arr) {
+		free(m_epev_arr);
+	}
+}
+
+bool 
+Net::init()
+{
+	struct rlimit rl;
+	int nfiles = 65535;
+
+	if (getrlimit(RLIMIT_NOFILE, &rl) == 0 && rl.rlim_cur != RLIM_INFINITY) {
+			nfiles = rl.rlim_cur - 1;
+	}
+	
+	if (-1 == (m_epoll_fd = epoll_create(nfiles))) {
+		return false;
+	}
+	
+	m_epev_arr = (struct epoll_event*)malloc(EVENT_TOTAL_COUNT * sizeof(struct epoll_event));
+
+	if (!m_epev_arr) return false;
+
+	return true;
+}
+
+bool
+Net::start_server()
+{
+	m_running = true;
+
+	return _start_linux();
+}
+
+bool 
+Net::_start_linux()
+{
+    static int check_times = 0;
+
+	while (m_running) {
+		int res = epoll_wait(m_epoll_fd, m_epev_arr, EVENT_TOTAL_COUNT, 100);
+
+		if (-1 == res) {
+			//error
+			if (EINTR == errno) {
+				continue;
+			}
+			
+			TRACE("epoll_wait return false, errno = %d\n", errno);
+			break;
+		}
+		
+		for (int i=0; i < res; i++) {
+			if(m_epev_arr[i].data.fd == m_listen_fd) {
+				handle_accept();
+            	continue;
+			}
+			
+            if(m_epev_arr[i].events&EPOLLIN) {
+				int fd = m_epev_arr[i].data.fd;
+
+				HandlerMapItr_t it = m_Handlers.find(fd);
+				
+				SocketHandler* pHandler =  it == m_Handlers.end() ? NULL : it->second; //m_Handlers[fd];
+
+				if (pHandler) {
+					if (pHandler->fd() == -1) { //stale event
+						continue;	
+					}
+					
+					if (pHandler->handle_read() == -1) {
+						log_debug("handler close.");
+						handle_close(pHandler);
+
+						continue;
+					}
+
+					struct epoll_event ev;
+					ev.data.fd = fd;
+					ev.events = EPOLLIN | EPOLLET;
+					epoll_ctl(m_epoll_fd, EPOLL_CTL_MOD, fd, &ev);
+				} else { // NULL
+					m_Handlers.erase(fd);
+
+					continue;
+				}
+
+#if 0
+				struct epoll_event ev;
+				ev.data.fd=m_epev_arr[i].data.fd;
+				ev.events = EPOLLIN|EPOLLOUT|EPOLLET;
+				epoll_ctl(m_epoll_fd, EPOLL_CTL_MOD, ev.data.fd, &ev);
+#endif 
+			}
+
+			if(m_epev_arr[i].events&EPOLLOUT) {
+				int fd = m_epev_arr[i].data.fd;
+
+				HandlerMapItr_t it = m_Handlers.find(fd);
+				
+				SocketHandler* pHandler =  it == m_Handlers.end() ? NULL : it->second;
+
+				if (pHandler == NULL) {
+					continue;
+				}
+
+				if (pHandler->handle_output() == -1)
+				{
+					handle_close(pHandler);
+					continue;
+				}
+
+		
+				struct epoll_event ev;
+				ev.data.fd = fd;
+				//ev.events = EPOLLIN | EPOLLOUT | EPOLLET; //杩欓噷濡傛灉鍏虫敞out浜嬩欢鐨勮瘽锛屼細涓嶉棿鏂殑瑙﹀彂
+				ev.events = EPOLLIN |EPOLLET;
+				epoll_ctl(m_epoll_fd, EPOLL_CTL_MOD, fd, &ev);
+#if 0				
+				struct epoll_event ev;
+				ev.data.fd=m_epev_arr[i].data.fd;
+				ev.events = EPOLLIN|EPOLLOUT|EPOLLET;	//ET妯″紡
+				epoll_ctl(m_epoll_fd, EPOLL_CTL_MOD, ev.data.fd, &ev);
+#endif
+			}
+		}
+
+        if(check_times++ >= CHECK_POINT_TIMES) {
+            run_timer();
+            check_times = 0;
+        }
+	}
+
+	//鍋滄鏈嶅姟鍣ㄤ簨浠跺洖璋?
+	int ret = 0;
+	call_lua("handle_fini", ">d", &ret);
+
+	return true;
+}
+
+void 
+Net::stop_server()
+{
+	m_running = false;
+}
+
+int 
+Net::handle_accept()
+{
+	int conn_fd;
+	int ret;
+
+	//循环accept listen队列中的接入
+	while(1) {
+		if ((conn_fd = accept(m_listen_fd, NULL, NULL)) == INVALID_SOCKET) {
+			return -1;
+		}
+
+		if (_set_non_block(conn_fd) < 0) {
+			log_error("set nonblock fd error.");
+		}
+
+		// if (_set_linger_socket(conn_fd) < 0) {
+		// return -1;
+		// }
+
+		SocketHandler* sh = _new_handler(conn_fd);
+		if (sh == NULL) {
+			::close(conn_fd);
+			continue;
+		}
+
+		_register_event(conn_fd, sh);
+
+		if(call_lua("handle_accept", "d>d", conn_fd, &ret) == -1) {
+			log_error("call lua->handle_accpet error.");
+			continue;
+		}			
+	}
+
+    return ret;
+}
+
+void 
+Net::handle_close(SocketHandler* sh)
+{
+	if (!sh) { //NULL
+		return;
+	}
+
+	int fd = sh->fd();
+
+	merase(fd);
+	
+	sh->handle_close(); // // call lua->handle_client_socket_close or -> handle_server_socket_close
+	
+	FreeHandler(sh, true);
+	lpush(sh);
+}
+
+void 
+Net::_register_event(int fd, SocketHandler* handler)
+{
+	struct epoll_event ev;
+	ev.data.fd = fd;
+	ev.events=EPOLLIN | EPOLLET;
+
+	epoll_ctl(m_epoll_fd, EPOLL_CTL_ADD, fd, &ev);
+}
+
+SocketHandler* 
+Net::_new_handler(SOCKET sock_fd, bool parse_protocal, bool encrypt, int conn_type) 
+{
+	SocketHandler* sh;
+
+	if (m_FreeHandlers.empty()) {
+		lincream();
+	}
+
+	lpop(sh);
+
+	if (sh) {
+		sh->assign(sock_fd, parse_protocal, encrypt, conn_type);
+
+		HandlerMapItr_t it = m_Handlers.find(sock_fd);
+		if (it != m_Handlers.end()) {
+			FreeHandler(it->second, false); //clean 这里不能使用true否则造成连接不能继续，自己关闭自己
+			lpush(it->second);			
+		}
+		
+		minsert(sock_fd, sh);
+	}
+
+	return sh;
+}
+
+int
+Net::epoll()
+{
+	return m_epoll_fd;
+}
+
+int 
+Net::connect_server(const char* ip, const int port, bool encrypt, int conn_flag)
+{
+	int fd = socket(AF_INET , SOCK_STREAM , 0);
+	if ( 0 > fd) {
+		return -1;
+	}
+
+	struct sockaddr_in remote;
+	memset( &remote, 0, sizeof(remote));
+	remote.sin_family 		 = AF_INET;
+	remote.sin_port   		 = htons(port);
+	remote.sin_addr.s_addr = inet_addr(ip);
+
+	if(0 != connect(fd, (struct sockaddr*)&remote, sizeof(remote))) {
+		log_error("Error: Connect Faile connect(): %s\n", strerror(errno));
+		return -1;
+	}
+
+	log_error("connect host[%s:%d] success!\n", ip, port);
+
+	SocketHandler* sh = _new_handler(fd, true, encrypt, conn_flag);
+	
+	if (sh) {
+		_register_event(fd, sh);
+		
+		return fd;
+	}
+	
+	::close(fd); 
+
+	return -1;
+}
+
+int 
+Net::create_listener(int port)
+{
+	m_listen_fd = socket(AF_INET, SOCK_STREAM, 0);
+	if (m_listen_fd == INVALID_SOCKET) {
+		return -1;
+	}
+
+	int nreuse = 1;
+	setsockopt(m_listen_fd, SOL_SOCKET, SO_REUSEADDR, (char*)&nreuse, sizeof(nreuse));	
+	_set_non_block(m_listen_fd);
+
+	sockaddr_in addr_in;
+	addr_in.sin_family = AF_INET;
+	addr_in.sin_addr.s_addr = htonl(INADDR_ANY);
+	addr_in.sin_port = htons(port);
+
+	if (bind(m_listen_fd, (sockaddr*) &addr_in, sizeof(addr_in)) == SOCKET_ERROR) {
+		return -1;
+	}
+
+	if (listen(m_listen_fd, 256) == SOCKET_ERROR) {
+		return -1;
+	}
+
+	struct epoll_event ev;
+	ev.data.fd = m_listen_fd;
+	//ev.events = EPOLLIN; /* 这里没有使用EPOLLET模式，否则会影响正常的accept接入*/
+	ev.events = EPOLLIN | EPOLLET;
+	epoll_ctl(m_epoll_fd, EPOLL_CTL_ADD, m_listen_fd, &ev);
+
+	log_error("Server start listening, listen port:%d\n", port);
+	return 0;
+}
+
+void 
+Net::_print_all_handler() 
+{
+	HandlerMapItr_t it;
+
+	log_debug("HanlderSize: %zu\n", m_Handlers.size());
+	
+	for (it = m_Handlers.begin(); it != m_Handlers.end(); it++) {
+		log_debug("m_Handlers[%d]: %p\n", it->first, it->second);
+	}
+}
+
+void
+Net::CloseHandler(const int& fd) 
+{
+	HandlerMapItr_t it = m_Handlers.find(fd);
+
+	SocketHandler* p = it == m_Handlers.end() ? NULL : it->second;
+
+	if (p) {
+		merase(fd);
+		FreeHandler(p, true);
+		lpush(p);
+	}
+}
+
+
+

@@ -1,0 +1,1573 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.7	//
+ADAPTER_HANDLE	.\wtypedef.h	/^typedef DWORD ADAPTER_HANDLE;$/;"	t
+AFXAPI	.\wtypedef.h	73;"	d
+AFX_CDECL	.\wtypedef.h	75;"	d
+AFX_COMDAT	.\wtypedef.h	78;"	d
+AFX_DATADEF	.\wtypedef.h	79;"	d
+AFX_INLINE	.\wtypedef.h	81;"	d
+AFX_STATIC_DATA	.\wtypedef.h	77;"	d
+ASSERT_VALID	.\wtypedef.h	88;"	d
+BOOL	.\wtypedef.h	/^typedef long BOOL;$/;"	t
+BOOLEAN	.\wtypedef.h	/^typedef unsigned char   BOOLEAN;$/;"	t
+BOYAA_COMMON_H_20110313	.\common.h	2;"	d
+BOYAA_LINUX_TIMER_H	.\timer.h	2;"	d
+BOYAA_NET_H_20110313	.\net.h	2;"	d
+BOYAA_PROTOCAL_H_20120207	.\protocal.h	2;"	d
+BOYAA_SOCKET_HANDLER_H_20110312	.\socket.h	2;"	d
+BOYAA_TIMER_EVENT_H_20110313	.\timer_event.h	2;"	d
+BYTE	.\PacketBase.h	/^typedef unsigned char       BYTE;$/;"	t
+BYTE	.\PacketParser.h	/^typedef unsigned char BYTE;$/;"	t
+BYTE	.\wtypedef.h	/^typedef unsigned char	BYTE;$/;"	t
+Begin	.\PacketBase.h	/^	void Begin(short nCommand, char cVersion = SERVER_PACKET_DEFAULT_VER, char cSubVersion = SERVER_PACKET_DEFAULT_SUBVER, $/;"	f	class:InputPacket	access:public	signature:(short nCommand, char cVersion = SERVER_PACKET_DEFAULT_VER, char cSubVersion = SERVER_PACKET_DEFAULT_SUBVER, short nSubCmd = SERVER_PACKET_DEFAULT_SUBCMD, short nSeq = SERVER_PACKET_DEFAULT_SEQ, char cSourceType = SERVER_PACKET_DEFAULT_SOURCETYPE)
+Begin	.\PacketBase.h	/^    void Begin(short nCommand, char cVersion = SERVER_PACKET_DEFAULT_VER, char cSubVersion = SERVER_PACKET_DEFAULT_SUBVER, $/;"	f	class:OutputPacket	access:public	signature:(short nCommand, char cVersion = SERVER_PACKET_DEFAULT_VER, char cSubVersion = SERVER_PACKET_DEFAULT_SUBVER, short nSubCmd = SERVER_PACKET_DEFAULT_SUBCMD, short nSeq = SERVER_PACKET_DEFAULT_SEQ, char cSourceType = SERVER_PACKET_DEFAULT_SOURCETYPE)
+CALLBACK_FUNC	.\protocal.h	/^typedef int (*CALLBACK_FUNC)(const char* format, ...);      \/\/ÂëΩ‰ª§Â§ÑÁêÜÂõûË∞ÉÂáΩÊï∞$/;"	t
+CConnect	.\connectpool.cpp	/^CConnect::CConnect()$/;"	f	class:CConnect	signature:()
+CConnect	.\connectpool.h	/^	CConnect();$/;"	p	class:CConnect	access:public	signature:()
+CConnect	.\connectpool.h	/^    CConnect(const CConnect &);$/;"	p	class:CConnect	access:protected	signature:(const CConnect &)
+CConnect	.\connectpool.h	/^class CConnect$/;"	c
+CConnect::CConnect	.\connectpool.cpp	/^CConnect::CConnect()$/;"	f	class:CConnect	signature:()
+CConnect::CConnect	.\connectpool.h	/^	CConnect();$/;"	p	class:CConnect	access:public	signature:()
+CConnect::CConnect	.\connectpool.h	/^    CConnect(const CConnect &);$/;"	p	class:CConnect	access:protected	signature:(const CConnect &)
+CConnect::Connect	.\connectpool.h	/^	virtual bool Connect(const std::string &host,$/;"	p	class:CConnect	access:public	signature:(const std::string &host, const std::string &user, const std::string &password, const std::string &dbname, unsigned int port, const std::string &unix_socket, const std::string &character)
+CConnect::Disconnect	.\connectpool.h	/^	virtual bool Disconnect() = 0;$/;"	p	class:CConnect	access:public	signature:()
+CConnect::GetConnect	.\connectpool.h	/^	virtual void * GetConnect()  = 0;$/;"	p	class:CConnect	access:public	signature:()
+CConnect::GetConnectSyntax	.\connectpool.h	/^	virtual const std::string GetConnectSyntax() = 0;$/;"	p	class:CConnect	access:public	signature:()
+CConnect::What	.\connectpool.h	/^	std::string What(){return m_err;}$/;"	f	class:CConnect	access:public	signature:()
+CConnect::m_err	.\connectpool.h	/^	std::string m_err;$/;"	m	class:CConnect	access:protected
+CConnect::operator =	.\connectpool.h	/^    CConnect &operator=(const CConnect &);$/;"	p	class:CConnect	access:protected	signature:(const CConnect &)
+CConnect::~CConnect	.\connectpool.cpp	/^CConnect::~CConnect()$/;"	f	class:CConnect	signature:()
+CConnect::~CConnect	.\connectpool.h	/^	virtual ~CConnect();$/;"	p	class:CConnect	access:public	signature:()
+CDataStore	.\connectpool.cpp	/^CDataStore::CDataStore()$/;"	f	class:CDataStore	signature:()
+CDataStore	.\connectpool.h	/^	CDataStore();$/;"	p	class:CDataStore	access:public	signature:()
+CDataStore	.\connectpool.h	/^class CDataStore$/;"	c
+CDataStore::CDataStore	.\connectpool.cpp	/^CDataStore::CDataStore()$/;"	f	class:CDataStore	signature:()
+CDataStore::CDataStore	.\connectpool.h	/^	CDataStore();$/;"	p	class:CDataStore	access:public	signature:()
+CDataStore::Commit	.\connectpool.h	/^	virtual bool Commit() = 0;$/;"	p	class:CDataStore	access:public	signature:()
+CDataStore::Exec	.\connectpool.h	/^	virtual bool Exec(const std::string &ddl) = 0;$/;"	p	class:CDataStore	access:public	signature:(const std::string &ddl)
+CDataStore::GetItemFloat	.\connectpool.h	/^	virtual float GetItemFloat(unsigned long row,$/;"	p	class:CDataStore	access:public	signature:(unsigned long row, const std::string &fieldname)
+CDataStore::GetItemFloat	.\connectpool.h	/^	virtual float GetItemFloat(unsigned long row,$/;"	p	class:CDataStore	access:public	signature:(unsigned long row, const unsigned int index)
+CDataStore::GetItemLong	.\connectpool.h	/^	virtual long GetItemLong(unsigned long row,$/;"	p	class:CDataStore	access:public	signature:(unsigned long row, const std::string &fieldname)
+CDataStore::GetItemLong	.\connectpool.h	/^	virtual long GetItemLong(unsigned long row,$/;"	p	class:CDataStore	access:public	signature:(unsigned long row, const unsigned int index)
+CDataStore::GetItemString	.\connectpool.h	/^	virtual const std::string GetItemString($/;"	p	class:CDataStore	access:public	signature:( unsigned long row, const std::string &fieldname)
+CDataStore::GetItemString	.\connectpool.h	/^	virtual const std::string GetItemString($/;"	p	class:CDataStore	access:public	signature:( unsigned long row, unsigned int index)
+CDataStore::Query	.\connectpool.h	/^	virtual bool Query(const std::string &dml) = 0;$/;"	p	class:CDataStore	access:public	signature:(const std::string &dml)
+CDataStore::RollBack	.\connectpool.h	/^	virtual bool RollBack() = 0;$/;"	p	class:CDataStore	access:public	signature:()
+CDataStore::RowCount	.\connectpool.h	/^	virtual unsigned long RowCount() = 0;$/;"	p	class:CDataStore	access:public	signature:()
+CDataStore::SetTransAction	.\connectpool.h	/^	virtual bool SetTransAction(CConnect * conn) = 0;$/;"	p	class:CDataStore	access:public	signature:(CConnect * conn)
+CDataStore::What	.\connectpool.h	/^	virtual const std::string What() = 0;$/;"	p	class:CDataStore	access:public	signature:()
+CDataStore::~CDataStore	.\connectpool.cpp	/^CDataStore::~CDataStore()$/;"	f	class:CDataStore	signature:()
+CDataStore::~CDataStore	.\connectpool.h	/^	virtual ~CDataStore();$/;"	p	class:CDataStore	access:public	signature:()
+CHAR	.\connectpool.h	/^	{CHAR = 1,INT = 2,DATETIME = 3,DOUBLE = 4,DEC = 5,UNKNOWN = 6};$/;"	e	enum:CMysqlStore::filedtype_t
+CHAR	.\wtypedef.h	/^typedef char			CHAR;$/;"	t
+CHECK_POINT_TIMES	.\net.cpp	13;"	d	file:
+CMysql	.\mysql_part.cpp	/^CMysql::CMysql()$/;"	f	class:CMysql	signature:()
+CMysql	.\mysql_part.h	/^    CMysql();$/;"	p	class:CMysql	access:public	signature:()
+CMysql	.\mysql_part.h	/^class CMysql$/;"	c
+CMysql::CMysql	.\mysql_part.cpp	/^CMysql::CMysql()$/;"	f	class:CMysql	signature:()
+CMysql::CMysql	.\mysql_part.h	/^    CMysql();$/;"	p	class:CMysql	access:public	signature:()
+CMysql::connect_mysql	.\mysql_part.cpp	/^int CMysql::connect_mysql(const char* host, const char* user, const char* password, const char* dbname, unsigned int port)$/;"	f	class:CMysql	signature:(const char* host, const char* user, const char* password, const char* dbname, unsigned int port)
+CMysql::connect_mysql	.\mysql_part.h	/^    int connect_mysql(const char* host, const char* user, const char* password, const char* dbname, unsigned int port);$/;"	p	class:CMysql	access:public	signature:(const char* host, const char* user, const char* password, const char* dbname, unsigned int port)
+CMysql::m_strError	.\mysql_part.h	/^    string m_strError;$/;"	m	class:CMysql	access:private
+CMysql::mysql_conn	.\mysql_part.h	/^    CConnect*     mysql_conn;$/;"	m	class:CMysql	access:private
+CMysql::mysql_store	.\mysql_part.h	/^	CMysqlStore*  mysql_store;$/;"	m	class:CMysql	access:private
+CMysql::query	.\mysql_part.cpp	/^int CMysql::query(const char* sql)$/;"	f	class:CMysql	signature:(const char* sql)
+CMysql::query	.\mysql_part.h	/^    int query(const char* sql);$/;"	p	class:CMysql	access:public	signature:(const char* sql)
+CMysql::~CMysql	.\mysql_part.cpp	/^CMysql::~CMysql()$/;"	f	class:CMysql	signature:()
+CMysql::~CMysql	.\mysql_part.h	/^    ~CMysql();$/;"	p	class:CMysql	access:public	signature:()
+CMysqlConnect	.\connectpool.cpp	/^CMysqlConnect::CMysqlConnect():m_conn(NULL)$/;"	f	class:CMysqlConnect	signature:()
+CMysqlConnect	.\connectpool.h	/^	CMysqlConnect();$/;"	p	class:CMysqlConnect	access:public	signature:()
+CMysqlConnect	.\connectpool.h	/^	CMysqlConnect(const CMysqlConnect &rhs);$/;"	p	class:CMysqlConnect	access:private	signature:(const CMysqlConnect &rhs)
+CMysqlConnect	.\connectpool.h	/^class CMysqlConnect : public CConnect$/;"	c	inherits:CConnect
+CMysqlConnect::CMysqlConnect	.\connectpool.cpp	/^CMysqlConnect::CMysqlConnect():m_conn(NULL)$/;"	f	class:CMysqlConnect	signature:()
+CMysqlConnect::CMysqlConnect	.\connectpool.h	/^	CMysqlConnect();$/;"	p	class:CMysqlConnect	access:public	signature:()
+CMysqlConnect::CMysqlConnect	.\connectpool.h	/^	CMysqlConnect(const CMysqlConnect &rhs);$/;"	p	class:CMysqlConnect	access:private	signature:(const CMysqlConnect &rhs)
+CMysqlConnect::Connect	.\connectpool.cpp	/^bool CMysqlConnect::Connect(const std::string &host,$/;"	f	class:CMysqlConnect	signature:(const std::string &host, const std::string &user, const std::string &password, const std::string &dbname, unsigned int port, const std::string &unix_socket, const std::string &character)
+CMysqlConnect::Connect	.\connectpool.h	/^	virtual bool Connect(const std::string &host,$/;"	p	class:CMysqlConnect	access:public	signature:(const std::string &host, const std::string &user, const std::string &password, const std::string &dbname, unsigned int port, const std::string &unix_socket, const std::string &character)
+CMysqlConnect::Disconnect	.\connectpool.cpp	/^bool CMysqlConnect::Disconnect()$/;"	f	class:CMysqlConnect	signature:()
+CMysqlConnect::Disconnect	.\connectpool.h	/^	virtual bool Disconnect();$/;"	p	class:CMysqlConnect	access:public	signature:()
+CMysqlConnect::GetConnect	.\connectpool.cpp	/^void * CMysqlConnect::GetConnect()$/;"	f	class:CMysqlConnect	signature:()
+CMysqlConnect::GetConnect	.\connectpool.h	/^	void * GetConnect();$/;"	p	class:CMysqlConnect	access:public	signature:()
+CMysqlConnect::GetConnectSyntax	.\connectpool.cpp	/^const std::string CMysqlConnect::GetConnectSyntax()$/;"	f	class:CMysqlConnect	signature:()
+CMysqlConnect::GetConnectSyntax	.\connectpool.h	/^	virtual const std::string GetConnectSyntax();$/;"	p	class:CMysqlConnect	access:public	signature:()
+CMysqlConnect::m_conn	.\connectpool.h	/^	MYSQL *m_conn;$/;"	m	class:CMysqlConnect	access:private
+CMysqlConnect::operator =	.\connectpool.h	/^	CMysqlConnect & operator=(const CMysqlConnect &rhs);$/;"	p	class:CMysqlConnect	access:private	signature:(const CMysqlConnect &rhs)
+CMysqlConnect::~CMysqlConnect	.\connectpool.cpp	/^CMysqlConnect::~CMysqlConnect()$/;"	f	class:CMysqlConnect	signature:()
+CMysqlConnect::~CMysqlConnect	.\connectpool.h	/^	virtual ~CMysqlConnect();$/;"	p	class:CMysqlConnect	access:public	signature:()
+CMysqlStore	.\connectpool.cpp	/^CMysqlStore::CMysqlStore():m_connptr(NULL),m_resultptr(NULL),$/;"	f	class:CMysqlStore	signature:()
+CMysqlStore	.\connectpool.h	/^	CMysqlStore();$/;"	p	class:CMysqlStore	access:public	signature:()
+CMysqlStore	.\connectpool.h	/^class CMysqlStore : public CDataStore$/;"	c	inherits:CDataStore
+CMysqlStore::CHAR	.\connectpool.h	/^	{CHAR = 1,INT = 2,DATETIME = 3,DOUBLE = 4,DEC = 5,UNKNOWN = 6};$/;"	e	enum:CMysqlStore::filedtype_t
+CMysqlStore::CMysqlStore	.\connectpool.cpp	/^CMysqlStore::CMysqlStore():m_connptr(NULL),m_resultptr(NULL),$/;"	f	class:CMysqlStore	signature:()
+CMysqlStore::CMysqlStore	.\connectpool.h	/^	CMysqlStore();$/;"	p	class:CMysqlStore	access:public	signature:()
+CMysqlStore::Clear	.\connectpool.cpp	/^void CMysqlStore::Clear()$/;"	f	class:CMysqlStore	signature:()
+CMysqlStore::Clear	.\connectpool.h	/^	void Clear();	$/;"	p	class:CMysqlStore	access:private	signature:()
+CMysqlStore::Commit	.\connectpool.cpp	/^bool CMysqlStore::Commit()$/;"	f	class:CMysqlStore	signature:()
+CMysqlStore::Commit	.\connectpool.h	/^	virtual bool Commit();$/;"	p	class:CMysqlStore	access:public	signature:()
+CMysqlStore::DATETIME	.\connectpool.h	/^	{CHAR = 1,INT = 2,DATETIME = 3,DOUBLE = 4,DEC = 5,UNKNOWN = 6};$/;"	e	enum:CMysqlStore::filedtype_t
+CMysqlStore::DEC	.\connectpool.h	/^	{CHAR = 1,INT = 2,DATETIME = 3,DOUBLE = 4,DEC = 5,UNKNOWN = 6};$/;"	e	enum:CMysqlStore::filedtype_t
+CMysqlStore::DOUBLE	.\connectpool.h	/^	{CHAR = 1,INT = 2,DATETIME = 3,DOUBLE = 4,DEC = 5,UNKNOWN = 6};$/;"	e	enum:CMysqlStore::filedtype_t
+CMysqlStore::Exec	.\connectpool.cpp	/^bool CMysqlStore::Exec(const std::string &ddl)$/;"	f	class:CMysqlStore	signature:(const std::string &ddl)
+CMysqlStore::Exec	.\connectpool.h	/^	virtual bool Exec(const std::string &ddl);$/;"	p	class:CMysqlStore	access:public	signature:(const std::string &ddl)
+CMysqlStore::FindRow	.\connectpool.cpp	/^CMysqlStore::row_t * CMysqlStore::FindRow(unsigned long findrow)$/;"	f	class:CMysqlStore	signature:(unsigned long findrow)
+CMysqlStore::FindRow	.\connectpool.h	/^	row_t * FindRow(unsigned long findrow);$/;"	p	class:CMysqlStore	access:private	signature:(unsigned long findrow)
+CMysqlStore::GetColCount	.\connectpool.h	/^    int GetColCount()$/;"	f	class:CMysqlStore	access:public	signature:()
+CMysqlStore::GetFieldIndex	.\connectpool.cpp	/^unsigned int CMysqlStore::GetFieldIndex(const std::string &fieldname)$/;"	f	class:CMysqlStore	signature:(const std::string &fieldname)
+CMysqlStore::GetFieldIndex	.\connectpool.h	/^	unsigned int GetFieldIndex(const std::string &fieldname);$/;"	p	class:CMysqlStore	access:private	signature:(const std::string &fieldname)
+CMysqlStore::GetIncreaseID	.\connectpool.cpp	/^long CMysqlStore::GetIncreaseID()$/;"	f	class:CMysqlStore	signature:()
+CMysqlStore::GetIncreaseID	.\connectpool.h	/^	long GetIncreaseID();$/;"	p	class:CMysqlStore	access:public	signature:()
+CMysqlStore::GetItemFloat	.\connectpool.cpp	/^float CMysqlStore::GetItemFloat(unsigned long row,$/;"	f	class:CMysqlStore	signature:(unsigned long row, const std::string &fieldname)
+CMysqlStore::GetItemFloat	.\connectpool.cpp	/^float CMysqlStore::GetItemFloat(unsigned long row,$/;"	f	class:CMysqlStore	signature:(unsigned long row, const unsigned int index)
+CMysqlStore::GetItemFloat	.\connectpool.h	/^	virtual float GetItemFloat(unsigned long row,$/;"	p	class:CMysqlStore	access:public	signature:(unsigned long row, const std::string &fieldname)
+CMysqlStore::GetItemFloat	.\connectpool.h	/^	virtual float GetItemFloat(unsigned long row,$/;"	p	class:CMysqlStore	access:public	signature:(unsigned long row, const unsigned int index)
+CMysqlStore::GetItemLong	.\connectpool.cpp	/^long CMysqlStore::GetItemLong(unsigned long row,$/;"	f	class:CMysqlStore	signature:(unsigned long row, const std::string &fieldname)
+CMysqlStore::GetItemLong	.\connectpool.cpp	/^long CMysqlStore::GetItemLong(unsigned long row,$/;"	f	class:CMysqlStore	signature:(unsigned long row, const unsigned int index)
+CMysqlStore::GetItemLong	.\connectpool.h	/^	virtual long GetItemLong(unsigned long row,$/;"	p	class:CMysqlStore	access:public	signature:(unsigned long row, const std::string &fieldname)
+CMysqlStore::GetItemLong	.\connectpool.h	/^	virtual long GetItemLong(unsigned long row,$/;"	p	class:CMysqlStore	access:public	signature:(unsigned long row, const unsigned int index)
+CMysqlStore::GetItemString	.\connectpool.cpp	/^const std::string CMysqlStore::GetItemString(unsigned long row,$/;"	f	class:CMysqlStore	signature:(unsigned long row, const std::string &fieldname)
+CMysqlStore::GetItemString	.\connectpool.cpp	/^const std::string CMysqlStore::GetItemString(unsigned long row,$/;"	f	class:CMysqlStore	signature:(unsigned long row, unsigned int index)
+CMysqlStore::GetItemString	.\connectpool.h	/^	virtual const std::string GetItemString(unsigned long row,$/;"	p	class:CMysqlStore	access:public	signature:(unsigned long row, const std::string &fieldname)
+CMysqlStore::GetItemString	.\connectpool.h	/^	virtual const std::string GetItemString(unsigned long row,$/;"	p	class:CMysqlStore	access:public	signature:(unsigned long row, unsigned int index)
+CMysqlStore::GetItemValue	.\connectpool.cpp	/^const std::string CMysqlStore::GetItemValue(unsigned long row,$/;"	f	class:CMysqlStore	signature:(unsigned long row, const std::string &fieldname)
+CMysqlStore::GetItemValue	.\connectpool.cpp	/^const std::string CMysqlStore::GetItemValue(unsigned long row,$/;"	f	class:CMysqlStore	signature:(unsigned long row, unsigned int index)
+CMysqlStore::GetItemValue	.\connectpool.h	/^	const std::string GetItemValue(unsigned long row,$/;"	p	class:CMysqlStore	access:private	signature:(unsigned long row, const std::string &fieldname)
+CMysqlStore::GetItemValue	.\connectpool.h	/^	const std::string GetItemValue(unsigned long row,$/;"	p	class:CMysqlStore	access:private	signature:(unsigned long row, unsigned int index)
+CMysqlStore::GetMySqlConn	.\connectpool.h	/^	MYSQL* GetMySqlConn()$/;"	f	class:CMysqlStore	access:public	signature:()
+CMysqlStore::GetStatus	.\connectpool.cpp	/^bool CMysqlStore::GetStatus()$/;"	f	class:CMysqlStore	signature:()
+CMysqlStore::GetStatus	.\connectpool.h	/^	bool GetStatus();$/;"	p	class:CMysqlStore	access:public	signature:()
+CMysqlStore::INT	.\connectpool.h	/^	{CHAR = 1,INT = 2,DATETIME = 3,DOUBLE = 4,DEC = 5,UNKNOWN = 6};$/;"	e	enum:CMysqlStore::filedtype_t
+CMysqlStore::Query	.\connectpool.cpp	/^bool CMysqlStore::Query(const std::string &dml)$/;"	f	class:CMysqlStore	signature:(const std::string &dml)
+CMysqlStore::Query	.\connectpool.h	/^	virtual bool Query(const std::string &dml);$/;"	p	class:CMysqlStore	access:public	signature:(const std::string &dml)
+CMysqlStore::RollBack	.\connectpool.cpp	/^bool CMysqlStore::RollBack()$/;"	f	class:CMysqlStore	signature:()
+CMysqlStore::RollBack	.\connectpool.h	/^	virtual bool RollBack();$/;"	p	class:CMysqlStore	access:public	signature:()
+CMysqlStore::RowCount	.\connectpool.cpp	/^unsigned long CMysqlStore::RowCount()$/;"	f	class:CMysqlStore	signature:()
+CMysqlStore::RowCount	.\connectpool.h	/^	virtual unsigned long RowCount();$/;"	p	class:CMysqlStore	access:public	signature:()
+CMysqlStore::SetFieldType	.\connectpool.cpp	/^CMysqlStore::filedtype_t CMysqlStore::SetFieldType(enum_field_types fieldtype)$/;"	f	class:CMysqlStore	signature:(enum_field_types fieldtype)
+CMysqlStore::SetFieldType	.\connectpool.h	/^	filedtype_t SetFieldType(enum_field_types fieldtype);$/;"	p	class:CMysqlStore	access:public	signature:(enum_field_types fieldtype)
+CMysqlStore::SetIncreaseID	.\connectpool.cpp	/^void CMysqlStore::SetIncreaseID(long id)$/;"	f	class:CMysqlStore	signature:(long id)
+CMysqlStore::SetIncreaseID	.\connectpool.h	/^	void SetIncreaseID(long id);$/;"	p	class:CMysqlStore	access:private	signature:(long id)
+CMysqlStore::SetTransAction	.\connectpool.cpp	/^bool CMysqlStore::SetTransAction(CConnect * conn)$/;"	f	class:CMysqlStore	signature:(CConnect * conn)
+CMysqlStore::SetTransAction	.\connectpool.h	/^	bool SetTransAction(CConnect * conn);$/;"	p	class:CMysqlStore	access:public	signature:(CConnect * conn)
+CMysqlStore::UNKNOWN	.\connectpool.h	/^	{CHAR = 1,INT = 2,DATETIME = 3,DOUBLE = 4,DEC = 5,UNKNOWN = 6};$/;"	e	enum:CMysqlStore::filedtype_t
+CMysqlStore::What	.\connectpool.cpp	/^const std::string CMysqlStore::What()$/;"	f	class:CMysqlStore	signature:()
+CMysqlStore::What	.\connectpool.h	/^	virtual const std::string What();$/;"	p	class:CMysqlStore	access:public	signature:()
+CMysqlStore::filedtype_t	.\connectpool.h	/^	enum  filedtype_t$/;"	g	class:CMysqlStore	access:private
+CMysqlStore::m_autocommit	.\connectpool.h	/^	bool m_autocommit;$/;"	m	class:CMysqlStore	access:private
+CMysqlStore::m_colcount	.\connectpool.h	/^    int m_colcount;$/;"	m	class:CMysqlStore	access:private
+CMysqlStore::m_connptr	.\connectpool.h	/^	MYSQL * m_connptr;$/;"	m	class:CMysqlStore	access:private
+CMysqlStore::m_err	.\connectpool.h	/^	std::string m_err;$/;"	m	class:CMysqlStore	access:private
+CMysqlStore::m_fieldtype	.\connectpool.h	/^	std::vector<typeset_t> m_fieldtype;$/;"	m	class:CMysqlStore	access:private
+CMysqlStore::m_getstatus	.\connectpool.h	/^	bool m_getstatus;$/;"	m	class:CMysqlStore	access:private
+CMysqlStore::m_increaseID	.\connectpool.h	/^	long m_increaseID;$/;"	m	class:CMysqlStore	access:private
+CMysqlStore::m_recordset	.\connectpool.h	/^	std::vector<row_t> m_recordset;$/;"	m	class:CMysqlStore	access:private
+CMysqlStore::m_resultptr	.\connectpool.h	/^	MYSQL_RES *m_resultptr;$/;"	m	class:CMysqlStore	access:private
+CMysqlStore::m_row	.\connectpool.h	/^	unsigned long m_row;$/;"	m	class:CMysqlStore	access:private
+CMysqlStore::row_t	.\connectpool.h	/^	typedef std::vector<std::string> row_t;$/;"	t	class:CMysqlStore	access:private
+CMysqlStore::typeset_t	.\connectpool.h	/^	struct typeset_t$/;"	s	class:CMysqlStore	access:private
+CMysqlStore::typeset_t::index	.\connectpool.h	/^		unsigned int index;$/;"	m	struct:CMysqlStore::typeset_t	access:public
+CMysqlStore::typeset_t::length	.\connectpool.h	/^		unsigned int length;$/;"	m	struct:CMysqlStore::typeset_t	access:public
+CMysqlStore::typeset_t::name	.\connectpool.h	/^		std::string name;$/;"	m	struct:CMysqlStore::typeset_t	access:public
+CMysqlStore::typeset_t::type	.\connectpool.h	/^		filedtype_t type;$/;"	m	struct:CMysqlStore::typeset_t	access:public
+CMysqlStore::typeset_t::typeset_t	.\connectpool.cpp	/^CMysqlStore::typeset_t::typeset_t()$/;"	f	class:CMysqlStore::typeset_t	signature:()
+CMysqlStore::typeset_t::typeset_t	.\connectpool.h	/^		typeset_t();	$/;"	p	struct:CMysqlStore::typeset_t	access:public	signature:()
+CMysqlStore::~CMysqlStore	.\connectpool.cpp	/^CMysqlStore::~CMysqlStore()$/;"	f	class:CMysqlStore	signature:()
+CMysqlStore::~CMysqlStore	.\connectpool.h	/^	virtual ~CMysqlStore();$/;"	p	class:CMysqlStore	access:public	signature:()
+COMMAND_ARGS	.\interface_c.h	3;"	d
+CONNECTION_TYPE_CLIENT	.\socket.h	14;"	d
+CPU_NUM	.\main.cpp	31;"	d	file:
+CProtocal	.\protocal.cpp	/^CProtocal::CProtocal()$/;"	f	class:CProtocal	signature:()
+CProtocal	.\protocal.h	/^    CProtocal();$/;"	p	class:CProtocal	access:public	signature:()
+CProtocal	.\protocal.h	/^class CProtocal$/;"	c
+CProtocal::CProtocal	.\protocal.cpp	/^CProtocal::CProtocal()$/;"	f	class:CProtocal	signature:()
+CProtocal::CProtocal	.\protocal.h	/^    CProtocal();$/;"	p	class:CProtocal	access:public	signature:()
+CProtocal::get_message	.\protocal.cpp	/^CProtocal::get_message(unsigned short cmd)$/;"	f	class:CProtocal	signature:(unsigned short cmd)
+CProtocal::get_message	.\protocal.h	/^    static Message get_message(unsigned short cmd);$/;"	p	class:CProtocal	access:public	signature:(unsigned short cmd)
+CProtocal::init	.\protocal.cpp	/^int CProtocal::init()$/;"	f	class:CProtocal	signature:()
+CProtocal::init	.\protocal.h	/^	static int init();$/;"	p	class:CProtocal	access:public	signature:()
+CProtocal::message_count	.\protocal.cpp	/^int CProtocal::message_count = 0;$/;"	m	class:CProtocal	file:
+CProtocal::message_count	.\protocal.h	/^    static int message_count;$/;"	m	class:CProtocal	access:public
+CProtocal::message_table	.\protocal.cpp	/^MessageMap_t CProtocal::message_table = MessageMap_t();$/;"	m	class:CProtocal	file:
+CProtocal::message_table	.\protocal.h	/^    static MessageMap_t message_table;$/;"	m	class:CProtocal	access:public
+CProtocal::trace_message	.\protocal.cpp	/^CProtocal::trace_message()$/;"	f	class:CProtocal	signature:()
+CProtocal::trace_message	.\protocal.h	/^    static void trace_message();$/;"	p	class:CProtocal	access:public	signature:()
+CProtocal::~CProtocal	.\protocal.cpp	/^CProtocal::~CProtocal()$/;"	f	class:CProtocal	signature:()
+CProtocal::~CProtocal	.\protocal.h	/^    ~CProtocal();$/;"	p	class:CProtocal	access:public	signature:()
+CRedis	.\redis.cpp	/^CRedis::CRedis():$/;"	f	class:CRedis	signature:()
+CRedis	.\redis.h	/^    CRedis();$/;"	p	class:CRedis	access:public	signature:()
+CRedis	.\redis.h	/^class CRedis$/;"	c
+CRedis::CRedis	.\redis.cpp	/^CRedis::CRedis():$/;"	f	class:CRedis	signature:()
+CRedis::CRedis	.\redis.h	/^    CRedis();$/;"	p	class:CRedis	access:public	signature:()
+CRedis::Dequeue	.\redis.cpp	/^CRedis::Dequeue(const char* queue)$/;"	f	class:CRedis	signature:(const char* queue)
+CRedis::Dequeue	.\redis.h	/^	int Dequeue(const char* queue);$/;"	p	class:CRedis	access:public	signature:(const char* queue)
+CRedis::Enqueue	.\redis.cpp	/^CRedis::Enqueue(const char* queue, const char* value)$/;"	f	class:CRedis	signature:(const char* queue, const char* value)
+CRedis::Enqueue	.\redis.h	/^	int Enqueue(const char* queue, const char* value);$/;"	p	class:CRedis	access:public	signature:(const char* queue, const char* value)
+CRedis::IsActived	.\redis.cpp	/^CRedis::IsActived()$/;"	f	class:CRedis	signature:()
+CRedis::IsActived	.\redis.h	/^	bool IsActived();$/;"	p	class:CRedis	access:public	signature:()
+CRedis::S_IsMember	.\redis.cpp	/^CRedis::S_IsMember(const char* key, const char* value)$/;"	f	class:CRedis	signature:(const char* key, const char* value)
+CRedis::S_IsMember	.\redis.cpp	/^CRedis::S_IsMember(const char* key, const int value)$/;"	f	class:CRedis	signature:(const char* key, const int value)
+CRedis::S_IsMember	.\redis.h	/^	int S_IsMember(const char* key, const char* value);$/;"	p	class:CRedis	access:public	signature:(const char* key, const char* value)
+CRedis::S_IsMember	.\redis.h	/^	int S_IsMember(const char* key, const int value);$/;"	p	class:CRedis	access:public	signature:(const char* key, const int value)
+CRedis::connect_redis	.\redis.cpp	/^int CRedis::connect_redis(const char* host, unsigned int port, unsigned short second)$/;"	f	class:CRedis	signature:(const char* host, unsigned int port, unsigned short second)
+CRedis::connect_redis	.\redis.h	/^    int connect_redis(const char* host, unsigned int port, unsigned short second = 0);$/;"	p	class:CRedis	access:public	signature:(const char* host, unsigned int port, unsigned short second = 0)
+CRedis::get_value	.\redis.cpp	/^int CRedis::get_value(const char* key)$/;"	f	class:CRedis	signature:(const char* key)
+CRedis::get_value	.\redis.h	/^    int get_value(const char* key);$/;"	p	class:CRedis	access:public	signature:(const char* key)
+CRedis::m_redis	.\redis.h	/^    redisContext *m_redis;	$/;"	m	class:CRedis	access:private
+CRedis::m_reply	.\redis.h	/^    redisReply *m_reply;	$/;"	m	class:CRedis	access:private
+CRedis::set_expire	.\redis.cpp	/^int CRedis::set_expire(const char* key, int expire)$/;"	f	class:CRedis	signature:(const char* key, int expire)
+CRedis::set_expire	.\redis.h	/^    int set_expire(const char* key, int expire);$/;"	p	class:CRedis	access:public	signature:(const char* key, int expire)
+CRedis::set_value	.\redis.cpp	/^int CRedis::set_value(const char* key, const char* value)$/;"	f	class:CRedis	signature:(const char* key, const char* value)
+CRedis::set_value	.\redis.h	/^    int set_value(const char* key, const char* value);$/;"	p	class:CRedis	access:public	signature:(const char* key, const char* value)
+CRedis::~CRedis	.\redis.cpp	/^CRedis::~CRedis()$/;"	f	class:CRedis	signature:()
+CRedis::~CRedis	.\redis.h	/^    ~CRedis();$/;"	p	class:CRedis	access:public	signature:()
+CSql_error	.\connectpool.cpp	/^CSql_error::CSql_error():std::runtime_error("Failed query"),m_err()$/;"	f	class:CSql_error	signature:()
+CSql_error	.\connectpool.cpp	/^CSql_error::CSql_error(const std::string &whatarg)$/;"	f	class:CSql_error	signature:(const std::string &whatarg)
+CSql_error	.\connectpool.cpp	/^CSql_error::CSql_error(const std::string &whatarg, const std::string &err)$/;"	f	class:CSql_error	signature:(const std::string &whatarg, const std::string &err)
+CSql_error	.\connectpool.h	/^  explicit CSql_error();$/;"	p	class:CSql_error	access:public	signature:()
+CSql_error	.\connectpool.h	/^  explicit CSql_error(const std::string &whatarg);$/;"	p	class:CSql_error	access:public	signature:(const std::string &whatarg)
+CSql_error	.\connectpool.h	/^  explicit CSql_error(const std::string &whatarg, const std::string &err);$/;"	p	class:CSql_error	access:public	signature:(const std::string &whatarg, const std::string &err)
+CSql_error	.\connectpool.h	/^class CSql_error : public std::runtime_error$/;"	c	inherits:std::runtime_error
+CSql_error::CSql_error	.\connectpool.cpp	/^CSql_error::CSql_error():std::runtime_error("Failed query"),m_err()$/;"	f	class:CSql_error	signature:()
+CSql_error::CSql_error	.\connectpool.cpp	/^CSql_error::CSql_error(const std::string &whatarg)$/;"	f	class:CSql_error	signature:(const std::string &whatarg)
+CSql_error::CSql_error	.\connectpool.cpp	/^CSql_error::CSql_error(const std::string &whatarg, const std::string &err)$/;"	f	class:CSql_error	signature:(const std::string &whatarg, const std::string &err)
+CSql_error::CSql_error	.\connectpool.h	/^  explicit CSql_error();$/;"	p	class:CSql_error	access:public	signature:()
+CSql_error::CSql_error	.\connectpool.h	/^  explicit CSql_error(const std::string &whatarg);$/;"	p	class:CSql_error	access:public	signature:(const std::string &whatarg)
+CSql_error::CSql_error	.\connectpool.h	/^  explicit CSql_error(const std::string &whatarg, const std::string &err);$/;"	p	class:CSql_error	access:public	signature:(const std::string &whatarg, const std::string &err)
+CSql_error::m_err	.\connectpool.h	/^	std::string m_err;$/;"	m	class:CSql_error	access:private
+CSql_error::what	.\connectpool.cpp	/^const char * CSql_error::what() const throw ()$/;"	f	class:CSql_error	signature:() const
+CSql_error::what	.\connectpool.h	/^  virtual const char * what() const throw ();$/;"	p	class:CSql_error	access:public	signature:() const
+CSql_error::~CSql_error	.\connectpool.cpp	/^CSql_error::~CSql_error() throw ()$/;"	f	class:CSql_error	signature:()
+CSql_error::~CSql_error	.\connectpool.h	/^  virtual ~CSql_error() throw ();$/;"	p	class:CSql_error	access:public	signature:()
+Clear	.\connectpool.cpp	/^void CMysqlStore::Clear()$/;"	f	class:CMysqlStore	signature:()
+Clear	.\connectpool.h	/^	void Clear();	$/;"	p	class:CMysqlStore	access:private	signature:()
+CloseHandler	.\net.cpp	/^Net::CloseHandler(const int& fd) $/;"	f	class:Net	signature:(const int& fd)
+CloseHandler	.\net.h	/^	void CloseHandler(const int& fd);$/;"	p	class:Net	access:public	signature:(const int& fd)
+Commit	.\connectpool.cpp	/^bool CMysqlStore::Commit()$/;"	f	class:CMysqlStore	signature:()
+Commit	.\connectpool.h	/^	virtual bool Commit() = 0;$/;"	p	class:CDataStore	access:public	signature:()
+Commit	.\connectpool.h	/^	virtual bool Commit();$/;"	p	class:CMysqlStore	access:public	signature:()
+Connect	.\connectpool.cpp	/^bool CMysqlConnect::Connect(const std::string &host,$/;"	f	class:CMysqlConnect	signature:(const std::string &host, const std::string &user, const std::string &password, const std::string &dbname, unsigned int port, const std::string &unix_socket, const std::string &character)
+Connect	.\connectpool.h	/^	virtual bool Connect(const std::string &host,$/;"	p	class:CConnect	access:public	signature:(const std::string &host, const std::string &user, const std::string &password, const std::string &dbname, unsigned int port, const std::string &unix_socket, const std::string &character)
+Connect	.\connectpool.h	/^	virtual bool Connect(const std::string &host,$/;"	p	class:CMysqlConnect	access:public	signature:(const std::string &host, const std::string &user, const std::string &password, const std::string &dbname, unsigned int port, const std::string &unix_socket, const std::string &character)
+Copy	.\PacketBase.h	/^	bool Copy(const void *pInBuf, int nLen)$/;"	f	class:InputPacket	access:public	signature:(const void *pInBuf, int nLen)
+Copy	.\PacketBase.h	/^	bool Copy(const void *pInBuf, int nLen)$/;"	f	class:OutputPacket	access:public	signature:(const void *pInBuf, int nLen)
+CrevasseBuffer	.\socket.cpp	/^int SocketHandler::CrevasseBuffer(NETInputPacket *pPacket)$/;"	f	class:SocketHandler	signature:(NETInputPacket *pPacket)
+CrevasseBuffer	.\socket.h	/^	static int  CrevasseBuffer(NETInputPacket *pPacket);$/;"	p	class:SocketHandler	access:public	signature:(NETInputPacket *pPacket)
+DATETIME	.\connectpool.h	/^	{CHAR = 1,INT = 2,DATETIME = 3,DOUBLE = 4,DEC = 5,UNKNOWN = 6};$/;"	e	enum:CMysqlStore::filedtype_t
+DEC	.\connectpool.h	/^	{CHAR = 1,INT = 2,DATETIME = 3,DOUBLE = 4,DEC = 5,UNKNOWN = 6};$/;"	e	enum:CMysqlStore::filedtype_t
+DEFAULT_FILE_NUM	.\log.h	12;"	d
+DEFAULT_FILE_SIZE	.\log.h	13;"	d
+DOUBLE	.\connectpool.h	/^	{CHAR = 1,INT = 2,DATETIME = 3,DOUBLE = 4,DEC = 5,UNKNOWN = 6};$/;"	e	enum:CMysqlStore::filedtype_t
+DWORD	.\wtypedef.h	/^typedef unsigned long   DWORD;$/;"	t
+DWORD_PTR	.\wtypedef.h	82;"	d
+Data1	.\interface_c.cpp	/^	unsigned int	Data1;$/;"	m	struct:__anon1	file:	access:public
+Data2	.\interface_c.cpp	/^	unsigned short 	Data2;$/;"	m	struct:__anon1	file:	access:public
+Data3	.\interface_c.cpp	/^	unsigned short 	Data3;$/;"	m	struct:__anon1	file:	access:public
+Data4	.\interface_c.cpp	/^	unsigned char 	Data4[8];$/;"	m	struct:__anon1	file:	access:public
+Dequeue	.\interface_c.cpp	/^int Dequeue(const char* queue)$/;"	f	signature:(const char* queue)
+Dequeue	.\interface_c.h	/^int Dequeue(const char* queue);$/;"	p	signature:(const char* queue)
+Dequeue	.\redis.cpp	/^CRedis::Dequeue(const char* queue)$/;"	f	class:CRedis	signature:(const char* queue)
+Dequeue	.\redis.h	/^	int Dequeue(const char* queue);$/;"	p	class:CRedis	access:public	signature:(const char* queue)
+Disconnect	.\connectpool.cpp	/^bool CMysqlConnect::Disconnect()$/;"	f	class:CMysqlConnect	signature:()
+Disconnect	.\connectpool.h	/^	virtual bool Disconnect() = 0;$/;"	p	class:CConnect	access:public	signature:()
+Disconnect	.\connectpool.h	/^	virtual bool Disconnect();$/;"	p	class:CMysqlConnect	access:public	signature:()
+ELE	.\llist.h	/^}ELE;$/;"	t	typeref:struct:__anon2
+ERRNO	.\interface_c.h	6;"	d
+EVENT_TOTAL_COUNT	.\net.cpp	12;"	d	file:
+EXPORT	.\mtimer.c	30;"	d	file:
+EncryptBuffer	.\socket.cpp	/^WORD SocketHandler::EncryptBuffer(NETOutputPacket *pPacket)$/;"	f	class:SocketHandler	signature:(NETOutputPacket *pPacket)
+EncryptBuffer	.\socket.h	/^	static WORD EncryptBuffer(NETOutputPacket *pPacket);$/;"	p	class:SocketHandler	access:public	signature:(NETOutputPacket *pPacket)
+End	.\PacketBase.h	/^	void End(void)$/;"	f	class:InputPacket	access:public	signature:(void)
+End	.\PacketBase.h	/^	void End(void)$/;"	f	class:OutputPacket	access:public	signature:(void)
+Enqueue	.\interface_c.cpp	/^int Enqueue(const char* queue, const char* value)$/;"	f	signature:(const char* queue, const char* value)
+Enqueue	.\interface_c.h	/^int Enqueue(const char* queue, const char* value);$/;"	p	signature:(const char* queue, const char* value)
+Enqueue	.\redis.cpp	/^CRedis::Enqueue(const char* queue, const char* value)$/;"	f	class:CRedis	signature:(const char* queue, const char* value)
+Enqueue	.\redis.h	/^	int Enqueue(const char* queue, const char* value);$/;"	p	class:CRedis	access:public	signature:(const char* queue, const char* value)
+Exec	.\connectpool.cpp	/^bool CMysqlStore::Exec(const std::string &ddl)$/;"	f	class:CMysqlStore	signature:(const std::string &ddl)
+Exec	.\connectpool.h	/^	virtual bool Exec(const std::string &ddl) = 0;$/;"	p	class:CDataStore	access:public	signature:(const std::string &ddl)
+Exec	.\connectpool.h	/^	virtual bool Exec(const std::string &ddl);$/;"	p	class:CMysqlStore	access:public	signature:(const std::string &ddl)
+FALSE	.\wtypedef.h	70;"	d
+FASTCALL	.\wtypedef.h	76;"	d
+FLOAT	.\wtypedef.h	/^typedef float               FLOAT;$/;"	t
+FindRow	.\connectpool.cpp	/^CMysqlStore::row_t * CMysqlStore::FindRow(unsigned long findrow)$/;"	f	class:CMysqlStore	signature:(unsigned long findrow)
+FindRow	.\connectpool.h	/^	row_t * FindRow(unsigned long findrow);$/;"	p	class:CMysqlStore	access:private	signature:(unsigned long findrow)
+FreeHandler	.\net.cpp	48;"	d	file:
+FreeHandlerList_t	.\net.h	/^	typedef tr1::unordered_set<SocketHandler*>		FreeHandlerList_t; $/;"	t	class:Net	access:public
+FreeStaleSocket	.\net.cpp	51;"	d	file:
+Frees	.\net.h	/^	size_t Frees() { return m_FreeHandlers.size(); }$/;"	f	class:Net	access:public	signature:()
+GETOPT_H_	.\getopt.h	38;"	d
+GUID	.\interface_c.cpp	/^} GUID, UUID;$/;"	t	typeref:struct:__anon1	file:
+GetBodyLength	.\PacketBase.h	/^	short GetBodyLength(void)$/;"	f	class:PacketBase	access:public	signature:(void)
+GetCmdType	.\PacketBase.h	/^	short GetCmdType(void)$/;"	f	class:PacketBase	access:public	signature:(void)
+GetColCount	.\connectpool.h	/^    int GetColCount()$/;"	f	class:CMysqlStore	access:public	signature:()
+GetConnect	.\connectpool.cpp	/^void * CMysqlConnect::GetConnect()$/;"	f	class:CMysqlConnect	signature:()
+GetConnect	.\connectpool.h	/^	virtual void * GetConnect()  = 0;$/;"	p	class:CConnect	access:public	signature:()
+GetConnect	.\connectpool.h	/^	void * GetConnect();$/;"	p	class:CMysqlConnect	access:public	signature:()
+GetConnectSyntax	.\connectpool.cpp	/^const std::string CMysqlConnect::GetConnectSyntax()$/;"	f	class:CMysqlConnect	signature:()
+GetConnectSyntax	.\connectpool.h	/^	virtual const std::string GetConnectSyntax() = 0;$/;"	p	class:CConnect	access:public	signature:()
+GetConnectSyntax	.\connectpool.h	/^	virtual const std::string GetConnectSyntax();$/;"	p	class:CMysqlConnect	access:public	signature:()
+GetCpuNum	.\main.cpp	/^GetCpuNum()$/;"	f	file:	signature:()
+GetFieldIndex	.\connectpool.cpp	/^unsigned int CMysqlStore::GetFieldIndex(const std::string &fieldname)$/;"	f	class:CMysqlStore	signature:(const std::string &fieldname)
+GetFieldIndex	.\connectpool.h	/^	unsigned int GetFieldIndex(const std::string &fieldname);$/;"	p	class:CMysqlStore	access:private	signature:(const std::string &fieldname)
+GetIncreaseID	.\connectpool.cpp	/^long CMysqlStore::GetIncreaseID()$/;"	f	class:CMysqlStore	signature:()
+GetIncreaseID	.\connectpool.h	/^	long GetIncreaseID();$/;"	p	class:CMysqlStore	access:public	signature:()
+GetItemFloat	.\connectpool.cpp	/^float CMysqlStore::GetItemFloat(unsigned long row,$/;"	f	class:CMysqlStore	signature:(unsigned long row, const std::string &fieldname)
+GetItemFloat	.\connectpool.cpp	/^float CMysqlStore::GetItemFloat(unsigned long row,$/;"	f	class:CMysqlStore	signature:(unsigned long row, const unsigned int index)
+GetItemFloat	.\connectpool.h	/^	virtual float GetItemFloat(unsigned long row,$/;"	p	class:CDataStore	access:public	signature:(unsigned long row, const std::string &fieldname)
+GetItemFloat	.\connectpool.h	/^	virtual float GetItemFloat(unsigned long row,$/;"	p	class:CDataStore	access:public	signature:(unsigned long row, const unsigned int index)
+GetItemFloat	.\connectpool.h	/^	virtual float GetItemFloat(unsigned long row,$/;"	p	class:CMysqlStore	access:public	signature:(unsigned long row, const std::string &fieldname)
+GetItemFloat	.\connectpool.h	/^	virtual float GetItemFloat(unsigned long row,$/;"	p	class:CMysqlStore	access:public	signature:(unsigned long row, const unsigned int index)
+GetItemLong	.\connectpool.cpp	/^long CMysqlStore::GetItemLong(unsigned long row,$/;"	f	class:CMysqlStore	signature:(unsigned long row, const std::string &fieldname)
+GetItemLong	.\connectpool.cpp	/^long CMysqlStore::GetItemLong(unsigned long row,$/;"	f	class:CMysqlStore	signature:(unsigned long row, const unsigned int index)
+GetItemLong	.\connectpool.h	/^	virtual long GetItemLong(unsigned long row,$/;"	p	class:CDataStore	access:public	signature:(unsigned long row, const std::string &fieldname)
+GetItemLong	.\connectpool.h	/^	virtual long GetItemLong(unsigned long row,$/;"	p	class:CDataStore	access:public	signature:(unsigned long row, const unsigned int index)
+GetItemLong	.\connectpool.h	/^	virtual long GetItemLong(unsigned long row,$/;"	p	class:CMysqlStore	access:public	signature:(unsigned long row, const std::string &fieldname)
+GetItemLong	.\connectpool.h	/^	virtual long GetItemLong(unsigned long row,$/;"	p	class:CMysqlStore	access:public	signature:(unsigned long row, const unsigned int index)
+GetItemString	.\connectpool.cpp	/^const std::string CMysqlStore::GetItemString(unsigned long row,$/;"	f	class:CMysqlStore	signature:(unsigned long row, const std::string &fieldname)
+GetItemString	.\connectpool.cpp	/^const std::string CMysqlStore::GetItemString(unsigned long row,$/;"	f	class:CMysqlStore	signature:(unsigned long row, unsigned int index)
+GetItemString	.\connectpool.h	/^	virtual const std::string GetItemString($/;"	p	class:CDataStore	access:public	signature:( unsigned long row, const std::string &fieldname)
+GetItemString	.\connectpool.h	/^	virtual const std::string GetItemString($/;"	p	class:CDataStore	access:public	signature:( unsigned long row, unsigned int index)
+GetItemString	.\connectpool.h	/^	virtual const std::string GetItemString(unsigned long row,$/;"	p	class:CMysqlStore	access:public	signature:(unsigned long row, const std::string &fieldname)
+GetItemString	.\connectpool.h	/^	virtual const std::string GetItemString(unsigned long row,$/;"	p	class:CMysqlStore	access:public	signature:(unsigned long row, unsigned int index)
+GetItemValue	.\connectpool.cpp	/^const std::string CMysqlStore::GetItemValue(unsigned long row,$/;"	f	class:CMysqlStore	signature:(unsigned long row, const std::string &fieldname)
+GetItemValue	.\connectpool.cpp	/^const std::string CMysqlStore::GetItemValue(unsigned long row,$/;"	f	class:CMysqlStore	signature:(unsigned long row, unsigned int index)
+GetItemValue	.\connectpool.h	/^	const std::string GetItemValue(unsigned long row,$/;"	p	class:CMysqlStore	access:private	signature:(unsigned long row, const std::string &fieldname)
+GetItemValue	.\connectpool.h	/^	const std::string GetItemValue(unsigned long row,$/;"	p	class:CMysqlStore	access:private	signature:(unsigned long row, unsigned int index)
+GetMySqlConn	.\connectpool.h	/^	MYSQL* GetMySqlConn()$/;"	f	class:CMysqlStore	access:public	signature:()
+GetRemain	.\timer_event.cpp	/^TimerEvent::GetRemain()$/;"	f	class:TimerEvent	signature:()
+GetRemain	.\timer_event.h	/^	int GetRemain(); \/\/ add austinch at 2012\/06\/13$/;"	p	class:TimerEvent	access:public	signature:()
+GetSequence	.\PacketBase.h	/^    short GetSequence(void)$/;"	f	class:PacketBase	access:public	signature:(void)
+GetStatus	.\connectpool.cpp	/^bool CMysqlStore::GetStatus()$/;"	f	class:CMysqlStore	signature:()
+GetStatus	.\connectpool.h	/^	bool GetStatus();$/;"	p	class:CMysqlStore	access:public	signature:()
+GetSubCmdType	.\PacketBase.h	/^    short GetSubCmdType(void)$/;"	f	class:PacketBase	access:public	signature:(void)
+GetSubVersion	.\PacketBase.h	/^	char GetSubVersion(void)$/;"	f	class:PacketBase	access:public	signature:(void)
+GetVersion	.\PacketBase.h	/^	char GetVersion(void)$/;"	f	class:PacketBase	access:public	signature:(void)
+GetcbCheckCode	.\PacketBase.h	/^	BYTE GetcbCheckCode(void)$/;"	f	class:PacketBase	access:public	signature:(void)
+GetcbSourceType	.\PacketBase.h	/^    BYTE GetcbSourceType(void)$/;"	f	class:PacketBase	access:public	signature:(void)
+HANDLE	.\wtypedef.h	/^typedef void*           HANDLE;$/;"	t
+HEADER_SIZE_14	.\PacketBase.h	27;"	d
+HEADER_SIZE_9	.\PacketBase.h	28;"	d
+HIWORD	.\wtypedef.h	83;"	d
+HLIST_HEAD	.\clist.h	609;"	d
+HLIST_HEAD_INIT	.\clist.h	608;"	d
+HRESULT	.\wtypedef.h	/^typedef long HRESULT;$/;"	t
+HandlerMapItr_t	.\net.h	/^	typedef HandlerMap_t::iterator 					HandlerMapItr_t;$/;"	t	class:Net	access:public
+HandlerMap_t	.\net.h	/^	typedef tr1::unordered_map<int, SocketHandler*> HandlerMap_t;$/;"	t	class:Net	access:public
+Handlers	.\net.h	/^	size_t Handlers() { return m_Handlers.size(); }$/;"	f	class:Net	access:public	signature:()
+ICHAT_TCP_DEFAULT_BUFFER	.\PacketBase.h	22;"	d
+ICHAT_TCP_DEFAULT_BUFFER	.\PacketBase.h	24;"	d
+ID	.\getopt.c	/^static const char* ID = "$Id: getopt.c,v 1.2 2003\/10\/26 03:10:20 vindaci Exp $";$/;"	v	file:
+IN	.\wtypedef.h	67;"	d
+INDEX	.\mtimer.c	249;"	d	file:
+INIT_HLIST_HEAD	.\clist.h	610;"	d
+INIT_HLIST_NODE	.\clist.h	/^static inline void INIT_HLIST_NODE(struct hlist_node *h)$/;"	f	signature:(struct hlist_node *h)
+INIT_LIST_HEAD	.\clist.h	/^static inline void INIT_LIST_HEAD(struct list_head *list)$/;"	f	signature:(struct list_head *list)
+INT	.\connectpool.h	/^	{CHAR = 1,INT = 2,DATETIME = 3,DOUBLE = 4,DEC = 5,UNKNOWN = 6};$/;"	e	enum:CMysqlStore::filedtype_t
+INT	.\wtypedef.h	/^typedef int                 INT;$/;"	t
+INVALID_SOCKET	.\net.h	22;"	d
+ITEM_FREE	.\plex.h	265;"	d
+ITEM_MALLOC	.\plex.h	262;"	d
+InputPacket	.\PacketBase.h	/^class InputPacket: public PacketBase<_buffer_size>$/;"	c	inherits:PacketBase
+InputPacket::Begin	.\PacketBase.h	/^	void Begin(short nCommand, char cVersion = SERVER_PACKET_DEFAULT_VER, char cSubVersion = SERVER_PACKET_DEFAULT_SUBVER, $/;"	f	class:InputPacket	access:public	signature:(short nCommand, char cVersion = SERVER_PACKET_DEFAULT_VER, char cSubVersion = SERVER_PACKET_DEFAULT_SUBVER, short nSubCmd = SERVER_PACKET_DEFAULT_SUBCMD, short nSeq = SERVER_PACKET_DEFAULT_SEQ, char cSourceType = SERVER_PACKET_DEFAULT_SOURCETYPE)
+InputPacket::Copy	.\PacketBase.h	/^	bool Copy(const void *pInBuf, int nLen)$/;"	f	class:InputPacket	access:public	signature:(const void *pInBuf, int nLen)
+InputPacket::End	.\PacketBase.h	/^	void End(void)$/;"	f	class:InputPacket	access:public	signature:(void)
+InputPacket::ReadBinary	.\PacketBase.h	/^	int ReadBinary(char *pBuf, int nMaxLen)$/;"	f	class:InputPacket	access:public	signature:(char *pBuf, int nMaxLen)
+InputPacket::ReadByte	.\PacketBase.h	/^	BYTE ReadByte(void)		{BYTE nValue = -1; base::_Read((char*)&nValue, sizeof(BYTE)); return nValue;}$/;"	f	class:InputPacket	access:public	signature:(void)
+InputPacket::ReadChar	.\PacketBase.h	/^	char *ReadChar(void)$/;"	f	class:InputPacket	access:public	signature:(void)
+InputPacket::ReadInt	.\PacketBase.h	/^	int ReadInt(void)		{int nValue = -1; base::_Read((char*)&nValue, sizeof(int)); return ntohl(nValue);} \/\/’‚¿Ô±ÿ–Ë≥ı ºªØ$/;"	f	class:InputPacket	access:public	signature:(void)
+InputPacket::ReadIntDel	.\PacketBase.h	/^	int ReadIntDel(void)	{int nValue = -1; base::_ReadDel((char*)&nValue, sizeof(int)); return ntohl(nValue);} $/;"	f	class:InputPacket	access:public	signature:(void)
+InputPacket::ReadShort	.\PacketBase.h	/^	short ReadShort(void)	{short nValue = -1; base::_Read((char*)&nValue, sizeof(short)); return ntohs(nValue);}$/;"	f	class:InputPacket	access:public	signature:(void)
+InputPacket::ReadString	.\PacketBase.h	/^	bool ReadString(char *pOutString, int nMaxLen)$/;"	f	class:InputPacket	access:public	signature:(char *pOutString, int nMaxLen)
+InputPacket::ReadString	.\PacketBase.h	/^	string ReadString(void)$/;"	f	class:InputPacket	access:public	signature:(void)
+InputPacket::ReadULong	.\PacketBase.h	/^	unsigned long ReadULong(void) {unsigned long nValue = -1; base::_Read((char*)&nValue, sizeof(unsigned long)); return ntohl(nValue);}$/;"	f	class:InputPacket	access:public	signature:(void)
+InputPacket::Reset	.\PacketBase.h	/^	void Reset(void)$/;"	f	class:InputPacket	access:public	signature:(void)
+InputPacket::WriteBody	.\PacketBase.h	/^	bool WriteBody(const char *pIn, int nLen)$/;"	f	class:InputPacket	access:public	signature:(const char *pIn, int nLen)
+InputPacket::base	.\PacketBase.h	/^	typedef PacketBase<_buffer_size> base;$/;"	t	class:InputPacket	access:public
+InsertByte	.\PacketBase.h	/^	bool InsertByte(BYTE nValue)	{return base::_Insert((char*)&nValue, sizeof(BYTE));}$/;"	f	class:OutputPacket	access:public	signature:(BYTE nValue)
+InsertInt	.\PacketBase.h	/^	bool InsertInt(int nValue)		{int value = htonl(nValue); return base::_Insert((char*)&value, sizeof(int));}$/;"	f	class:OutputPacket	access:public	signature:(int nValue)
+IsActived	.\interface_c.cpp	/^bool IsActived()$/;"	f	signature:()
+IsActived	.\interface_c.h	/^bool IsActived();$/;"	p	signature:()
+IsActived	.\redis.cpp	/^CRedis::IsActived()$/;"	f	class:CRedis	signature:()
+IsActived	.\redis.h	/^	bool IsActived();$/;"	p	class:CRedis	access:public	signature:()
+IsServerClosed	.\socket.h	/^	bool IsServerClosed() { return m_is_closed;}$/;"	f	class:SocketHandler	access:public	signature:()
+IsWritecbCheckCode	.\PacketBase.h	/^	bool IsWritecbCheckCode(void)$/;"	f	class:OutputPacket	access:public	signature:(void)
+L	.\interface_c.cpp	/^extern lua_State* L;$/;"	x
+L	.\lua_interface.cpp	/^extern lua_State* L;$/;"	x
+L	.\main.cpp	/^lua_State* L;$/;"	v
+L	.\mysql_part.cpp	/^extern lua_State* L;$/;"	x
+L	.\protocal.cpp	/^extern lua_State* L;$/;"	x
+L	.\redis.cpp	/^extern lua_State* L;$/;"	x
+L	.\socket.cpp	/^extern lua_State* L;$/;"	x
+LIST_HEAD	.\clist.h	44;"	d
+LIST_HEAD_INIT	.\clist.h	42;"	d
+LIST_POISON1	.\clist.h	17;"	d
+LIST_POISON2	.\clist.h	19;"	d
+LLIST	.\llist.h	/^}LLIST;$/;"	t	typeref:struct:__anon3
+LOGSIZE	.\log.cpp	14;"	d	file:
+LONG	.\wtypedef.h	/^typedef long			LONG;$/;"	t
+LONG_PTR	.\wtypedef.h	/^typedef long				LONG_PTR;$/;"	t
+LOWORD	.\wtypedef.h	84;"	d
+LPARAM	.\wtypedef.h	72;"	d
+LPBOOL	.\wtypedef.h	/^typedef BOOL	            *LPBOOL;$/;"	t
+LPBYTE	.\wtypedef.h	/^typedef BYTE	            *LPBYTE;$/;"	t
+LPCSTR	.\wtypedef.h	/^typedef const CHAR* LPCSTR;$/;"	t
+LPCTSTR	.\wtypedef.h	/^typedef const TCHAR* LPCTSTR;$/;"	t
+LPCVOID	.\wtypedef.h	/^typedef const void			*LPCVOID;$/;"	t
+LPDWORD	.\wtypedef.h	/^typedef DWORD				*LPDWORD;$/;"	t
+LPINT	.\wtypedef.h	/^typedef int		            *LPINT;$/;"	t
+LPLONG	.\wtypedef.h	/^typedef long	            *LPLONG;$/;"	t
+LPSTR	.\wtypedef.h	/^typedef CHAR* LPSTR;$/;"	t
+LPTSTR	.\wtypedef.h	/^typedef TCHAR* LPTSTR;$/;"	t
+LPVOID	.\wtypedef.h	/^typedef void	            *LPVOID;$/;"	t
+LPWORD	.\wtypedef.h	/^typedef WORD	            *LPWORD;$/;"	t
+LRESULT	.\wtypedef.h	/^typedef unsigned long   LRESULT;$/;"	t
+MAKEWORD	.\wtypedef.h	85;"	d
+MAX_PATH_LEN	.\log.cpp	15;"	d	file:
+MOD_TIMER_H	.\mtimer.h	2;"	d
+MYSQL_RESULT_SET	.\interface_c.h	2;"	d
+MapRecvByte	.\socket.cpp	/^BYTE SocketHandler::MapRecvByte(BYTE const cbData)$/;"	f	class:SocketHandler	signature:(BYTE const cbData)
+MapRecvByte	.\socket.h	/^	static BYTE MapRecvByte(BYTE const cbData);$/;"	p	class:SocketHandler	access:public	signature:(BYTE const cbData)
+MapSendByte	.\socket.cpp	/^BYTE SocketHandler::MapSendByte(BYTE const cbData)$/;"	f	class:SocketHandler	signature:(BYTE const cbData)
+MapSendByte	.\socket.h	/^	static BYTE MapSendByte(BYTE const cbData);$/;"	p	class:SocketHandler	access:public	signature:(BYTE const cbData)
+Message	.\protocal.h	/^}Message;$/;"	t	typeref:struct:_message
+MessageMapItr_t	.\protocal.h	/^typedef MessageMap_t::iterator MessageMapItr_t;$/;"	t
+MessageMap_t	.\protocal.h	/^typedef map<unsigned short, Message> MessageMap_t;$/;"	t
+Mtolua_delete	.\tolua++.h	163;"	d
+Mtolua_delete_dim	.\tolua++.h	171;"	d
+Mtolua_new	.\tolua++.h	159;"	d
+Mtolua_new_dim	.\tolua++.h	167;"	d
+NETInputPacket	.\PacketBase.h	/^typedef InputPacket<ICHAT_TCP_DEFAULT_BUFFER>	NETInputPacket;$/;"	t
+NETOutputPacket	.\PacketBase.h	/^typedef OutputPacket<ICHAT_TCP_DEFAULT_BUFFER>	NETOutputPacket;$/;"	t
+Net	.\net.cpp	/^Net::Net(unsigned short _nums)$/;"	f	class:Net	signature:(unsigned short _nums)
+Net	.\net.h	/^	Net(unsigned short _nums);$/;"	p	class:Net	access:public	signature:(unsigned short _nums)
+Net	.\net.h	/^class Net$/;"	c
+Net::CloseHandler	.\net.cpp	/^Net::CloseHandler(const int& fd) $/;"	f	class:Net	signature:(const int& fd)
+Net::CloseHandler	.\net.h	/^	void CloseHandler(const int& fd);$/;"	p	class:Net	access:public	signature:(const int& fd)
+Net::FreeHandlerList_t	.\net.h	/^	typedef tr1::unordered_set<SocketHandler*>		FreeHandlerList_t; $/;"	t	class:Net	access:public
+Net::Frees	.\net.h	/^	size_t Frees() { return m_FreeHandlers.size(); }$/;"	f	class:Net	access:public	signature:()
+Net::HandlerMapItr_t	.\net.h	/^	typedef HandlerMap_t::iterator 					HandlerMapItr_t;$/;"	t	class:Net	access:public
+Net::HandlerMap_t	.\net.h	/^	typedef tr1::unordered_map<int, SocketHandler*> HandlerMap_t;$/;"	t	class:Net	access:public
+Net::Handlers	.\net.h	/^	size_t Handlers() { return m_Handlers.size(); }$/;"	f	class:Net	access:public	signature:()
+Net::Net	.\net.cpp	/^Net::Net(unsigned short _nums)$/;"	f	class:Net	signature:(unsigned short _nums)
+Net::Net	.\net.h	/^	Net(unsigned short _nums);$/;"	p	class:Net	access:public	signature:(unsigned short _nums)
+Net::_new_handler	.\net.cpp	/^Net::_new_handler(SOCKET sock_fd, bool parse_protocal, bool encrypt, int conn_type) $/;"	f	class:Net	signature:(SOCKET sock_fd, bool parse_protocal, bool encrypt, int conn_type)
+Net::_new_handler	.\net.h	/^	SocketHandler* _new_handler($/;"	p	class:Net	access:private	signature:( SOCKET sock_fd, bool parse_protocal = true, bool encrypt = true, int conn_type = 0)
+Net::_print_all_handler	.\net.cpp	/^Net::_print_all_handler() $/;"	f	class:Net	signature:()
+Net::_print_all_handler	.\net.h	/^	void _print_all_handler();$/;"	p	class:Net	access:private	signature:()
+Net::_register_event	.\net.cpp	/^Net::_register_event(int fd, SocketHandler* handler)$/;"	f	class:Net	signature:(int fd, SocketHandler* handler)
+Net::_register_event	.\net.h	/^	void _register_event(int fd, SocketHandler* handler);$/;"	p	class:Net	access:private	signature:(int fd, SocketHandler* handler)
+Net::_start_linux	.\net.cpp	/^Net::_start_linux()$/;"	f	class:Net	signature:()
+Net::_start_linux	.\net.h	/^	bool _start_linux();$/;"	p	class:Net	access:private	signature:()
+Net::connect_server	.\net.cpp	/^Net::connect_server(const char* ip, const int port, bool encrypt, int conn_flag)$/;"	f	class:Net	signature:(const char* ip, const int port, bool encrypt, int conn_flag)
+Net::connect_server	.\net.h	/^	int  connect_server(const char* ip, const int port, bool encrypt, int conn_flag);$/;"	p	class:Net	access:public	signature:(const char* ip, const int port, bool encrypt, int conn_flag)
+Net::create_listener	.\net.cpp	/^Net::create_listener(int port)$/;"	f	class:Net	signature:(int port)
+Net::create_listener	.\net.h	/^	int  create_listener(int port);$/;"	p	class:Net	access:public	signature:(int port)
+Net::epoll	.\net.cpp	/^Net::epoll()$/;"	f	class:Net	signature:()
+Net::epoll	.\net.h	/^    int  epoll();$/;"	p	class:Net	access:public	signature:()
+Net::handle_accept	.\net.cpp	/^Net::handle_accept()$/;"	f	class:Net	signature:()
+Net::handle_accept	.\net.h	/^	int  handle_accept();$/;"	p	class:Net	access:public	signature:()
+Net::handle_close	.\net.cpp	/^Net::handle_close(SocketHandler* sh)$/;"	f	class:Net	signature:(SocketHandler* sh)
+Net::handle_close	.\net.h	/^	void handle_close(SocketHandler* sh);$/;"	p	class:Net	access:private	signature:(SocketHandler* sh)
+Net::init	.\net.cpp	/^Net::init()$/;"	f	class:Net	signature:()
+Net::init	.\net.h	/^	bool init();$/;"	p	class:Net	access:public	signature:()
+Net::m_FreeHandlers	.\net.h	/^	FreeHandlerList_t 			m_FreeHandlers;$/;"	m	class:Net	access:private
+Net::m_Handlers	.\net.h	/^	HandlerMap_t 				m_Handlers; \/\/ <fd, SocketHandler*>$/;"	m	class:Net	access:private
+Net::m_epev_arr	.\net.h	/^	struct epoll_event* m_epev_arr; \/\/epoll_event ˝◊È$/;"	m	class:Net	typeref:struct:Net::epoll_event	access:private
+Net::m_epoll_fd	.\net.h	/^	int  m_epoll_fd;$/;"	m	class:Net	access:private
+Net::m_listen_fd	.\net.h	/^	int							m_listen_fd;$/;"	m	class:Net	access:private
+Net::m_running	.\net.h	/^	bool    					m_running;$/;"	m	class:Net	access:private
+Net::start_server	.\net.cpp	/^Net::start_server()$/;"	f	class:Net	signature:()
+Net::start_server	.\net.h	/^	bool start_server();$/;"	p	class:Net	access:public	signature:()
+Net::stop_server	.\net.cpp	/^Net::stop_server()$/;"	f	class:Net	signature:()
+Net::stop_server	.\net.h	/^	void stop_server();$/;"	p	class:Net	access:public	signature:()
+Net::~Net	.\net.cpp	/^Net::~Net() $/;"	f	class:Net	signature:()
+Net::~Net	.\net.h	/^	~Net();$/;"	p	class:Net	access:public	signature:()
+NewUUID	.\interface_c.cpp	/^void NewUUID()$/;"	f	signature:()
+NewUUID	.\interface_c.h	/^void NewUUID();$/;"	p	signature:()
+OUT	.\wtypedef.h	68;"	d
+OnPacketComplete	.\PacketParser.h	/^	virtual int OnPacketComplete(INPUT_PACKET *) = 0;$/;"	p	class:PacketParser	access:public	signature:(INPUT_PACKET *)
+OnPacketComplete	.\socket.cpp	/^int SocketHandler::OnPacketComplete(NETInputPacket *pPacket)$/;"	f	class:SocketHandler	signature:(NETInputPacket *pPacket)
+OnPacketComplete	.\socket.h	/^	virtual int  OnPacketComplete(NETInputPacket *);$/;"	p	class:SocketHandler	access:public	signature:(NETInputPacket *)
+OnParser	.\socket.cpp	/^int SocketHandler::OnParser(char *buf, int len)$/;"	f	class:SocketHandler	signature:(char *buf, int len)
+OnParser	.\socket.h	/^	int OnParser(char *buf, int nLen);$/;"	p	class:SocketHandler	access:public	signature:(char *buf, int nLen)
+OnTimer	.\timer_event.cpp	/^void TimerEvent::OnTimer(unsigned long timer_id)$/;"	f	class:TimerEvent	signature:(unsigned long timer_id)
+OnTimer	.\timer_event.h	/^	void OnTimer(unsigned long timer_id);$/;"	p	class:TimerEvent	access:public	signature:(unsigned long timer_id)
+OutputPacket	.\PacketBase.h	/^	OutputPacket(void){m_isCheckCode = false;}$/;"	f	class:OutputPacket	access:public	signature:(void)
+OutputPacket	.\PacketBase.h	/^class OutputPacket: public PacketBase<BUFFER_SIZE>$/;"	c	inherits:PacketBase
+OutputPacket::Begin	.\PacketBase.h	/^    void Begin(short nCommand, char cVersion = SERVER_PACKET_DEFAULT_VER, char cSubVersion = SERVER_PACKET_DEFAULT_SUBVER, $/;"	f	class:OutputPacket	access:public	signature:(short nCommand, char cVersion = SERVER_PACKET_DEFAULT_VER, char cSubVersion = SERVER_PACKET_DEFAULT_SUBVER, short nSubCmd = SERVER_PACKET_DEFAULT_SUBCMD, short nSeq = SERVER_PACKET_DEFAULT_SEQ, char cSourceType = SERVER_PACKET_DEFAULT_SOURCETYPE)
+OutputPacket::Copy	.\PacketBase.h	/^	bool Copy(const void *pInBuf, int nLen)$/;"	f	class:OutputPacket	access:public	signature:(const void *pInBuf, int nLen)
+OutputPacket::End	.\PacketBase.h	/^	void End(void)$/;"	f	class:OutputPacket	access:public	signature:(void)
+OutputPacket::InsertByte	.\PacketBase.h	/^	bool InsertByte(BYTE nValue)	{return base::_Insert((char*)&nValue, sizeof(BYTE));}$/;"	f	class:OutputPacket	access:public	signature:(BYTE nValue)
+OutputPacket::InsertInt	.\PacketBase.h	/^	bool InsertInt(int nValue)		{int value = htonl(nValue); return base::_Insert((char*)&value, sizeof(int));}$/;"	f	class:OutputPacket	access:public	signature:(int nValue)
+OutputPacket::IsWritecbCheckCode	.\PacketBase.h	/^	bool IsWritecbCheckCode(void)$/;"	f	class:OutputPacket	access:public	signature:(void)
+OutputPacket::OutputPacket	.\PacketBase.h	/^	OutputPacket(void){m_isCheckCode = false;}$/;"	f	class:OutputPacket	access:public	signature:(void)
+OutputPacket::SetBegin	.\PacketBase.h	/^	void SetBegin(short nCommand)$/;"	f	class:OutputPacket	access:public	signature:(short nCommand)
+OutputPacket::WriteBinary	.\PacketBase.h	/^	bool WriteBinary(const char *pBuf, int nLen)$/;"	f	class:OutputPacket	access:public	signature:(const char *pBuf, int nLen)
+OutputPacket::WriteByte	.\PacketBase.h	/^	bool WriteByte(BYTE nValue)		{return base::_Write((char*)&nValue, sizeof(BYTE));}$/;"	f	class:OutputPacket	access:public	signature:(BYTE nValue)
+OutputPacket::WriteInt	.\PacketBase.h	/^	bool WriteInt(int nValue)		{int value = htonl(nValue); return base::_Write((char*)&value, sizeof(int));}$/;"	f	class:OutputPacket	access:public	signature:(int nValue)
+OutputPacket::WriteShort	.\PacketBase.h	/^	bool WriteShort(short nValue)	{short value = htons(nValue); return base::_Write((char*)&value, sizeof(short));}$/;"	f	class:OutputPacket	access:public	signature:(short nValue)
+OutputPacket::WriteString	.\PacketBase.h	/^	bool WriteString(const char *pString)$/;"	f	class:OutputPacket	access:public	signature:(const char *pString)
+OutputPacket::WriteString	.\PacketBase.h	/^	bool WriteString(const string &strDate)$/;"	f	class:OutputPacket	access:public	signature:(const string &strDate)
+OutputPacket::WriteULong	.\PacketBase.h	/^	bool WriteULong(unsigned long nValue) {unsigned long value = htonl(nValue);return base::_Write((char*)&value, sizeof(unsigned long));}$/;"	f	class:OutputPacket	access:public	signature:(unsigned long nValue)
+OutputPacket::WritecbCheckCode	.\PacketBase.h	/^	void WritecbCheckCode(BYTE nValue)$/;"	f	class:OutputPacket	access:public	signature:(BYTE nValue)
+OutputPacket::base	.\PacketBase.h	/^	typedef PacketBase<BUFFER_SIZE> base;$/;"	t	class:OutputPacket	access:public
+OutputPacket::m_isCheckCode	.\PacketBase.h	/^	bool m_isCheckCode;$/;"	m	class:OutputPacket	access:private
+OutputPacket::oldEnd	.\PacketBase.h	/^	void oldEnd(void)$/;"	f	class:OutputPacket	access:public	signature:(void)
+PACKETVER	.\PacketParser.h	/^enum PACKETVER$/;"	g
+PACKET_BUFFER_SIZE	.\PacketBase.h	/^		PACKET_BUFFER_SIZE = _buffer_size$/;"	e	enum:PacketBase::__anon4
+PACKET_HEADER_SIZE	.\PacketBase.h	/^		PACKET_HEADER_SIZE = 9,$/;"	e	enum:PacketBase::__anon4
+PASCAL	.\wtypedef.h	74;"	d
+PBOOL	.\wtypedef.h	/^typedef BOOL				*PBOOL;$/;"	t
+PBYTE	.\wtypedef.h	/^typedef BYTE				*PBYTE;$/;"	t
+PDWORD	.\wtypedef.h	/^typedef DWORD				*PDWORD;$/;"	t
+PFLOAT	.\wtypedef.h	/^typedef FLOAT               *PFLOAT;$/;"	t
+PINT	.\wtypedef.h	/^typedef int		            *PINT;$/;"	t
+PLEX_INLINE	.\plex.h	25;"	d
+PLEX_INLINE	.\plex.h	28;"	d
+PLEX_INLINE	.\plex.h	31;"	d
+PLEX_MEMORY_H	.\plex.h	2;"	d
+PLEX_STATIC	.\plex.h	26;"	d
+PLEX_STATIC	.\plex.h	29;"	d
+PLEX_STATIC	.\plex.h	32;"	d
+PUCHAR	.\wtypedef.h	/^typedef UCHAR* PUCHAR;$/;"	t
+PUINT	.\wtypedef.h	/^typedef unsigned int        *PUINT;$/;"	t
+PULONG	.\wtypedef.h	/^typedef	unsigned int*	PULONG;$/;"	t
+PVOID	.\wtypedef.h	/^typedef void*			PVOID;$/;"	t
+PWORD	.\wtypedef.h	/^typedef WORD				*PWORD;$/;"	t
+PacketBase	.\PacketBase.h	/^	PacketBase(void){}$/;"	f	class:PacketBase	access:public	signature:(void)
+PacketBase	.\PacketBase.h	/^class PacketBase$/;"	c
+PacketBase::GetBodyLength	.\PacketBase.h	/^	short GetBodyLength(void)$/;"	f	class:PacketBase	access:public	signature:(void)
+PacketBase::GetCmdType	.\PacketBase.h	/^	short GetCmdType(void)$/;"	f	class:PacketBase	access:public	signature:(void)
+PacketBase::GetSequence	.\PacketBase.h	/^    short GetSequence(void)$/;"	f	class:PacketBase	access:public	signature:(void)
+PacketBase::GetSubCmdType	.\PacketBase.h	/^    short GetSubCmdType(void)$/;"	f	class:PacketBase	access:public	signature:(void)
+PacketBase::GetSubVersion	.\PacketBase.h	/^	char GetSubVersion(void)$/;"	f	class:PacketBase	access:public	signature:(void)
+PacketBase::GetVersion	.\PacketBase.h	/^	char GetVersion(void)$/;"	f	class:PacketBase	access:public	signature:(void)
+PacketBase::GetcbCheckCode	.\PacketBase.h	/^	BYTE GetcbCheckCode(void)$/;"	f	class:PacketBase	access:public	signature:(void)
+PacketBase::GetcbSourceType	.\PacketBase.h	/^    BYTE GetcbSourceType(void)$/;"	f	class:PacketBase	access:public	signature:(void)
+PacketBase::PACKET_BUFFER_SIZE	.\PacketBase.h	/^		PACKET_BUFFER_SIZE = _buffer_size$/;"	e	enum:PacketBase::__anon4
+PacketBase::PACKET_HEADER_SIZE	.\PacketBase.h	/^		PACKET_HEADER_SIZE = 9,$/;"	e	enum:PacketBase::__anon4
+PacketBase::PacketBase	.\PacketBase.h	/^	PacketBase(void){}$/;"	f	class:PacketBase	access:public	signature:(void)
+PacketBase::_Insert	.\PacketBase.h	/^	bool _Insert(const char *pIn, int nLen)$/;"	f	class:PacketBase	access:protected	signature:(const char *pIn, int nLen)
+PacketBase::_Read	.\PacketBase.h	/^	bool _Read(char *pOut, int nLen)$/;"	f	class:PacketBase	access:protected	signature:(char *pOut, int nLen)
+PacketBase::_ReadDel	.\PacketBase.h	/^	bool _ReadDel(char *pOut, int nLen)$/;"	f	class:PacketBase	access:protected	signature:(char *pOut, int nLen)
+PacketBase::_SetBegin	.\PacketBase.h	/^	void _SetBegin(short nCmdType)$/;"	f	class:PacketBase	access:protected	signature:(short nCmdType)
+PacketBase::_Write	.\PacketBase.h	/^	bool _Write(const char *pIn, int nLen)$/;"	f	class:PacketBase	access:protected	signature:(const char *pIn, int nLen)
+PacketBase::_begin	.\PacketBase.h	/^	void _begin(short nCmdType, char cVersion, char cSubVersion)$/;"	f	class:PacketBase	access:protected	signature:(short nCmdType, char cVersion, char cSubVersion)
+PacketBase::_begin	.\PacketBase.h	/^    void _begin(short nCmdType, char cVersion, char cSubVersion, short nSubCmd, short nSeq, char cSourceType)$/;"	f	class:PacketBase	access:protected	signature:(short nCmdType, char cVersion, char cSubVersion, short nSubCmd, short nSeq, char cSourceType)
+PacketBase::_copy	.\PacketBase.h	/^	bool _copy(const void *pInBuf, int nLen)$/;"	f	class:PacketBase	access:protected	signature:(const void *pInBuf, int nLen)
+PacketBase::_end	.\PacketBase.h	/^	void _end()$/;"	f	class:PacketBase	access:protected	signature:()
+PacketBase::_oldend	.\PacketBase.h	/^	void _oldend()$/;"	f	class:PacketBase	access:protected	signature:()
+PacketBase::_readHeader	.\PacketBase.h	/^	void _readHeader(char *pOut, int nLen, int nPos)$/;"	f	class:PacketBase	access:protected	signature:(char *pOut, int nLen, int nPos)
+PacketBase::_readpoint	.\PacketBase.h	/^	char *_readpoint(int nLen) \/\/◊¢“‚∑µªÿµƒ «÷∏’Î «Î…˜÷ÿ π”√string$/;"	f	class:PacketBase	access:protected	signature:(int nLen)
+PacketBase::_readundo	.\PacketBase.h	/^	void _readundo(int nLen)$/;"	f	class:PacketBase	access:protected	signature:(int nLen)
+PacketBase::_reset	.\PacketBase.h	/^	void _reset(void)$/;"	f	class:PacketBase	access:protected	signature:(void)
+PacketBase::_writeHeader	.\PacketBase.h	/^	void _writeHeader(char *pIn, int nLen, int nPos)$/;"	f	class:PacketBase	access:protected	signature:(char *pIn, int nLen, int nPos)
+PacketBase::_writezero	.\PacketBase.h	/^	bool _writezero(void)$/;"	f	class:PacketBase	access:protected	signature:(void)
+PacketBase::m_nBufPos	.\PacketBase.h	/^	int m_nBufPos;$/;"	m	class:PacketBase	access:private
+PacketBase::m_nPacketSize	.\PacketBase.h	/^	int m_nPacketSize ;	\/\/  µº ±®Œƒ◊‹≥§∂»$/;"	m	class:PacketBase	access:private
+PacketBase::m_strBuf	.\PacketBase.h	/^	char m_strBuf[PACKET_BUFFER_SIZE];	\/\/ ±®Œƒ∞¸ª∫¥Ê$/;"	m	class:PacketBase	access:private
+PacketBase::packet_buf	.\PacketBase.h	/^	char *packet_buf(void)	{return m_strBuf;}$/;"	f	class:PacketBase	access:public	signature:(void)
+PacketBase::packet_size	.\PacketBase.h	/^	int packet_size(void)	{return m_nPacketSize;}$/;"	f	class:PacketBase	access:public	signature:(void)
+PacketBase::~PacketBase	.\PacketBase.h	/^	virtual ~PacketBase(void){}$/;"	f	class:PacketBase	access:public	signature:(void)
+PacketParser	.\PacketParser.h	/^	PacketParser(void)$/;"	f	class:PacketParser	access:public	signature:(void)
+PacketParser	.\PacketParser.h	/^class PacketParser$/;"	c
+PacketParser::OnPacketComplete	.\PacketParser.h	/^	virtual int OnPacketComplete(INPUT_PACKET *) = 0;$/;"	p	class:PacketParser	access:public	signature:(INPUT_PACKET *)
+PacketParser::PacketParser	.\PacketParser.h	/^	PacketParser(void)$/;"	f	class:PacketParser	access:public	signature:(void)
+PacketParser::ParsePacket	.\PacketParser.h	/^	int ParsePacket(char *data, int length)$/;"	f	class:PacketParser	access:public	signature:(char *data, int length)
+PacketParser::REQSTATUS	.\PacketParser.h	/^	enum REQSTATUS{	REQ_REQUEST=0, REQ_HEADER, REQ_BODY, REQ_DONE, REQ_PROCESS, REQ_ERROR };$/;"	g	class:PacketParser	access:private
+PacketParser::REQ_BODY	.\PacketParser.h	/^	enum REQSTATUS{	REQ_REQUEST=0, REQ_HEADER, REQ_BODY, REQ_DONE, REQ_PROCESS, REQ_ERROR };$/;"	e	enum:PacketParser::REQSTATUS
+PacketParser::REQ_DONE	.\PacketParser.h	/^	enum REQSTATUS{	REQ_REQUEST=0, REQ_HEADER, REQ_BODY, REQ_DONE, REQ_PROCESS, REQ_ERROR };$/;"	e	enum:PacketParser::REQSTATUS
+PacketParser::REQ_ERROR	.\PacketParser.h	/^	enum REQSTATUS{	REQ_REQUEST=0, REQ_HEADER, REQ_BODY, REQ_DONE, REQ_PROCESS, REQ_ERROR };$/;"	e	enum:PacketParser::REQSTATUS
+PacketParser::REQ_HEADER	.\PacketParser.h	/^	enum REQSTATUS{	REQ_REQUEST=0, REQ_HEADER, REQ_BODY, REQ_DONE, REQ_PROCESS, REQ_ERROR };$/;"	e	enum:PacketParser::REQSTATUS
+PacketParser::REQ_PROCESS	.\PacketParser.h	/^	enum REQSTATUS{	REQ_REQUEST=0, REQ_HEADER, REQ_BODY, REQ_DONE, REQ_PROCESS, REQ_ERROR };$/;"	e	enum:PacketParser::REQSTATUS
+PacketParser::REQ_REQUEST	.\PacketParser.h	/^	enum REQSTATUS{	REQ_REQUEST=0, REQ_HEADER, REQ_BODY, REQ_DONE, REQ_PROCESS, REQ_ERROR };$/;"	e	enum:PacketParser::REQSTATUS
+PacketParser::m_Packet	.\PacketParser.h	/^	INPUT_PACKET m_Packet;$/;"	m	class:PacketParser	access:private
+PacketParser::m_nBodyLen	.\PacketParser.h	/^	int m_nBodyLen;$/;"	m	class:PacketParser	access:private
+PacketParser::m_nPacketPos	.\PacketParser.h	/^	int	m_nPacketPos;$/;"	m	class:PacketParser	access:private
+PacketParser::m_nStatus	.\PacketParser.h	/^	int m_nStatus; $/;"	m	class:PacketParser	access:private
+PacketParser::m_pBuf	.\PacketParser.h	/^	char *m_pBuf;$/;"	m	class:PacketParser	access:private
+PacketParser::m_subVersion	.\PacketParser.h	/^	short m_subVersion;$/;"	m	class:PacketParser	access:public
+PacketParser::m_version	.\PacketParser.h	/^	short m_version;$/;"	m	class:PacketParser	access:public
+PacketParser::parse_body	.\PacketParser.h	/^	bool parse_body(char *data, int length, int &ndx)$/;"	f	class:PacketParser	access:private	signature:(char *data, int length, int &ndx)
+PacketParser::parse_header	.\PacketParser.h	/^	int parse_header(void) \/\/0:≥…π¶ -1:∞¸¥ÌŒÛ -2:√¸¡Ó∑∂Œß¥ÌŒÛ -3:∞Ê±æ¥ÌŒÛ -4:≥§∂»¥ÌŒÛ$/;"	f	class:PacketParser	access:private	signature:(void)
+PacketParser::read_header	.\PacketParser.h	/^	bool read_header(char *data, int length, int &ndx)$/;"	f	class:PacketParser	access:private	signature:(char *data, int length, int &ndx)
+PacketParser::reset	.\PacketParser.h	/^	void reset(void)$/;"	f	class:PacketParser	access:protected	signature:(void)
+PacketParser::~PacketParser	.\PacketParser.h	/^	virtual ~PacketParser(void){}$/;"	f	class:PacketParser	access:public	signature:(void)
+ParsePacket	.\PacketParser.h	/^	int ParsePacket(char *data, int length)$/;"	f	class:PacketParser	access:public	signature:(char *data, int length)
+Query	.\connectpool.cpp	/^bool CMysqlStore::Query(const std::string &dml)$/;"	f	class:CMysqlStore	signature:(const std::string &dml)
+Query	.\connectpool.h	/^	virtual bool Query(const std::string &dml) = 0;$/;"	p	class:CDataStore	access:public	signature:(const std::string &dml)
+Query	.\connectpool.h	/^	virtual bool Query(const std::string &dml);$/;"	p	class:CMysqlStore	access:public	signature:(const std::string &dml)
+RECV_BUFFER	.\socket.h	11;"	d
+RECV_BUFFER	.\socket.h	9;"	d
+REDIS_RESULT	.\interface_c.h	4;"	d
+REQSTATUS	.\PacketParser.h	/^	enum REQSTATUS{	REQ_REQUEST=0, REQ_HEADER, REQ_BODY, REQ_DONE, REQ_PROCESS, REQ_ERROR };$/;"	g	class:PacketParser	access:private
+REQ_BODY	.\PacketParser.h	/^	enum REQSTATUS{	REQ_REQUEST=0, REQ_HEADER, REQ_BODY, REQ_DONE, REQ_PROCESS, REQ_ERROR };$/;"	e	enum:PacketParser::REQSTATUS
+REQ_DONE	.\PacketParser.h	/^	enum REQSTATUS{	REQ_REQUEST=0, REQ_HEADER, REQ_BODY, REQ_DONE, REQ_PROCESS, REQ_ERROR };$/;"	e	enum:PacketParser::REQSTATUS
+REQ_ERROR	.\PacketParser.h	/^	enum REQSTATUS{	REQ_REQUEST=0, REQ_HEADER, REQ_BODY, REQ_DONE, REQ_PROCESS, REQ_ERROR };$/;"	e	enum:PacketParser::REQSTATUS
+REQ_HEADER	.\PacketParser.h	/^	enum REQSTATUS{	REQ_REQUEST=0, REQ_HEADER, REQ_BODY, REQ_DONE, REQ_PROCESS, REQ_ERROR };$/;"	e	enum:PacketParser::REQSTATUS
+REQ_PROCESS	.\PacketParser.h	/^	enum REQSTATUS{	REQ_REQUEST=0, REQ_HEADER, REQ_BODY, REQ_DONE, REQ_PROCESS, REQ_ERROR };$/;"	e	enum:PacketParser::REQSTATUS
+REQ_REQUEST	.\PacketParser.h	/^	enum REQSTATUS{	REQ_REQUEST=0, REQ_HEADER, REQ_BODY, REQ_DONE, REQ_PROCESS, REQ_ERROR };$/;"	e	enum:PacketParser::REQSTATUS
+ReadBinary	.\PacketBase.h	/^	int ReadBinary(char *pBuf, int nMaxLen)$/;"	f	class:InputPacket	access:public	signature:(char *pBuf, int nMaxLen)
+ReadByte	.\PacketBase.h	/^	BYTE ReadByte(void)		{BYTE nValue = -1; base::_Read((char*)&nValue, sizeof(BYTE)); return nValue;}$/;"	f	class:InputPacket	access:public	signature:(void)
+ReadChar	.\PacketBase.h	/^	char *ReadChar(void)$/;"	f	class:InputPacket	access:public	signature:(void)
+ReadInt	.\PacketBase.h	/^	int ReadInt(void)		{int nValue = -1; base::_Read((char*)&nValue, sizeof(int)); return ntohl(nValue);} \/\/’‚¿Ô±ÿ–Ë≥ı ºªØ$/;"	f	class:InputPacket	access:public	signature:(void)
+ReadIntDel	.\PacketBase.h	/^	int ReadIntDel(void)	{int nValue = -1; base::_ReadDel((char*)&nValue, sizeof(int)); return ntohl(nValue);} $/;"	f	class:InputPacket	access:public	signature:(void)
+ReadShort	.\PacketBase.h	/^	short ReadShort(void)	{short nValue = -1; base::_Read((char*)&nValue, sizeof(short)); return ntohs(nValue);}$/;"	f	class:InputPacket	access:public	signature:(void)
+ReadString	.\PacketBase.h	/^	bool ReadString(char *pOutString, int nMaxLen)$/;"	f	class:InputPacket	access:public	signature:(char *pOutString, int nMaxLen)
+ReadString	.\PacketBase.h	/^	string ReadString(void)$/;"	f	class:InputPacket	access:public	signature:(void)
+ReadULong	.\PacketBase.h	/^	unsigned long ReadULong(void) {unsigned long nValue = -1; base::_Read((char*)&nValue, sizeof(unsigned long)); return ntohl(nValue);}$/;"	f	class:InputPacket	access:public	signature:(void)
+Reset	.\PacketBase.h	/^	void Reset(void)$/;"	f	class:InputPacket	access:public	signature:(void)
+ResetTimer	.\timer_event.cpp	/^void TimerEvent::ResetTimer()$/;"	f	class:TimerEvent	signature:()
+ResetTimer	.\timer_event.h	/^	void ResetTimer();$/;"	p	class:TimerEvent	access:public	signature:()
+RollBack	.\connectpool.cpp	/^bool CMysqlStore::RollBack()$/;"	f	class:CMysqlStore	signature:()
+RollBack	.\connectpool.h	/^	virtual bool RollBack() = 0;$/;"	p	class:CDataStore	access:public	signature:()
+RollBack	.\connectpool.h	/^	virtual bool RollBack();$/;"	p	class:CMysqlStore	access:public	signature:()
+RowCount	.\connectpool.cpp	/^unsigned long CMysqlStore::RowCount()$/;"	f	class:CMysqlStore	signature:()
+RowCount	.\connectpool.h	/^	virtual unsigned long RowCount() = 0;$/;"	p	class:CDataStore	access:public	signature:()
+RowCount	.\connectpool.h	/^	virtual unsigned long RowCount();$/;"	p	class:CMysqlStore	access:public	signature:()
+SERVER_COMMAND_PACKETVERERR	.\socket.cpp	17;"	d	file:
+SERVER_PACKET_DEFAULT_SEQ	.\PacketParser.h	/^    SERVER_PACKET_DEFAULT_SEQ = 1,$/;"	e	enum:PACKETVER
+SERVER_PACKET_DEFAULT_SOURCETYPE	.\PacketParser.h	/^    SERVER_PACKET_DEFAULT_SOURCETYPE = 1,$/;"	e	enum:PACKETVER
+SERVER_PACKET_DEFAULT_SUBCMD	.\PacketParser.h	/^    SERVER_PACKET_DEFAULT_SUBCMD = 0,$/;"	e	enum:PACKETVER
+SERVER_PACKET_DEFAULT_SUBVER	.\PacketParser.h	/^	SERVER_PACKET_DEFAULT_SUBVER = 1,$/;"	e	enum:PACKETVER
+SERVER_PACKET_DEFAULT_VER	.\PacketParser.h	/^	SERVER_PACKET_DEFAULT_VER = 1,$/;"	e	enum:PACKETVER
+SERVER_PACKET_MAX_COMMAND	.\PacketParser.h	/^    SERVER_PACKET_MAX_COMMAND = 65535$/;"	e	enum:PACKETVER
+SOCKET	.\common.h	/^typedef int SOCKET;$/;"	t
+SOCKET	.\wtypedef.h	/^typedef int SOCKET;$/;"	t
+SOCKET_ERROR	.\net.h	23;"	d
+S_IsMember	.\interface_c.cpp	/^int S_IsMember(const char* key, const char* value)$/;"	f	signature:(const char* key, const char* value)
+S_IsMember	.\interface_c.cpp	/^int S_IsMember(const char* key, const int value)$/;"	f	signature:(const char* key, const int value)
+S_IsMember	.\interface_c.h	/^int S_IsMember(const char* key, const char* value);$/;"	p	signature:(const char* key, const char* value)
+S_IsMember	.\interface_c.h	/^int S_IsMember(const char* key, const int value);$/;"	p	signature:(const char* key, const int value)
+S_IsMember	.\redis.cpp	/^CRedis::S_IsMember(const char* key, const char* value)$/;"	f	class:CRedis	signature:(const char* key, const char* value)
+S_IsMember	.\redis.cpp	/^CRedis::S_IsMember(const char* key, const int value)$/;"	f	class:CRedis	signature:(const char* key, const int value)
+S_IsMember	.\redis.h	/^	int S_IsMember(const char* key, const char* value);$/;"	p	class:CRedis	access:public	signature:(const char* key, const char* value)
+S_IsMember	.\redis.h	/^	int S_IsMember(const char* key, const int value);$/;"	p	class:CRedis	access:public	signature:(const char* key, const int value)
+SendPacketVarErr	.\socket.cpp	/^int SocketHandler::SendPacketVarErr(void)$/;"	f	class:SocketHandler	signature:(void)
+SendPacketVarErr	.\socket.h	/^	int SendPacketVarErr(void);$/;"	p	class:SocketHandler	access:public	signature:(void)
+SetBegin	.\PacketBase.h	/^	void SetBegin(short nCommand)$/;"	f	class:OutputPacket	access:public	signature:(short nCommand)
+SetClosed	.\socket.h	/^	void SetClosed(bool b) { m_is_closed = b; }$/;"	f	class:SocketHandler	access:public	signature:(bool b)
+SetFieldType	.\connectpool.cpp	/^CMysqlStore::filedtype_t CMysqlStore::SetFieldType(enum_field_types fieldtype)$/;"	f	class:CMysqlStore	signature:(enum_field_types fieldtype)
+SetFieldType	.\connectpool.h	/^	filedtype_t SetFieldType(enum_field_types fieldtype);$/;"	p	class:CMysqlStore	access:public	signature:(enum_field_types fieldtype)
+SetIncreaseID	.\connectpool.cpp	/^void CMysqlStore::SetIncreaseID(long id)$/;"	f	class:CMysqlStore	signature:(long id)
+SetIncreaseID	.\connectpool.h	/^	void SetIncreaseID(long id);$/;"	p	class:CMysqlStore	access:private	signature:(long id)
+SetTimerId	.\timer_event.cpp	/^void TimerEvent::SetTimerId(unsigned long timer_id)$/;"	f	class:TimerEvent	signature:(unsigned long timer_id)
+SetTimerId	.\timer_event.h	/^	void SetTimerId(unsigned long timer_id);$/;"	p	class:TimerEvent	access:public	signature:(unsigned long timer_id)
+SetTransAction	.\connectpool.cpp	/^bool CMysqlStore::SetTransAction(CConnect * conn)$/;"	f	class:CMysqlStore	signature:(CConnect * conn)
+SetTransAction	.\connectpool.h	/^	bool SetTransAction(CConnect * conn);$/;"	p	class:CMysqlStore	access:public	signature:(CConnect * conn)
+SetTransAction	.\connectpool.h	/^	virtual bool SetTransAction(CConnect * conn) = 0;$/;"	p	class:CDataStore	access:public	signature:(CConnect * conn)
+SocketHandler	.\net.h	/^class SocketHandler;$/;"	x
+SocketHandler	.\socket.cpp	/^SocketHandler::SocketHandler() {$/;"	f	class:SocketHandler	signature:()
+SocketHandler	.\socket.cpp	/^SocketHandler::SocketHandler(int socket_fd, bool parse_protocal, bool encrypt, int conn_type)$/;"	f	class:SocketHandler	signature:(int socket_fd, bool parse_protocal, bool encrypt, int conn_type)
+SocketHandler	.\socket.h	/^	SocketHandler();$/;"	p	class:SocketHandler	access:public	signature:()
+SocketHandler	.\socket.h	/^	SocketHandler(int sockt_fd, bool parse_protocal = true, bool encrypt = true, int conn_type = 0);$/;"	p	class:SocketHandler	access:public	signature:(int sockt_fd, bool parse_protocal = true, bool encrypt = true, int conn_type = 0)
+SocketHandler	.\socket.h	/^class SocketHandler:public PacketParser<NETInputPacket>$/;"	c	inherits:PacketParser
+SocketHandler::CrevasseBuffer	.\socket.cpp	/^int SocketHandler::CrevasseBuffer(NETInputPacket *pPacket)$/;"	f	class:SocketHandler	signature:(NETInputPacket *pPacket)
+SocketHandler::CrevasseBuffer	.\socket.h	/^	static int  CrevasseBuffer(NETInputPacket *pPacket);$/;"	p	class:SocketHandler	access:public	signature:(NETInputPacket *pPacket)
+SocketHandler::EncryptBuffer	.\socket.cpp	/^WORD SocketHandler::EncryptBuffer(NETOutputPacket *pPacket)$/;"	f	class:SocketHandler	signature:(NETOutputPacket *pPacket)
+SocketHandler::EncryptBuffer	.\socket.h	/^	static WORD EncryptBuffer(NETOutputPacket *pPacket);$/;"	p	class:SocketHandler	access:public	signature:(NETOutputPacket *pPacket)
+SocketHandler::IsServerClosed	.\socket.h	/^	bool IsServerClosed() { return m_is_closed;}$/;"	f	class:SocketHandler	access:public	signature:()
+SocketHandler::MapRecvByte	.\socket.cpp	/^BYTE SocketHandler::MapRecvByte(BYTE const cbData)$/;"	f	class:SocketHandler	signature:(BYTE const cbData)
+SocketHandler::MapRecvByte	.\socket.h	/^	static BYTE MapRecvByte(BYTE const cbData);$/;"	p	class:SocketHandler	access:public	signature:(BYTE const cbData)
+SocketHandler::MapSendByte	.\socket.cpp	/^BYTE SocketHandler::MapSendByte(BYTE const cbData)$/;"	f	class:SocketHandler	signature:(BYTE const cbData)
+SocketHandler::MapSendByte	.\socket.h	/^	static BYTE MapSendByte(BYTE const cbData);$/;"	p	class:SocketHandler	access:public	signature:(BYTE const cbData)
+SocketHandler::OnPacketComplete	.\socket.cpp	/^int SocketHandler::OnPacketComplete(NETInputPacket *pPacket)$/;"	f	class:SocketHandler	signature:(NETInputPacket *pPacket)
+SocketHandler::OnPacketComplete	.\socket.h	/^	virtual int  OnPacketComplete(NETInputPacket *);$/;"	p	class:SocketHandler	access:public	signature:(NETInputPacket *)
+SocketHandler::OnParser	.\socket.cpp	/^int SocketHandler::OnParser(char *buf, int len)$/;"	f	class:SocketHandler	signature:(char *buf, int len)
+SocketHandler::OnParser	.\socket.h	/^	int OnParser(char *buf, int nLen);$/;"	p	class:SocketHandler	access:public	signature:(char *buf, int nLen)
+SocketHandler::SendPacketVarErr	.\socket.cpp	/^int SocketHandler::SendPacketVarErr(void)$/;"	f	class:SocketHandler	signature:(void)
+SocketHandler::SendPacketVarErr	.\socket.h	/^	int SendPacketVarErr(void);$/;"	p	class:SocketHandler	access:public	signature:(void)
+SocketHandler::SetClosed	.\socket.h	/^	void SetClosed(bool b) { m_is_closed = b; }$/;"	f	class:SocketHandler	access:public	signature:(bool b)
+SocketHandler::SocketHandler	.\socket.cpp	/^SocketHandler::SocketHandler() {$/;"	f	class:SocketHandler	signature:()
+SocketHandler::SocketHandler	.\socket.cpp	/^SocketHandler::SocketHandler(int socket_fd, bool parse_protocal, bool encrypt, int conn_type)$/;"	f	class:SocketHandler	signature:(int socket_fd, bool parse_protocal, bool encrypt, int conn_type)
+SocketHandler::SocketHandler	.\socket.h	/^	SocketHandler();$/;"	p	class:SocketHandler	access:public	signature:()
+SocketHandler::SocketHandler	.\socket.h	/^	SocketHandler(int sockt_fd, bool parse_protocal = true, bool encrypt = true, int conn_type = 0);$/;"	p	class:SocketHandler	access:public	signature:(int sockt_fd, bool parse_protocal = true, bool encrypt = true, int conn_type = 0)
+SocketHandler::assign	.\socket.cpp	/^SocketHandler::assign(int sockt_fd, bool parse_protocal, bool encrypt, int conn_type)$/;"	f	class:SocketHandler	signature:(int sockt_fd, bool parse_protocal, bool encrypt, int conn_type)
+SocketHandler::assign	.\socket.h	/^	void assign(int sockt_fd, bool parse_protocal = true, bool encrypt = true, int conn_type = 0); \/\/÷ÿ–¬πÿ¡™$/;"	p	class:SocketHandler	access:public	signature:(int sockt_fd, bool parse_protocal = true, bool encrypt = true, int conn_type = 0)
+SocketHandler::build_package	.\socket.cpp	/^void SocketHandler::build_package(NETOutputPacket* pOutPack, short nCmdType, const char* pszFmt, ...)$/;"	f	class:SocketHandler	signature:(NETOutputPacket* pOutPack, short nCmdType, const char* pszFmt, ...)
+SocketHandler::build_package	.\socket.h	/^	void build_package(NETOutputPacket* pOutPack, short nCmdType, const char* pszFmt, ...);$/;"	p	class:SocketHandler	access:public	signature:(NETOutputPacket* pOutPack, short nCmdType, const char* pszFmt, ...)
+SocketHandler::clean	.\socket.cpp	/^SocketHandler::clean(bool IsClosefd)$/;"	f	class:SocketHandler	signature:(bool IsClosefd)
+SocketHandler::clean	.\socket.h	/^	void clean(bool IsClosefd);\/\/«Âø’œ‡πÿ◊ ‘¥$/;"	p	class:SocketHandler	access:public	signature:(bool IsClosefd)
+SocketHandler::fd	.\socket.h	/^	int fd() { return m_sock_fd; }$/;"	f	class:SocketHandler	access:public	signature:()
+SocketHandler::handle_close	.\socket.cpp	/^int SocketHandler::handle_close()$/;"	f	class:SocketHandler	signature:()
+SocketHandler::handle_close	.\socket.h	/^	int handle_close();$/;"	p	class:SocketHandler	access:public	signature:()
+SocketHandler::handle_output	.\socket.cpp	/^int SocketHandler::handle_output()$/;"	f	class:SocketHandler	signature:()
+SocketHandler::handle_output	.\socket.h	/^	int handle_output();$/;"	p	class:SocketHandler	access:public	signature:()
+SocketHandler::handle_read	.\socket.cpp	/^int SocketHandler::handle_read()$/;"	f	class:SocketHandler	signature:()
+SocketHandler::handle_read	.\socket.h	/^	int handle_read();$/;"	p	class:SocketHandler	access:public	signature:()
+SocketHandler::handle_timeout	.\socket.cpp	/^void SocketHandler::handle_timeout()$/;"	f	class:SocketHandler	signature:()
+SocketHandler::handle_timeout	.\socket.h	/^	static void handle_timeout();$/;"	p	class:SocketHandler	access:public	signature:()
+SocketHandler::m_RecvByteMap	.\socket.cpp	/^BYTE SocketHandler::m_RecvByteMap[256]=				$/;"	m	class:SocketHandler	file:
+SocketHandler::m_RecvByteMap	.\socket.h	/^	static BYTE	m_RecvByteMap[256];		\/\/Â≠óËäÇÊò†Â∞ÑË°®$/;"	m	class:SocketHandler	access:public
+SocketHandler::m_SendByteMap	.\socket.cpp	/^BYTE SocketHandler::m_SendByteMap[256]=				$/;"	m	class:SocketHandler	file:
+SocketHandler::m_SendByteMap	.\socket.h	/^	static BYTE	m_SendByteMap[256];		\/\/Â≠óËäÇÊò†Â∞ÑË°®$/;"	m	class:SocketHandler	access:public
+SocketHandler::m_conn_flag	.\socket.h	/^	int  m_conn_flag;		\/\/ËøûÊé•Ê†áËØÜ, ÈÄöËøáflagÊù•Âå∫Âà´ËøûÊé•Á±ªÂûã, Â¶Ç‰∏∫0Ë°®Á§∫ÂÆ¢Êà∑Á´ØËøûÊé•ÔºåÂèØÁî®ÂÖ∂‰ªñÊï∞Â≠óÂå∫Âà´Â§ßÂéÖÔºåÂêéÁ´ØËøûÊé•$/;"	m	class:SocketHandler	access:private
+SocketHandler::m_encrypt	.\socket.h	/^	bool m_encrypt;$/;"	m	class:SocketHandler	access:private
+SocketHandler::m_is_closed	.\socket.h	/^	bool m_is_closed;$/;"	m	class:SocketHandler	access:private
+SocketHandler::m_parse_protocal	.\socket.h	/^	bool m_parse_protocal;	\/\/ÊòØÂê¶Áî±ServerËß£ÊûêÂçèËÆÆ$/;"	m	class:SocketHandler	access:private
+SocketHandler::m_recvbuf	.\socket.h	/^	char m_recvbuf[RECV_BUFFER];$/;"	m	class:SocketHandler	access:private
+SocketHandler::m_sock_fd	.\socket.h	/^	int  m_sock_fd;$/;"	m	class:SocketHandler	access:private
+SocketHandler::send_packet	.\socket.cpp	/^int SocketHandler::send_packet(NETOutputPacket *pPacket)$/;"	f	class:SocketHandler	signature:(NETOutputPacket *pPacket)
+SocketHandler::send_packet	.\socket.h	/^	int send_packet(NETOutputPacket *pPacket);$/;"	p	class:SocketHandler	access:public	signature:(NETOutputPacket *pPacket)
+SocketHandler::~SocketHandler	.\socket.cpp	/^SocketHandler::~SocketHandler() $/;"	f	class:SocketHandler	signature:()
+SocketHandler::~SocketHandler	.\socket.h	/^	~SocketHandler();$/;"	p	class:SocketHandler	access:public	signature:()
+StartTimer	.\timer_event.cpp	/^void TimerEvent::StartTimer(int sec, int usec)$/;"	f	class:TimerEvent	signature:(int sec, int usec)
+StartTimer	.\timer_event.h	/^	void StartTimer(int sec, int usec = 0);$/;"	p	class:TimerEvent	access:public	signature:(int sec, int usec = 0)
+StopTimer	.\timer_event.cpp	/^void TimerEvent::StopTimer()$/;"	f	class:TimerEvent	signature:()
+StopTimer	.\timer_event.h	/^	void StopTimer();$/;"	p	class:TimerEvent	access:public	signature:()
+TCHAR	.\wtypedef.h	/^typedef char TCHAR;$/;"	t
+TCP_NODELAY	.\common.h	4;"	d
+TEMPLATE_BIND	.\tolua++.h	36;"	d
+TGW_HEADER	.\socket.cpp	/^static const char* const TGW_HEADER = "tgw_l7_forward\\r\\nHost: app100643177.qzoneapp.com:8001\\r\\n\\r\\n";$/;"	v	file:
+TOLUA_API	.\tolua++.h	20;"	d
+TOLUA_H	.\tolua++.h	17;"	d
+TOLUA_NOPEER	.\tolua++.h	57;"	d
+TOLUA_PROPERTY_TYPE	.\tolua++.h	42;"	d
+TOLUA_PROTECTED_DESTRUCTOR	.\tolua++.h	41;"	d
+TOLUA_TEMPLATE_BIND	.\tolua++.h	39;"	d
+TOLUA_VERSION	.\tolua++.h	23;"	d
+TRACE	.\log.h	62;"	d
+TRUE	.\wtypedef.h	69;"	d
+TVN_BITS	.\mtimer.c	36;"	d	file:
+TVN_MASK	.\mtimer.c	40;"	d	file:
+TVN_SIZE	.\mtimer.c	38;"	d	file:
+TVR_BITS	.\mtimer.c	37;"	d	file:
+TVR_MASK	.\mtimer.c	41;"	d	file:
+TVR_SIZE	.\mtimer.c	39;"	d	file:
+TimerEvent	.\timer_event.cpp	/^TimerEvent::TimerEvent()$/;"	f	class:TimerEvent	signature:()
+TimerEvent	.\timer_event.h	/^	TimerEvent();$/;"	p	class:TimerEvent	access:public	signature:()
+TimerEvent	.\timer_event.h	/^class TimerEvent$/;"	c
+TimerEvent::GetRemain	.\timer_event.cpp	/^TimerEvent::GetRemain()$/;"	f	class:TimerEvent	signature:()
+TimerEvent::GetRemain	.\timer_event.h	/^	int GetRemain(); \/\/ add austinch at 2012\/06\/13$/;"	p	class:TimerEvent	access:public	signature:()
+TimerEvent::OnTimer	.\timer_event.cpp	/^void TimerEvent::OnTimer(unsigned long timer_id)$/;"	f	class:TimerEvent	signature:(unsigned long timer_id)
+TimerEvent::OnTimer	.\timer_event.h	/^	void OnTimer(unsigned long timer_id);$/;"	p	class:TimerEvent	access:public	signature:(unsigned long timer_id)
+TimerEvent::ResetTimer	.\timer_event.cpp	/^void TimerEvent::ResetTimer()$/;"	f	class:TimerEvent	signature:()
+TimerEvent::ResetTimer	.\timer_event.h	/^	void ResetTimer();$/;"	p	class:TimerEvent	access:public	signature:()
+TimerEvent::SetTimerId	.\timer_event.cpp	/^void TimerEvent::SetTimerId(unsigned long timer_id)$/;"	f	class:TimerEvent	signature:(unsigned long timer_id)
+TimerEvent::SetTimerId	.\timer_event.h	/^	void SetTimerId(unsigned long timer_id);$/;"	p	class:TimerEvent	access:public	signature:(unsigned long timer_id)
+TimerEvent::StartTimer	.\timer_event.cpp	/^void TimerEvent::StartTimer(int sec, int usec)$/;"	f	class:TimerEvent	signature:(int sec, int usec)
+TimerEvent::StartTimer	.\timer_event.h	/^	void StartTimer(int sec, int usec = 0);$/;"	p	class:TimerEvent	access:public	signature:(int sec, int usec = 0)
+TimerEvent::StopTimer	.\timer_event.cpp	/^void TimerEvent::StopTimer()$/;"	f	class:TimerEvent	signature:()
+TimerEvent::StopTimer	.\timer_event.h	/^	void StopTimer();$/;"	p	class:TimerEvent	access:public	signature:()
+TimerEvent::TimerEvent	.\timer_event.cpp	/^TimerEvent::TimerEvent()$/;"	f	class:TimerEvent	signature:()
+TimerEvent::TimerEvent	.\timer_event.h	/^	TimerEvent();$/;"	p	class:TimerEvent	access:public	signature:()
+TimerEvent::m_ev	.\timer_event.h	/^	time_ev m_ev;$/;"	m	class:TimerEvent	access:public
+TimerEvent::m_guid	.\timer_event.h	/^	unsigned long m_guid;			\/\/ÊØè‰∏™TimerEventÁöÑÂîØ‰∏Äid$/;"	m	class:TimerEvent	access:public
+TimerEvent::m_increase_id	.\timer_event.cpp	/^unsigned long  TimerEvent::m_increase_id = 0;$/;"	m	class:TimerEvent	file:
+TimerEvent::m_increase_id	.\timer_event.h	/^	static unsigned long m_increase_id;	$/;"	m	class:TimerEvent	access:public
+TimerEvent::m_timeout	.\timer_event.h	/^	int m_timeout;$/;"	m	class:TimerEvent	access:public
+TimerEvent::~TimerEvent	.\timer_event.cpp	/^TimerEvent::~TimerEvent(void)$/;"	f	class:TimerEvent	signature:(void)
+TimerEvent::~TimerEvent	.\timer_event.h	/^	~TimerEvent(void);$/;"	p	class:TimerEvent	access:public	signature:(void)
+UCHAR	.\wtypedef.h	/^typedef unsigned char   UCHAR;$/;"	t
+UINT	.\wtypedef.h	/^typedef unsigned int    UINT;$/;"	t
+ULONG	.\wtypedef.h	/^typedef unsigned long   ULONG;$/;"	t
+ULONG_PTR	.\wtypedef.h	/^typedef unsigned long		ULONG_PTR;$/;"	t
+UNKNOWN	.\connectpool.h	/^	{CHAR = 1,INT = 2,DATETIME = 3,DOUBLE = 4,DEC = 5,UNKNOWN = 6};$/;"	e	enum:CMysqlStore::filedtype_t
+USHORT	.\wtypedef.h	/^typedef unsigned short  USHORT;$/;"	t
+UUID	.\interface_c.cpp	/^} GUID, UUID;$/;"	t	typeref:struct:__anon1	file:
+UUID_RESULT	.\interface_c.h	5;"	d
+VOID	.\wtypedef.h	/^typedef void			VOID;$/;"	t
+WORD	.\wtypedef.h	/^typedef unsigned short	WORD;$/;"	t
+WPARAM	.\wtypedef.h	71;"	d
+WSAEINTR	.\interface_c.cpp	21;"	d	file:
+WSAEWOULDBLOCK	.\interface_c.cpp	20;"	d	file:
+WSAGetLastError	.\interface_c.cpp	19;"	d	file:
+WSAGetLastError	.\net.h	24;"	d
+What	.\connectpool.cpp	/^const std::string CMysqlStore::What()$/;"	f	class:CMysqlStore	signature:()
+What	.\connectpool.h	/^	std::string What(){return m_err;}$/;"	f	class:CConnect	access:public	signature:()
+What	.\connectpool.h	/^	virtual const std::string What() = 0;$/;"	p	class:CDataStore	access:public	signature:()
+What	.\connectpool.h	/^	virtual const std::string What();$/;"	p	class:CMysqlStore	access:public	signature:()
+WriteBinary	.\PacketBase.h	/^	bool WriteBinary(const char *pBuf, int nLen)$/;"	f	class:OutputPacket	access:public	signature:(const char *pBuf, int nLen)
+WriteBody	.\PacketBase.h	/^	bool WriteBody(const char *pIn, int nLen)$/;"	f	class:InputPacket	access:public	signature:(const char *pIn, int nLen)
+WriteByte	.\PacketBase.h	/^	bool WriteByte(BYTE nValue)		{return base::_Write((char*)&nValue, sizeof(BYTE));}$/;"	f	class:OutputPacket	access:public	signature:(BYTE nValue)
+WriteInt	.\PacketBase.h	/^	bool WriteInt(int nValue)		{int value = htonl(nValue); return base::_Write((char*)&value, sizeof(int));}$/;"	f	class:OutputPacket	access:public	signature:(int nValue)
+WriteShort	.\PacketBase.h	/^	bool WriteShort(short nValue)	{short value = htons(nValue); return base::_Write((char*)&value, sizeof(short));}$/;"	f	class:OutputPacket	access:public	signature:(short nValue)
+WriteString	.\PacketBase.h	/^	bool WriteString(const char *pString)$/;"	f	class:OutputPacket	access:public	signature:(const char *pString)
+WriteString	.\PacketBase.h	/^	bool WriteString(const string &strDate)$/;"	f	class:OutputPacket	access:public	signature:(const string &strDate)
+WriteULong	.\PacketBase.h	/^	bool WriteULong(unsigned long nValue) {unsigned long value = htonl(nValue);return base::_Write((char*)&value, sizeof(unsigned long));}$/;"	f	class:OutputPacket	access:public	signature:(unsigned long nValue)
+WritecbCheckCode	.\PacketBase.h	/^	void WritecbCheckCode(BYTE nValue)$/;"	f	class:OutputPacket	access:public	signature:(BYTE nValue)
+_AFX_INLINE	.\wtypedef.h	80;"	d
+_CONNECTPOOL_H_	.\connectpool.h	3;"	d
+_Insert	.\PacketBase.h	/^	bool _Insert(const char *pIn, int nLen)$/;"	f	class:PacketBase	access:protected	signature:(const char *pIn, int nLen)
+_LINUX_LIST_H	.\clist.h	9;"	d
+_LLIST_H_	.\llist.h	2;"	d
+_Read	.\PacketBase.h	/^	bool _Read(char *pOut, int nLen)$/;"	f	class:PacketBase	access:protected	signature:(char *pOut, int nLen)
+_ReadDel	.\PacketBase.h	/^	bool _ReadDel(char *pOut, int nLen)$/;"	f	class:PacketBase	access:protected	signature:(char *pOut, int nLen)
+_SINFOR_WTYPE_HEADER_2005_10_08_BY_WINDOG	.\wtypedef.h	4;"	d
+_SetBegin	.\PacketBase.h	/^	void _SetBegin(short nCmdType)$/;"	f	class:PacketBase	access:protected	signature:(short nCmdType)
+_TUCHAR	.\wtypedef.h	/^typedef unsigned char _TUCHAR;$/;"	t
+_Write	.\PacketBase.h	/^	bool _Write(const char *pIn, int nLen)$/;"	f	class:PacketBase	access:protected	signature:(const char *pIn, int nLen)
+__INIT_NET_ENVIR__	.\net.h	25;"	d
+__KERNEL__	.\mtimer.h	6;"	d
+__TTCLOG_H__	.\log.h	2;"	d
+__TTREDIS_H__	.\redis.h	3;"	d
+____cacheline_aligned	.\mtimer.c	/^} ____cacheline_aligned;$/;"	v	typeref:struct:tvec_base
+__anon1::Data1	.\interface_c.cpp	/^	unsigned int	Data1;$/;"	m	struct:__anon1	file:	access:public
+__anon1::Data2	.\interface_c.cpp	/^	unsigned short 	Data2;$/;"	m	struct:__anon1	file:	access:public
+__anon1::Data3	.\interface_c.cpp	/^	unsigned short 	Data3;$/;"	m	struct:__anon1	file:	access:public
+__anon1::Data4	.\interface_c.cpp	/^	unsigned char 	Data4[8];$/;"	m	struct:__anon1	file:	access:public
+__anon2::i	.\llist.h	/^	int i;$/;"	m	struct:__anon2	access:public
+__anon2::j	.\llist.h	/^	int j;$/;"	m	struct:__anon2	access:public
+__anon2::k	.\llist.h	/^	void* k;$/;"	m	struct:__anon2	access:public
+__anon3::head	.\llist.h	/^	struct lnode head;$/;"	m	struct:__anon3	typeref:struct:__anon3::lnode	access:public
+__anon3::num	.\llist.h	/^	int num;$/;"	m	struct:__anon3	access:public
+__hlist_del	.\clist.h	/^static inline void __hlist_del(struct hlist_node *n)$/;"	f	signature:(struct hlist_node *n)
+__list_add	.\clist.h	/^extern void __list_add(struct list_head *new,$/;"	p	signature:(struct list_head *new, struct list_head *prev, struct list_head *next)
+__list_add	.\clist.h	/^static inline void __list_add(struct list_head *new,$/;"	f	signature:(struct list_head *new, struct list_head *prev, struct list_head *next)
+__list_cut_position	.\clist.h	/^static inline void __list_cut_position(struct list_head *list,$/;"	f	signature:(struct list_head *list, struct list_head *head, struct list_head *entry)
+__list_del	.\clist.h	/^static inline void __list_del(struct list_head * prev, struct list_head * next)$/;"	f	signature:(struct list_head * prev, struct list_head * next)
+__list_del_entry	.\clist.h	/^extern void __list_del_entry(struct list_head *entry);$/;"	p	signature:(struct list_head *entry)
+__list_del_entry	.\clist.h	/^static inline void __list_del_entry(struct list_head *entry)$/;"	f	signature:(struct list_head *entry)
+__list_for_each	.\clist.h	421;"	d
+__list_splice	.\clist.h	/^static inline void __list_splice(const struct list_head *list,$/;"	f	signature:(const struct list_head *list, struct list_head *prev, struct list_head *next)
+__log_level__	.\log.cpp	/^int __log_level__ = 6;$/;"	v
+__log_level__	.\log.h	16;"	d
+_begin	.\PacketBase.h	/^	void _begin(short nCmdType, char cVersion, char cSubVersion)$/;"	f	class:PacketBase	access:protected	signature:(short nCmdType, char cVersion, char cSubVersion)
+_begin	.\PacketBase.h	/^    void _begin(short nCmdType, char cVersion, char cSubVersion, short nSubCmd, short nSeq, char cSourceType)$/;"	f	class:PacketBase	access:protected	signature:(short nCmdType, char cVersion, char cSubVersion, short nSubCmd, short nSeq, char cSourceType)
+_copy	.\PacketBase.h	/^	bool _copy(const void *pInBuf, int nLen)$/;"	f	class:PacketBase	access:protected	signature:(const void *pInBuf, int nLen)
+_end	.\PacketBase.h	/^	void _end()$/;"	f	class:PacketBase	access:protected	signature:()
+_message	.\protocal.h	/^    _message()$/;"	f	struct:_message	access:public	signature:()
+_message	.\protocal.h	/^typedef struct _message {$/;"	s
+_message::_message	.\protocal.h	/^    _message()$/;"	f	struct:_message	access:public	signature:()
+_message::call_back	.\protocal.h	/^    char call_back[32];     \/\/ÂõûË∞ÉÂáΩÊï∞$/;"	m	struct:_message	access:public
+_message::cmd	.\protocal.h	/^    int  cmd;               \/\/ÂëΩ‰ª§Â≠óÁ±ªÂûã$/;"	m	struct:_message	access:public
+_message::desc	.\protocal.h	/^    char desc[256];         \/\/ÊèèËø∞$/;"	m	struct:_message	access:public
+_message::format	.\protocal.h	/^    char format[128];       \/\/Ê†ºÂºè$/;"	m	struct:_message	access:public
+_new_handler	.\net.cpp	/^Net::_new_handler(SOCKET sock_fd, bool parse_protocal, bool encrypt, int conn_type) $/;"	f	class:Net	signature:(SOCKET sock_fd, bool parse_protocal, bool encrypt, int conn_type)
+_new_handler	.\net.h	/^	SocketHandler* _new_handler($/;"	p	class:Net	access:private	signature:( SOCKET sock_fd, bool parse_protocal = true, bool encrypt = true, int conn_type = 0)
+_oldend	.\PacketBase.h	/^	void _oldend()$/;"	f	class:PacketBase	access:protected	signature:()
+_print_all_handler	.\net.cpp	/^Net::_print_all_handler() $/;"	f	class:Net	signature:()
+_print_all_handler	.\net.h	/^	void _print_all_handler();$/;"	p	class:Net	access:private	signature:()
+_readHeader	.\PacketBase.h	/^	void _readHeader(char *pOut, int nLen, int nPos)$/;"	f	class:PacketBase	access:protected	signature:(char *pOut, int nLen, int nPos)
+_readpoint	.\PacketBase.h	/^	char *_readpoint(int nLen) \/\/◊¢“‚∑µªÿµƒ «÷∏’Î «Î…˜÷ÿ π”√string$/;"	f	class:PacketBase	access:protected	signature:(int nLen)
+_readundo	.\PacketBase.h	/^	void _readundo(int nLen)$/;"	f	class:PacketBase	access:protected	signature:(int nLen)
+_register_event	.\net.cpp	/^Net::_register_event(int fd, SocketHandler* handler)$/;"	f	class:Net	signature:(int fd, SocketHandler* handler)
+_register_event	.\net.h	/^	void _register_event(int fd, SocketHandler* handler);$/;"	p	class:Net	access:private	signature:(int fd, SocketHandler* handler)
+_reset	.\PacketBase.h	/^	void _reset(void)$/;"	f	class:PacketBase	access:protected	signature:(void)
+_set_defer_accept	.\net.cpp	/^_set_defer_accept(int fd) $/;"	f	file:	signature:(int fd)
+_set_linger_socket	.\net.cpp	/^_set_linger_socket(int fd) {$/;"	f	file:	signature:(int fd)
+_set_non_block	.\net.cpp	/^_set_non_block(int fd)$/;"	f	file:	signature:(int fd)
+_start_linux	.\net.cpp	/^Net::_start_linux()$/;"	f	class:Net	signature:()
+_start_linux	.\net.h	/^	bool _start_linux();$/;"	p	class:Net	access:private	signature:()
+_writeHeader	.\PacketBase.h	/^	void _writeHeader(char *pIn, int nLen, int nPos)$/;"	f	class:PacketBase	access:protected	signature:(char *pIn, int nLen, int nPos)
+_writezero	.\PacketBase.h	/^	bool _writezero(void)$/;"	f	class:PacketBase	access:protected	signature:(void)
+appname	.\log.cpp	/^static char appname[32];$/;"	v	file:
+argv_index	.\getopt.c	/^static int argv_index = 0;             \/* Option we're checking *\/$/;"	v	file:
+argv_index2	.\getopt.c	/^static int argv_index2 = 0;            \/* Option argument we're checking *\/$/;"	v	file:
+array	.\tolua++.h	/^	int array;$/;"	m	struct:tolua_Error	access:public
+assign	.\socket.cpp	/^SocketHandler::assign(int sockt_fd, bool parse_protocal, bool encrypt, int conn_type)$/;"	f	class:SocketHandler	signature:(int sockt_fd, bool parse_protocal, bool encrypt, int conn_type)
+assign	.\socket.h	/^	void assign(int sockt_fd, bool parse_protocal = true, bool encrypt = true, int conn_type = 0); \/\/÷ÿ–¬πÿ¡™$/;"	p	class:SocketHandler	access:public	signature:(int sockt_fd, bool parse_protocal = true, bool encrypt = true, int conn_type = 0)
+base	.\PacketBase.h	/^	typedef PacketBase<BUFFER_SIZE> base;$/;"	t	class:OutputPacket	access:public
+base	.\PacketBase.h	/^	typedef PacketBase<_buffer_size> base;$/;"	t	class:InputPacket	access:public
+base	.\mtimer.h	/^    timer_base_t *base;$/;"	m	struct:timer_list	access:public
+binding_cpu	.\main.cpp	/^binding_cpu(void)$/;"	f	file:	signature:(void)
+build_package	.\socket.cpp	/^void SocketHandler::build_package(NETOutputPacket* pOutPack, short nCmdType, const char* pszFmt, ...)$/;"	f	class:SocketHandler	signature:(NETOutputPacket* pOutPack, short nCmdType, const char* pszFmt, ...)
+build_package	.\socket.h	/^	void build_package(NETOutputPacket* pOutPack, short nCmdType, const char* pszFmt, ...);$/;"	p	class:SocketHandler	access:public	signature:(NETOutputPacket* pOutPack, short nCmdType, const char* pszFmt, ...)
+byte	.\wtypedef.h	/^typedef byte_t byte;$/;"	t
+byte_t	.\wtypedef.h	/^typedef unsigned char	byte_t;$/;"	t
+call_back	.\protocal.h	/^    char call_back[32];     \/\/ÂõûË∞ÉÂáΩÊï∞$/;"	m	struct:_message	access:public
+call_lua	.\lua_interface.cpp	/^int call_lua (const char *func, const char *sig, ...) {$/;"	f	signature:(const char *func, const char *sig, ...)
+call_lua	.\lua_interface.h	/^int call_lua (const char *func, const char *sig, ...);$/;"	p	signature:(const char *func, const char *sig, ...)
+call_timer_fn	.\mtimer.c	/^static void call_timer_fn(struct timer_list *timer, void (*fn)(void*),$/;"	f	file:	signature:(struct timer_list *timer, void (*fn)(void*), void* data)
+callback	.\timer.h	/^	void (*callback)(void* ptr);$/;"	m	struct:time_ev	access:public
+cascade	.\mtimer.c	/^cascade(struct tvec_base *base, struct tvec *tv, int index)$/;"	f	file:	signature:(struct tvec_base *base, struct tvec *tv, int index)
+cast	.\PacketParser.h	17;"	d
+cast_uint16	.\PacketParser.h	18;"	d
+class_gc_event	.\tolua++.h	/^TOLUA_API int class_gc_event (lua_State* L);$/;"	p	signature:(lua_State* L)
+clean	.\socket.cpp	/^SocketHandler::clean(bool IsClosefd)$/;"	f	class:SocketHandler	signature:(bool IsClosefd)
+clean	.\socket.h	/^	void clean(bool IsClosefd);\/\/«Âø’œ‡πÿ◊ ‘¥$/;"	p	class:SocketHandler	access:public	signature:(bool IsClosefd)
+clear_timer	.\interface_c.cpp	/^int clear_timer(unsigned long timer_id)$/;"	f	signature:(unsigned long timer_id)
+clear_timer	.\interface_c.h	/^int clear_timer(unsigned long timer_id);$/;"	p	signature:(unsigned long timer_id)
+close_socket	.\interface_c.cpp	/^int close_socket(int fd)$/;"	f	signature:(int fd)
+close_socket	.\interface_c.h	/^int close_socket(int fd);$/;"	p	signature:(int fd)
+cmd	.\protocal.h	/^    int  cmd;               \/\/ÂëΩ‰ª§Â≠óÁ±ªÂûã$/;"	m	struct:_message	access:public
+connect_mysql	.\interface_c.cpp	/^int connect_mysql(const char* host, const char* user, const char* password, const char* dbname, unsigned int port)$/;"	f	signature:(const char* host, const char* user, const char* password, const char* dbname, unsigned int port)
+connect_mysql	.\interface_c.h	/^int connect_mysql(const char* host, const char* user, const char* password, const char* dbname, unsigned int port);$/;"	p	signature:(const char* host, const char* user, const char* password, const char* dbname, unsigned int port)
+connect_mysql	.\mysql_part.cpp	/^int CMysql::connect_mysql(const char* host, const char* user, const char* password, const char* dbname, unsigned int port)$/;"	f	class:CMysql	signature:(const char* host, const char* user, const char* password, const char* dbname, unsigned int port)
+connect_mysql	.\mysql_part.h	/^    int connect_mysql(const char* host, const char* user, const char* password, const char* dbname, unsigned int port);$/;"	p	class:CMysql	access:public	signature:(const char* host, const char* user, const char* password, const char* dbname, unsigned int port)
+connect_redis	.\interface_c.cpp	/^int connect_redis(const char* host, unsigned int port, unsigned short second)$/;"	f	signature:(const char* host, unsigned int port, unsigned short second)
+connect_redis	.\interface_c.h	/^int connect_redis(const char* host, unsigned int port, unsigned short second = 0);$/;"	p	signature:(const char* host, unsigned int port, unsigned short second = 0)
+connect_redis	.\redis.cpp	/^int CRedis::connect_redis(const char* host, unsigned int port, unsigned short second)$/;"	f	class:CRedis	signature:(const char* host, unsigned int port, unsigned short second)
+connect_redis	.\redis.h	/^    int connect_redis(const char* host, unsigned int port, unsigned short second = 0);$/;"	p	class:CRedis	access:public	signature:(const char* host, unsigned int port, unsigned short second = 0)
+connect_server	.\interface_c.cpp	/^int connect_server(char* ip, int port)$/;"	f	signature:(char* ip, int port)
+connect_server	.\interface_c.cpp	/^int connect_server(char* ip, int port, bool is_encrypt, int conn_flag)$/;"	f	signature:(char* ip, int port, bool is_encrypt, int conn_flag)
+connect_server	.\interface_c.h	/^int connect_server(char* ip, int port);$/;"	p	signature:(char* ip, int port)
+connect_server	.\interface_c.h	/^int connect_server(char* ip, int port, bool is_encrypt, int conn_flag);$/;"	p	signature:(char* ip, int port, bool is_encrypt, int conn_flag)
+connect_server	.\net.cpp	/^Net::connect_server(const char* ip, const int port, bool encrypt, int conn_flag)$/;"	f	class:Net	signature:(const char* ip, const int port, bool encrypt, int conn_flag)
+connect_server	.\net.h	/^	int  connect_server(const char* ip, const int port, bool encrypt, int conn_flag);$/;"	p	class:Net	access:public	signature:(const char* ip, const int port, bool encrypt, int conn_flag)
+container_of	.\clist.h	51;"	d
+count_alloc	.\plex.h	/^    size_t            count_alloc;  \/\/º«¬º∑÷≈‰µƒ¥Œ ˝$/;"	m	struct:plex	access:public
+count_free	.\plex.h	/^    size_t            count_free;   \/\/º«¬º Õ∑≈µƒ¥Œ ˝$/;"	m	struct:plex	access:public
+create_listener	.\interface_c.cpp	/^int create_listener(int port)$/;"	f	signature:(int port)
+create_listener	.\interface_c.h	/^int create_listener(int port);$/;"	p	signature:(int port)
+create_listener	.\net.cpp	/^Net::create_listener(int port)$/;"	f	class:Net	signature:(int port)
+create_listener	.\net.h	/^	int  create_listener(int port);$/;"	p	class:Net	access:public	signature:(int port)
+create_timer	.\interface_c.cpp	/^int create_timer()$/;"	f	signature:()
+create_timer	.\interface_c.h	/^int create_timer();$/;"	p	signature:()
+ctx	.\mtimer.h	/^    void* ctx;$/;"	m	struct:timer_list	access:public
+cur_file_pos	.\log.cpp	/^static int  cur_file_pos    = 0;$/;"	v	file:
+daemonize	.\daemonize.h	/^void daemonize()$/;"	f	signature:()
+dashdash	.\getopt.c	/^static int dashdash = 0;               \/* True if "--" option reached *\/$/;"	v	file:
+data	.\plex.h	/^    char              data[0];      \/\/ ˝æ›≤ø∑÷£¨º¥÷⁄∂‡–°ƒ⁄¥Ê∆¨$/;"	m	struct:mem_block	access:public
+data	.\plex.h	/^    char              data[sizeof(char*)];\/\/ƒ⁄¥Ê∆¨µƒ ˝æ›≤ø∑÷$/;"	m	union:mem_item	access:public
+debug	.\interface_c.cpp	/^void debug(const char* msg)$/;"	f	signature:(const char* msg)
+debug	.\interface_c.h	/^void debug(const char* msg);$/;"	p	signature:(const char* msg)
+desc	.\protocal.h	/^    char desc[256];         \/\/ÊèèËø∞$/;"	m	struct:_message	access:public
+detach_slowtimer	.\mtimer.c	/^detach_slowtimer(stimer_t * timer)$/;"	f	file:	signature:(stimer_t * timer)
+element	.\llist.h	/^	ELE* element;	$/;"	m	struct:lnode	access:public
+entry	.\mtimer.c	/^struct list_head *entry;$/;"	v	typeref:struct:list_head
+entry	.\mtimer.h	/^	struct list_head entry;$/;"	m	struct:timer_list	typeref:struct:timer_list::list_head	access:public
+epoll	.\net.cpp	/^Net::epoll()$/;"	f	class:Net	signature:()
+epoll	.\net.h	/^    int  epoll();$/;"	p	class:Net	access:public	signature:()
+error	.\interface_c.cpp	/^void error(const char* msg)$/;"	f	signature:(const char* msg)
+error	.\interface_c.h	/^void error(const char* msg);$/;"	p	signature:(const char* msg)
+expires	.\mtimer.h	/^	unsigned long expires;$/;"	m	struct:timer_list	access:public
+fd	.\socket.h	/^	int fd() { return m_sock_fd; }$/;"	f	class:SocketHandler	access:public	signature:()
+filedtype_t	.\connectpool.h	/^	enum  filedtype_t$/;"	g	class:CMysqlStore	access:private
+find	.\timer.c	/^int find(ELE* pELE, void* key)$/;"	f	signature:(ELE* pELE, void* key)
+find_p	.\llist.h	/^list_find_p find_p;$/;"	v
+first	.\clist.h	/^	struct hlist_node *first;$/;"	m	struct:hlist_head	typeref:struct:hlist_head::hlist_node	access:public
+format	.\protocal.h	/^    char format[128];       \/\/Ê†ºÂºè$/;"	m	struct:_message	access:public
+free	.\plex.h	/^    union mem_item*   free;         \/\/º«¬ºø…∑÷≈‰µƒƒ⁄¥ÊøÈ$/;"	m	struct:plex	typeref:union:plex::mem_item	access:public
+function	.\mtimer.h	/^	void (*function)(void*);$/;"	m	struct:timer_list	access:public
+get_message	.\protocal.cpp	/^CProtocal::get_message(unsigned short cmd)$/;"	f	class:CProtocal	signature:(unsigned short cmd)
+get_message	.\protocal.h	/^    static Message get_message(unsigned short cmd);$/;"	p	class:CProtocal	access:public	signature:(unsigned short cmd)
+get_redis_value	.\interface_c.cpp	/^int get_redis_value(const char* key)$/;"	f	signature:(const char* key)
+get_redis_value	.\interface_c.h	/^int get_redis_value(const char* key);$/;"	p	signature:(const char* key)
+get_value	.\redis.cpp	/^int CRedis::get_value(const char* key)$/;"	f	class:CRedis	signature:(const char* key)
+get_value	.\redis.h	/^    int get_value(const char* key);$/;"	p	class:CRedis	access:public	signature:(const char* key)
+getopt	.\getopt.c	/^int getopt(int argc, char** argv, char* optstr)$/;"	f	signature:(int argc, char** argv, char* optstr)
+getopt	.\getopt.h	/^int getopt(int argc, char** argv, char* optstr);$/;"	p	signature:(int argc, char** argv, char* optstr)
+handle_accept	.\net.cpp	/^Net::handle_accept()$/;"	f	class:Net	signature:()
+handle_accept	.\net.h	/^	int  handle_accept();$/;"	p	class:Net	access:public	signature:()
+handle_close	.\net.cpp	/^Net::handle_close(SocketHandler* sh)$/;"	f	class:Net	signature:(SocketHandler* sh)
+handle_close	.\net.h	/^	void handle_close(SocketHandler* sh);$/;"	p	class:Net	access:private	signature:(SocketHandler* sh)
+handle_close	.\socket.cpp	/^int SocketHandler::handle_close()$/;"	f	class:SocketHandler	signature:()
+handle_close	.\socket.h	/^	int handle_close();$/;"	p	class:SocketHandler	access:public	signature:()
+handle_output	.\socket.cpp	/^int SocketHandler::handle_output()$/;"	f	class:SocketHandler	signature:()
+handle_output	.\socket.h	/^	int handle_output();$/;"	p	class:SocketHandler	access:public	signature:()
+handle_read	.\socket.cpp	/^int SocketHandler::handle_read()$/;"	f	class:SocketHandler	signature:()
+handle_read	.\socket.h	/^	int handle_read();$/;"	p	class:SocketHandler	access:public	signature:()
+handle_timeout	.\socket.cpp	/^void SocketHandler::handle_timeout()$/;"	f	class:SocketHandler	signature:()
+handle_timeout	.\socket.h	/^	static void handle_timeout();$/;"	p	class:SocketHandler	access:public	signature:()
+handle_timeout	.\timer_event.cpp	/^void handle_timeout(void* ptr)$/;"	f	signature:(void* ptr)
+hclosed	.\net.cpp	61;"	d	file:
+head	.\llist.h	/^	struct lnode head;$/;"	m	struct:__anon3	typeref:struct:__anon3::lnode	access:public
+head	.\plex.h	/^    struct mem_block* head;         \/\/º«¬º¥”œµÕ≥…Í«Îµƒƒ⁄¥ÊøÈ$/;"	m	struct:plex	typeref:struct:plex::mem_block	access:public
+hlist_add_after	.\clist.h	/^static inline void hlist_add_after(struct hlist_node *n,$/;"	f	signature:(struct hlist_node *n, struct hlist_node *next)
+hlist_add_before	.\clist.h	/^static inline void hlist_add_before(struct hlist_node *n,$/;"	f	signature:(struct hlist_node *n, struct hlist_node *next)
+hlist_add_fake	.\clist.h	/^static inline void hlist_add_fake(struct hlist_node *n)$/;"	f	signature:(struct hlist_node *n)
+hlist_add_head	.\clist.h	/^static inline void hlist_add_head(struct hlist_node *n, struct hlist_head *h)$/;"	f	signature:(struct hlist_node *n, struct hlist_head *h)
+hlist_del	.\clist.h	/^static inline void hlist_del(struct hlist_node *n)$/;"	f	signature:(struct hlist_node *n)
+hlist_del_init	.\clist.h	/^static inline void hlist_del_init(struct hlist_node *n)$/;"	f	signature:(struct hlist_node *n)
+hlist_empty	.\clist.h	/^static inline int hlist_empty(const struct hlist_head *h)$/;"	f	signature:(const struct hlist_head *h)
+hlist_entry	.\clist.h	701;"	d
+hlist_for_each	.\clist.h	703;"	d
+hlist_for_each_entry	.\clist.h	717;"	d
+hlist_for_each_entry_continue	.\clist.h	729;"	d
+hlist_for_each_entry_from	.\clist.h	741;"	d
+hlist_for_each_entry_safe	.\clist.h	754;"	d
+hlist_for_each_safe	.\clist.h	706;"	d
+hlist_head	.\clist.h	/^struct hlist_head {$/;"	s
+hlist_head::first	.\clist.h	/^	struct hlist_node *first;$/;"	m	struct:hlist_head	typeref:struct:hlist_head::hlist_node	access:public
+hlist_move_list	.\clist.h	/^static inline void hlist_move_list(struct hlist_head *old,$/;"	f	signature:(struct hlist_head *old, struct hlist_head *new)
+hlist_node	.\clist.h	/^struct hlist_node {$/;"	s
+hlist_node::next	.\clist.h	/^	struct hlist_node *next, **pprev;$/;"	m	struct:hlist_node	typeref:struct:hlist_node::hlist_node	access:public
+hlist_node::pprev	.\clist.h	/^	struct hlist_node *next, **pprev;$/;"	m	struct:hlist_node	typeref:struct:hlist_node::	access:public
+hlist_unhashed	.\clist.h	/^static inline int hlist_unhashed(const struct hlist_node *h)$/;"	f	signature:(const struct hlist_node *h)
+hostip_t	.\wtypedef.h	/^typedef unsigned long	hostip_t;		\/\/÷˜ª˙◊÷Ω⁄–Úµƒip$/;"	t
+hostport_t	.\wtypedef.h	/^typedef unsigned short	hostport_t;		\/\/÷˜ª˙◊÷Ω⁄–Úµƒport$/;"	t
+i	.\llist.h	/^	int i;$/;"	m	struct:__anon2	access:public
+in_package	.\interface_c.cpp	/^extern NETInputPacket in_package;$/;"	x
+in_package	.\socket.cpp	/^NETInputPacket in_package;$/;"	v
+increment_index	.\getopt.c	/^static void increment_index()$/;"	f	file:
+index	.\connectpool.h	/^		unsigned int index;$/;"	m	struct:CMysqlStore::typeset_t	access:public
+index	.\tolua++.h	/^	int index;$/;"	m	struct:tolua_Error	access:public
+info	.\interface_c.cpp	/^void info(const char* msg)$/;"	f	signature:(const char* msg)
+info	.\interface_c.h	/^void info(const char* msg);$/;"	p	signature:(const char* msg)
+init	.\net.cpp	/^Net::init()$/;"	f	class:Net	signature:()
+init	.\net.h	/^	bool init();$/;"	p	class:Net	access:public	signature:()
+init	.\protocal.cpp	/^int CProtocal::init()$/;"	f	class:CProtocal	signature:()
+init	.\protocal.h	/^	static int init();$/;"	p	class:CProtocal	access:public	signature:()
+init_log	.\log.cpp	/^void init_log (const char *app, const char *dir, int max_num, int max_size)$/;"	f	signature:(const char *app, const char *dir, int max_num, int max_size)
+init_log	.\log.cpp	/^void init_log (const char *app, const char *dir, int max_num, int max_size){}$/;"	f	signature:(const char *app, const char *dir, int max_num, int max_size)
+init_log	.\log.h	/^static inline void init_log (const char *app, const char *dir = NULL, int max_num = -1, int max_size = -1) {}$/;"	f	signature:(const char *app, const char *dir = NULL, int max_num = -1, int max_size = -1)
+init_stimer_vecs	.\mtimer.c	/^init_stimer_vecs(timer_base_t* base, unsigned long jiffies)$/;"	f	file:	signature:(timer_base_t* base, unsigned long jiffies)
+init_timer	.\timer.c	/^void init_timer()$/;"	f
+init_timer	.\timer.c	/^void init_timer(void)$/;"	f	signature:(void)
+init_timer	.\timer.h	/^void init_timer(void);$/;"	p	signature:(void)
+internal_add_timer	.\mtimer.c	/^internal_add_timer(timer_base_t* base, stimer_t * timer)$/;"	f	file:	signature:(timer_base_t* base, stimer_t * timer)
+is_daemon	.\log.cpp	/^extern bool is_daemon;$/;"	x
+is_daemon	.\main.cpp	/^bool is_daemon = false;$/;"	v
+item_size	.\plex.h	/^    size_t            item_size;    \/\/‘§∑÷≈‰≥…‘±µƒ¥Û–°$/;"	m	struct:plex	access:public
+j	.\llist.h	/^	int j;$/;"	m	struct:__anon2	access:public
+k	.\llist.h	/^	void* k;$/;"	m	struct:__anon2	access:public
+length	.\connectpool.h	/^		unsigned int length;$/;"	m	struct:CMysqlStore::typeset_t	access:public
+lfactor	.\net.cpp	72;"	d	file:
+lhandle	.\llist.h	/^LLIST* lhandle;$/;"	v
+lincream	.\net.cpp	73;"	d	file:
+list_add	.\clist.h	/^static inline void list_add(struct list_head *new, struct list_head *head)$/;"	f	signature:(struct list_head *new, struct list_head *head)
+list_add_tail	.\clist.h	/^static inline void list_add_tail(struct list_head *new, struct list_head *head)$/;"	f	signature:(struct list_head *new, struct list_head *head)
+list_cut_position	.\clist.h	/^static inline void list_cut_position(struct list_head *list,$/;"	f	signature:(struct list_head *list, struct list_head *head, struct list_head *entry)
+list_del	.\clist.h	/^extern void list_del(struct list_head *entry);$/;"	p	signature:(struct list_head *entry)
+list_del	.\clist.h	/^static inline void list_del(struct list_head *entry)$/;"	f	signature:(struct list_head *entry)
+list_del_init	.\clist.h	/^static inline void list_del_init(struct list_head *entry)$/;"	f	signature:(struct list_head *entry)
+list_empty	.\clist.h	/^static inline int list_empty(const struct list_head *head)$/;"	f	signature:(const struct list_head *head)
+list_empty_careful	.\clist.h	/^static inline int list_empty_careful(const struct list_head *head)$/;"	f	signature:(const struct list_head *head)
+list_entry	.\clist.h	381;"	d
+list_find_p	.\llist.h	/^typedef int(*list_find_p)(ELE* pELE, void *key);$/;"	t
+list_first_entry	.\clist.h	402;"	d
+list_for_each	.\clist.h	410;"	d
+list_for_each_entry	.\clist.h	459;"	d
+list_for_each_entry_continue	.\clist.h	495;"	d
+list_for_each_entry_continue_reverse	.\clist.h	509;"	d
+list_for_each_entry_from	.\clist.h	522;"	d
+list_for_each_entry_reverse	.\clist.h	470;"	d
+list_for_each_entry_safe	.\clist.h	533;"	d
+list_for_each_entry_safe_continue	.\clist.h	549;"	d
+list_for_each_entry_safe_from	.\clist.h	565;"	d
+list_for_each_entry_safe_reverse	.\clist.h	580;"	d
+list_for_each_prev	.\clist.h	429;"	d
+list_for_each_prev_safe	.\clist.h	448;"	d
+list_for_each_safe	.\clist.h	438;"	d
+list_head	.\clist.h	/^struct list_head {$/;"	s
+list_head::next	.\clist.h	/^	struct list_head *next, *prev;$/;"	m	struct:list_head	typeref:struct:list_head::list_head	access:public
+list_head::prev	.\clist.h	/^	struct list_head *next, *prev;$/;"	m	struct:list_head	typeref:struct:list_head::	access:public
+list_is_last	.\clist.h	/^static inline int list_is_last(const struct list_head *list,$/;"	f	signature:(const struct list_head *list, const struct list_head *head)
+list_is_singular	.\clist.h	/^static inline int list_is_singular(const struct list_head *head)$/;"	f	signature:(const struct list_head *head)
+list_move	.\clist.h	/^static inline void list_move(struct list_head *list, struct list_head *head)$/;"	f	signature:(struct list_head *list, struct list_head *head)
+list_move_tail	.\clist.h	/^static inline void list_move_tail(struct list_head *list,$/;"	f	signature:(struct list_head *list, struct list_head *head)
+list_prepare_entry	.\clist.h	483;"	d
+list_replace	.\clist.h	/^static inline void list_replace(struct list_head *old,$/;"	f	signature:(struct list_head *old, struct list_head *new)
+list_replace_init	.\clist.h	/^static inline void list_replace_init(struct list_head *old,$/;"	f	signature:(struct list_head *old, struct list_head *new)
+list_rotate_left	.\clist.h	/^static inline void list_rotate_left(struct list_head *head)$/;"	f	signature:(struct list_head *head)
+list_safe_reset_next	.\clist.h	598;"	d
+list_splice	.\clist.h	/^static inline void list_splice(const struct list_head *list,$/;"	f	signature:(const struct list_head *list, struct list_head *head)
+list_splice_init	.\clist.h	/^static inline void list_splice_init(struct list_head *list,$/;"	f	signature:(struct list_head *list, struct list_head *head)
+list_splice_tail	.\clist.h	/^static inline void list_splice_tail(struct list_head *list,$/;"	f	signature:(struct list_head *list, struct list_head *head)
+list_splice_tail_init	.\clist.h	/^static inline void list_splice_tail_init(struct list_head *list,$/;"	f	signature:(struct list_head *list, struct list_head *head)
+list_travel_p	.\llist.h	/^typedef void(*list_travel_p)(ELE* pELE, void *key);$/;"	t
+llist_append	.\llist.c	/^int llist_append(LLIST* handle, ELE* pELE)$/;"	f	signature:(LLIST* handle, ELE* pELE)
+llist_append	.\llist.h	/^int llist_append(LLIST* handle, ELE* pnode);$/;"	p	signature:(LLIST* handle, ELE* pnode)
+llist_creat	.\llist.c	/^LLIST* llist_creat(void)$/;"	f	signature:(void)
+llist_creat	.\llist.h	/^LLIST* llist_creat(void);$/;"	p	signature:(void)
+llist_delete	.\llist.c	/^int llist_delete(LLIST* handle, list_find_p find, void* key)$/;"	f	signature:(LLIST* handle, list_find_p find, void* key)
+llist_delete	.\llist.h	/^int llist_delete(LLIST* handle, list_find_p find, void* key);$/;"	p	signature:(LLIST* handle, list_find_p find, void* key)
+llist_delete_quick	.\llist.c	/^int  llist_delete_quick(LLIST* handle,struct lnode * pNode)$/;"	f	signature:(LLIST* handle,struct lnode * pNode)
+llist_destory	.\llist.c	/^void llist_destory(LLIST* handle)$/;"	f	signature:(LLIST* handle)
+llist_destory	.\llist.h	/^void llist_destory(LLIST* handle);$/;"	p	signature:(LLIST* handle)
+llist_preappend	.\llist.c	/^int llist_preappend(LLIST* handle, ELE* pELE)$/;"	f	signature:(LLIST* handle, ELE* pELE)
+llist_preappend	.\llist.h	/^int llist_preappend(LLIST* handle, ELE* pnode);$/;"	p	signature:(LLIST* handle, ELE* pnode)
+llist_size	.\llist.c	/^int llist_size(LLIST* handle)$/;"	f	signature:(LLIST* handle)
+llist_size	.\llist.h	/^int llist_size(LLIST* handle);$/;"	p	signature:(LLIST* handle)
+llist_travel	.\llist.c	/^void llist_travel(LLIST* handle, list_travel_p trav, void* arg)$/;"	f	signature:(LLIST* handle, list_travel_p trav, void* arg)
+llist_travel	.\llist.h	/^void llist_travel(LLIST* handle, list_travel_p trav, void* arg);$/;"	p	signature:(LLIST* handle, list_travel_p trav, void* arg)
+lnode	.\llist.h	/^struct lnode{$/;"	s
+lnode::element	.\llist.h	/^	ELE* element;	$/;"	m	struct:lnode	access:public
+lnode::next	.\llist.h	/^	struct lnode *prev, *next;$/;"	m	struct:lnode	typeref:struct:lnode::	access:public
+lnode::prev	.\llist.h	/^	struct lnode *prev, *next;$/;"	m	struct:lnode	typeref:struct:lnode::lnode	access:public
+lock	.\mtimer.c	/^	int lock;$/;"	m	struct:tvec_base	file:	access:public
+log_boot	.\log.cpp	/^void log_boot(const char* format, ...)$/;"	f	signature:(const char* format, ...)
+log_debug	.\log.h	23;"	d
+log_dir	.\log.cpp	/^static char log_dir[128] = "..\/log";$/;"	v	file:
+log_error	.\log.h	21;"	d
+log_generic	.\log.h	20;"	d
+log_info	.\log.h	22;"	d
+lpop	.\net.cpp	66;"	d	file:
+lpush	.\net.cpp	70;"	d	file:
+lua_Object	.\tolua++.h	/^typedef int lua_Object;$/;"	t
+luaopen_interface	.\interface.cpp	/^ TOLUA_API int luaopen_interface (lua_State* tolua_S) {$/;"	f	signature:(lua_State* tolua_S)
+luaopen_interface	.\interface.h	/^ TOLUA_API int luaopen_interface (lua_State* tolua_S) {$/;"	f	signature:(lua_State* tolua_S)
+m_FreeHandlers	.\net.h	/^	FreeHandlerList_t 			m_FreeHandlers;$/;"	m	class:Net	access:private
+m_Handlers	.\net.h	/^	HandlerMap_t 				m_Handlers; \/\/ <fd, SocketHandler*>$/;"	m	class:Net	access:private
+m_Packet	.\PacketParser.h	/^	INPUT_PACKET m_Packet;$/;"	m	class:PacketParser	access:private
+m_RecvByteMap	.\socket.cpp	/^BYTE SocketHandler::m_RecvByteMap[256]=				$/;"	m	class:SocketHandler	file:
+m_RecvByteMap	.\socket.h	/^	static BYTE	m_RecvByteMap[256];		\/\/Â≠óËäÇÊò†Â∞ÑË°®$/;"	m	class:SocketHandler	access:public
+m_SendByteMap	.\socket.cpp	/^BYTE SocketHandler::m_SendByteMap[256]=				$/;"	m	class:SocketHandler	file:
+m_SendByteMap	.\socket.h	/^	static BYTE	m_SendByteMap[256];		\/\/Â≠óËäÇÊò†Â∞ÑË°®$/;"	m	class:SocketHandler	access:public
+m_autocommit	.\connectpool.h	/^	bool m_autocommit;$/;"	m	class:CMysqlStore	access:private
+m_colcount	.\connectpool.h	/^    int m_colcount;$/;"	m	class:CMysqlStore	access:private
+m_conn	.\connectpool.h	/^	MYSQL *m_conn;$/;"	m	class:CMysqlConnect	access:private
+m_conn_flag	.\socket.h	/^	int  m_conn_flag;		\/\/ËøûÊé•Ê†áËØÜ, ÈÄöËøáflagÊù•Âå∫Âà´ËøûÊé•Á±ªÂûã, Â¶Ç‰∏∫0Ë°®Á§∫ÂÆ¢Êà∑Á´ØËøûÊé•ÔºåÂèØÁî®ÂÖ∂‰ªñÊï∞Â≠óÂå∫Âà´Â§ßÂéÖÔºåÂêéÁ´ØËøûÊé•$/;"	m	class:SocketHandler	access:private
+m_connptr	.\connectpool.h	/^	MYSQL * m_connptr;$/;"	m	class:CMysqlStore	access:private
+m_encrypt	.\socket.h	/^	bool m_encrypt;$/;"	m	class:SocketHandler	access:private
+m_epev_arr	.\net.h	/^	struct epoll_event* m_epev_arr; \/\/epoll_event ˝◊È$/;"	m	class:Net	typeref:struct:Net::epoll_event	access:private
+m_epoll_fd	.\net.h	/^	int  m_epoll_fd;$/;"	m	class:Net	access:private
+m_err	.\connectpool.h	/^	std::string m_err;$/;"	m	class:CConnect	access:protected
+m_err	.\connectpool.h	/^	std::string m_err;$/;"	m	class:CMysqlStore	access:private
+m_err	.\connectpool.h	/^	std::string m_err;$/;"	m	class:CSql_error	access:private
+m_ev	.\timer_event.h	/^	time_ev m_ev;$/;"	m	class:TimerEvent	access:public
+m_fieldtype	.\connectpool.h	/^	std::vector<typeset_t> m_fieldtype;$/;"	m	class:CMysqlStore	access:private
+m_getstatus	.\connectpool.h	/^	bool m_getstatus;$/;"	m	class:CMysqlStore	access:private
+m_guid	.\timer_event.h	/^	unsigned long m_guid;			\/\/ÊØè‰∏™TimerEventÁöÑÂîØ‰∏Äid$/;"	m	class:TimerEvent	access:public
+m_increaseID	.\connectpool.h	/^	long m_increaseID;$/;"	m	class:CMysqlStore	access:private
+m_increase_id	.\timer_event.cpp	/^unsigned long  TimerEvent::m_increase_id = 0;$/;"	m	class:TimerEvent	file:
+m_increase_id	.\timer_event.h	/^	static unsigned long m_increase_id;	$/;"	m	class:TimerEvent	access:public
+m_isCheckCode	.\PacketBase.h	/^	bool m_isCheckCode;$/;"	m	class:OutputPacket	access:private
+m_is_closed	.\socket.h	/^	bool m_is_closed;$/;"	m	class:SocketHandler	access:private
+m_listen_fd	.\net.h	/^	int							m_listen_fd;$/;"	m	class:Net	access:private
+m_nBodyLen	.\PacketParser.h	/^	int m_nBodyLen;$/;"	m	class:PacketParser	access:private
+m_nBufPos	.\PacketBase.h	/^	int m_nBufPos;$/;"	m	class:PacketBase	access:private
+m_nPacketPos	.\PacketParser.h	/^	int	m_nPacketPos;$/;"	m	class:PacketParser	access:private
+m_nPacketSize	.\PacketBase.h	/^	int m_nPacketSize ;	\/\/  µº ±®Œƒ◊‹≥§∂»$/;"	m	class:PacketBase	access:private
+m_nStatus	.\PacketParser.h	/^	int m_nStatus; $/;"	m	class:PacketParser	access:private
+m_pBuf	.\PacketParser.h	/^	char *m_pBuf;$/;"	m	class:PacketParser	access:private
+m_parse_protocal	.\socket.h	/^	bool m_parse_protocal;	\/\/ÊòØÂê¶Áî±ServerËß£ÊûêÂçèËÆÆ$/;"	m	class:SocketHandler	access:private
+m_recordset	.\connectpool.h	/^	std::vector<row_t> m_recordset;$/;"	m	class:CMysqlStore	access:private
+m_recvbuf	.\socket.h	/^	char m_recvbuf[RECV_BUFFER];$/;"	m	class:SocketHandler	access:private
+m_redis	.\redis.h	/^    redisContext *m_redis;	$/;"	m	class:CRedis	access:private
+m_reply	.\redis.h	/^    redisReply *m_reply;	$/;"	m	class:CRedis	access:private
+m_resultptr	.\connectpool.h	/^	MYSQL_RES *m_resultptr;$/;"	m	class:CMysqlStore	access:private
+m_row	.\connectpool.h	/^	unsigned long m_row;$/;"	m	class:CMysqlStore	access:private
+m_running	.\net.h	/^	bool    					m_running;$/;"	m	class:Net	access:private
+m_sock_fd	.\socket.h	/^	int  m_sock_fd;$/;"	m	class:SocketHandler	access:private
+m_strBuf	.\PacketBase.h	/^	char m_strBuf[PACKET_BUFFER_SIZE];	\/\/ ±®Œƒ∞¸ª∫¥Ê$/;"	m	class:PacketBase	access:private
+m_strError	.\mysql_part.h	/^    string m_strError;$/;"	m	class:CMysql	access:private
+m_subVersion	.\PacketParser.h	/^	short m_subVersion;$/;"	m	class:PacketParser	access:public
+m_timeout	.\timer_event.h	/^	int m_timeout;$/;"	m	class:TimerEvent	access:public
+m_version	.\PacketParser.h	/^	short m_version;$/;"	m	class:PacketParser	access:public
+main	.\main.cpp	/^int main(int argc, char ** argv)$/;"	f	signature:(int argc, char ** argv)
+max_file_num	.\log.cpp	/^static int  max_file_num    = DEFAULT_FILE_NUM;$/;"	v	file:
+max_file_size	.\log.cpp	/^static int  max_file_size   = DEFAULT_FILE_SIZE;$/;"	v	file:
+mem_block	.\plex.h	/^struct mem_block {$/;"	s
+mem_block::data	.\plex.h	/^    char              data[0];      \/\/ ˝æ›≤ø∑÷£¨º¥÷⁄∂‡–°ƒ⁄¥Ê∆¨$/;"	m	struct:mem_block	access:public
+mem_block::next	.\plex.h	/^    struct mem_block* next;         \/\/œ¬“ªøÈµƒ÷∏’Î$/;"	m	struct:mem_block	typeref:struct:mem_block::mem_block	access:public
+mem_block::nmemb	.\plex.h	/^    unsigned int      nmemb;        \/\/‘§∑÷≈‰≥…‘±µƒ ˝¡ø£¨º«¬º√ø“ªøÈƒ⁄¥Ê«–∆¨µƒ ˝¡ø£¨”√”⁄÷ÿ÷√(plex_reset)$/;"	m	struct:mem_block	access:public
+mem_item	.\plex.h	/^union mem_item {$/;"	u
+mem_item::data	.\plex.h	/^    char              data[sizeof(char*)];\/\/ƒ⁄¥Ê∆¨µƒ ˝æ›≤ø∑÷$/;"	m	union:mem_item	access:public
+mem_item::next	.\plex.h	/^    union mem_item*   next;               \/\/œ¬“ª∏ˆƒ⁄¥Ê∆¨µƒ÷∏’Î$/;"	m	union:mem_item	typeref:union:mem_item::mem_item	access:public
+merase	.\net.cpp	63;"	d	file:
+message_count	.\protocal.cpp	/^int CProtocal::message_count = 0;$/;"	m	class:CProtocal	file:
+message_count	.\protocal.h	/^    static int message_count;$/;"	m	class:CProtocal	access:public
+message_table	.\protocal.cpp	/^MessageMap_t CProtocal::message_table = MessageMap_t();$/;"	m	class:CProtocal	file:
+message_table	.\protocal.h	/^    static MessageMap_t message_table;$/;"	m	class:CProtocal	access:public
+minsert	.\net.cpp	64;"	d	file:
+mysql_conn	.\mysql_part.h	/^    CConnect*     mysql_conn;$/;"	m	class:CMysql	access:private
+mysql_handle	.\interface_c.cpp	/^extern CMysql mysql_handle;$/;"	x
+mysql_handle	.\main.cpp	/^CMysql mysql_handle;$/;"	v
+mysql_store	.\mysql_part.h	/^	CMysqlStore*  mysql_store;$/;"	m	class:CMysql	access:private
+n_long	.\wtypedef.h	/^typedef u_long	n_long;			\/* long as received from the net *\/$/;"	t
+n_short	.\wtypedef.h	/^typedef u_short n_short;		\/* short as received from the net *\/$/;"	t
+n_time	.\wtypedef.h	/^typedef	u_long	n_time;	   \/* ms since 00:00 GMT, byte rev *\/$/;"	t
+name	.\connectpool.h	/^		std::string name;$/;"	m	struct:CMysqlStore::typeset_t	access:public
+net	.\interface_c.cpp	/^extern Net net;$/;"	x
+net	.\main.cpp	/^	Net net(BeginHandlerNums);$/;"	p	file:	signature:(BeginHandlerNums)
+netip_t	.\wtypedef.h	/^typedef unsigned long	netip_t;		\/\/Õ¯¬Á◊÷Ω⁄–Úµƒip$/;"	t
+netport_t	.\wtypedef.h	/^typedef unsigned short	netport_t;		\/\/Õ¯¬Á◊÷Ω⁄–Úµƒport$/;"	t
+next	.\clist.h	/^	struct hlist_node *next, **pprev;$/;"	m	struct:hlist_node	typeref:struct:hlist_node::hlist_node	access:public
+next	.\clist.h	/^	struct list_head *next, *prev;$/;"	m	struct:list_head	typeref:struct:list_head::list_head	access:public
+next	.\llist.h	/^	struct lnode *prev, *next;$/;"	m	struct:lnode	typeref:struct:lnode::	access:public
+next	.\plex.h	/^    struct mem_block* next;         \/\/œ¬“ªøÈµƒ÷∏’Î$/;"	m	struct:mem_block	typeref:struct:mem_block::mem_block	access:public
+next	.\plex.h	/^    union mem_item*   next;               \/\/œ¬“ª∏ˆƒ⁄¥Ê∆¨µƒ÷∏’Î$/;"	m	union:mem_item	typeref:union:mem_item::mem_item	access:public
+next_timer	.\mtimer.c	/^	unsigned long next_timer;$/;"	m	struct:tvec_base	file:	access:public
+nmemb	.\plex.h	/^    unsigned int      nmemb;        \/\/‘§∑÷≈‰≥…‘±µƒ ˝¡ø£¨º«¬º√ø“ªøÈƒ⁄¥Ê«–∆¨µƒ ˝¡ø£¨”√”⁄÷ÿ÷√(plex_reset)$/;"	m	struct:mem_block	access:public
+nonopt	.\getopt.c	/^static int nonopt = 0;                 \/* How many nonopts we've found *\/$/;"	v	file:
+num	.\llist.h	/^	int num;$/;"	m	struct:__anon3	access:public
+oldEnd	.\PacketBase.h	/^	void oldEnd(void)$/;"	f	class:OutputPacket	access:public	signature:(void)
+on_timer	.\timer.c	/^void on_timer(void* ctx)$/;"	f	signature:(void* ctx)
+operator =	.\connectpool.h	/^	CMysqlConnect & operator=(const CMysqlConnect &rhs);$/;"	p	class:CMysqlConnect	access:private	signature:(const CMysqlConnect &rhs)
+operator =	.\connectpool.h	/^    CConnect &operator=(const CConnect &);$/;"	p	class:CConnect	access:protected	signature:(const CConnect &)
+opt_offset	.\getopt.c	/^static int opt_offset = 0;             \/* Index into compounded "-option" *\/$/;"	v	file:
+optarg	.\getopt.c	/^char* optarg = NULL;$/;"	v
+optarg	.\getopt.h	/^extern char* optarg;$/;"	x
+opterr	.\getopt.c	/^int opterr = 1;$/;"	v
+opterr	.\getopt.h	/^extern int opterr;$/;"	x
+optind	.\getopt.c	/^int optind = 0;$/;"	v
+optind	.\getopt.h	/^extern int optind;$/;"	x
+optopt	.\getopt.c	/^int optopt = '?';$/;"	v
+optopt	.\getopt.h	/^extern int optopt;$/;"	x
+out_package	.\interface_c.cpp	/^static NETOutputPacket out_package;$/;"	v	file:
+packet_buf	.\PacketBase.h	/^	char *packet_buf(void)	{return m_strBuf;}$/;"	f	class:PacketBase	access:public	signature:(void)
+packet_size	.\PacketBase.h	/^	int packet_size(void)	{return m_nPacketSize;}$/;"	f	class:PacketBase	access:public	signature:(void)
+parse_body	.\PacketParser.h	/^	bool parse_body(char *data, int length, int &ndx)$/;"	f	class:PacketParser	access:private	signature:(char *data, int length, int &ndx)
+parse_header	.\PacketParser.h	/^	int parse_header(void) \/\/0:≥…π¶ -1:∞¸¥ÌŒÛ -2:√¸¡Ó∑∂Œß¥ÌŒÛ -3:∞Ê±æ¥ÌŒÛ -4:≥§∂»¥ÌŒÛ$/;"	f	class:PacketParser	access:private	signature:(void)
+parser_parmeters	.\socket.cpp	/^parser_parmeters(const char* p, NETInputPacket *pPacket,int count, int &narg)$/;"	f	file:	signature:(const char* p, NETInputPacket *pPacket,int count, int &narg)
+permute_argv_once	.\getopt.c	/^static int permute_argv_once()$/;"	f	file:
+plex	.\plex.h	/^struct plex {$/;"	s
+plex::count_alloc	.\plex.h	/^    size_t            count_alloc;  \/\/º«¬º∑÷≈‰µƒ¥Œ ˝$/;"	m	struct:plex	access:public
+plex::count_free	.\plex.h	/^    size_t            count_free;   \/\/º«¬º Õ∑≈µƒ¥Œ ˝$/;"	m	struct:plex	access:public
+plex::free	.\plex.h	/^    union mem_item*   free;         \/\/º«¬ºø…∑÷≈‰µƒƒ⁄¥ÊøÈ$/;"	m	struct:plex	typeref:union:plex::mem_item	access:public
+plex::head	.\plex.h	/^    struct mem_block* head;         \/\/º«¬º¥”œµÕ≥…Í«Îµƒƒ⁄¥ÊøÈ$/;"	m	struct:plex	typeref:struct:plex::mem_block	access:public
+plex::item_size	.\plex.h	/^    size_t            item_size;    \/\/‘§∑÷≈‰≥…‘±µƒ¥Û–°$/;"	m	struct:plex	access:public
+plex_alloc	.\plex.h	/^PLEX_STATIC PLEX_INLINE void* plex_alloc(struct plex* me) $/;"	f	signature:(struct plex* me)
+plex_clear	.\plex.h	/^PLEX_STATIC PLEX_INLINE void plex_clear(struct plex* me, void(*free_f)(void*ctx, void*ptr), void* ctx) $/;"	f	signature:(struct plex* me, void(*free_f)(void*ctx, void*ptr), void* ctx)
+plex_expand	.\plex.h	/^PLEX_STATIC PLEX_INLINE int plex_expand(struct plex* me, unsigned int nmemb, void*(*malloc_f)(void*, size_t), void* ctx) $/;"	f	signature:(struct plex* me, unsigned int nmemb, void*(*malloc_f)(void*, size_t), void* ctx)
+plex_free	.\plex.h	/^PLEX_STATIC PLEX_INLINE void plex_free(struct plex* me, void* ptr) $/;"	f	signature:(struct plex* me, void* ptr)
+plex_init	.\plex.h	/^PLEX_STATIC PLEX_INLINE void plex_init(struct plex* me, size_t item_size) $/;"	f	signature:(struct plex* me, size_t item_size)
+plex_item_count	.\plex.h	/^PLEX_STATIC PLEX_INLINE size_t plex_item_count(struct plex* me)$/;"	f	signature:(struct plex* me)
+plex_reset	.\plex.h	/^PLEX_STATIC PLEX_INLINE void plex_reset(struct plex* me)$/;"	f	signature:(struct plex* me)
+plex_size	.\plex.h	/^PLEX_STATIC PLEX_INLINE  size_t plex_size(struct plex* me)$/;"	f	signature:(struct plex* me)
+plex_t	.\plex.h	/^typedef struct plex plex_t;$/;"	t	typeref:struct:plex
+pprev	.\clist.h	/^	struct hlist_node *next, **pprev;$/;"	m	struct:hlist_node	typeref:struct:hlist_node::	access:public
+prev	.\clist.h	/^	struct list_head *next, *prev;$/;"	m	struct:list_head	typeref:struct:list_head::	access:public
+prev	.\llist.h	/^	struct lnode *prev, *next;$/;"	m	struct:lnode	typeref:struct:lnode::lnode	access:public
+prev_argc	.\getopt.c	/^static int prev_argc = 0;              \/*    tell if getopt params change *\/$/;"	v	file:
+prev_argv	.\getopt.c	/^static char** prev_argv = NULL;        \/* Keep a copy of argv and argc to *\/$/;"	v	file:
+ptr	.\timer.h	/^	void* ptr;$/;"	m	struct:time_ev	access:public
+query	.\interface_c.cpp	/^int query(const char* mysql)$/;"	f	signature:(const char* mysql)
+query	.\interface_c.h	/^int query(const char* mysql);$/;"	p	signature:(const char* mysql)
+query	.\mysql_part.cpp	/^int CMysql::query(const char* sql)$/;"	f	class:CMysql	signature:(const char* sql)
+query	.\mysql_part.h	/^    int query(const char* sql);$/;"	p	class:CMysql	access:public	signature:(const char* sql)
+read_header	.\PacketParser.h	/^	bool read_header(char *data, int length, int &ndx)$/;"	f	class:PacketParser	access:private	signature:(char *data, int length, int &ndx)
+redis_handle	.\interface_c.cpp	/^extern CRedis redis_handle;$/;"	x
+redis_handle	.\main.cpp	/^CRedis redis_handle;$/;"	v
+remain_timer	.\interface_c.cpp	/^int remain_timer(unsigned long timer_id)$/;"	f	signature:(unsigned long timer_id)
+remain_timer	.\interface_c.h	/^int remain_timer(unsigned long timer_id);$/;"	p	signature:(unsigned long timer_id)
+remain_timer	.\timer.c	/^int remain_timer(struct time_ev* ev)$/;"	f	signature:(struct time_ev* ev)
+remain_timer	.\timer.h	/^int remain_timer(struct time_ev* ev);$/;"	p	signature:(struct time_ev* ev)
+reset	.\PacketParser.h	/^	void reset(void)$/;"	f	class:PacketParser	access:protected	signature:(void)
+reset_timer	.\interface_c.cpp	/^int reset_timer(unsigned long timer_id)$/;"	f	signature:(unsigned long timer_id)
+reset_timer	.\interface_c.h	/^int reset_timer(unsigned long timer_id);$/;"	p	signature:(unsigned long timer_id)
+row_t	.\connectpool.h	/^	typedef std::vector<std::string> row_t;$/;"	t	class:CMysqlStore	access:private
+run_stimer_list	.\mtimer.c	/^run_stimer_list(timer_base_t* base, unsigned long jiffies)$/;"	f	file:	signature:(timer_base_t* base, unsigned long jiffies)
+run_timer	.\timer.c	/^void run_timer()$/;"	f
+run_timer	.\timer.c	/^void run_timer(void)$/;"	f	signature:(void)
+run_timer	.\timer.h	/^void run_timer(void);$/;"	p	signature:(void)
+running_timer	.\mtimer.c	/^	struct timer_list *running_timer;$/;"	m	struct:tvec_base	typeref:struct:tvec_base::timer_list	file:	access:public
+sbegin	.\net.cpp	57;"	d	file:
+send	.\net.cpp	58;"	d	file:
+send_buffer	.\interface_c.cpp	/^int send_buffer(int fd, char* buffer, int len)$/;"	f	signature:(int fd, char* buffer, int len)
+send_buffer	.\interface_c.h	/^int  send_buffer(int fd, char* buffer, int len);$/;"	p	signature:(int fd, char* buffer, int len)
+send_packet	.\interface_c.cpp	/^int send_packet(int fd)$/;"	f	signature:(int fd)
+send_packet	.\interface_c.cpp	/^static int send_packet(int fd, bool encrypt)$/;"	f	file:	signature:(int fd, bool encrypt)
+send_packet	.\interface_c.h	/^int  send_packet(int fd);$/;"	p	signature:(int fd)
+send_packet	.\socket.cpp	/^int SocketHandler::send_packet(NETOutputPacket *pPacket)$/;"	f	class:SocketHandler	signature:(NETOutputPacket *pPacket)
+send_packet	.\socket.h	/^	int send_packet(NETOutputPacket *pPacket);$/;"	p	class:SocketHandler	access:public	signature:(NETOutputPacket *pPacket)
+send_raw_packet	.\interface_c.cpp	/^int send_raw_packet(int fd)$/;"	f	signature:(int fd)
+send_raw_packet	.\interface_c.h	/^int  send_raw_packet(int fd);$/;"	p	signature:(int fd)
+serase	.\net.cpp	59;"	d	file:
+set_expire	.\redis.cpp	/^int CRedis::set_expire(const char* key, int expire)$/;"	f	class:CRedis	signature:(const char* key, int expire)
+set_expire	.\redis.h	/^    int set_expire(const char* key, int expire);$/;"	p	class:CRedis	access:public	signature:(const char* key, int expire)
+set_log_level	.\log.cpp	/^void set_log_level(int l)$/;"	f	signature:(int l)
+set_log_level	.\log.cpp	/^void set_log_level(int){}$/;"	f	signature:(int)
+set_log_level	.\log.h	/^static inline void set_log_level(int n){}$/;"	f	signature:(int n)
+set_redis_expire	.\interface_c.cpp	/^int set_redis_expire(const char* key, int expire)$/;"	f	signature:(const char* key, int expire)
+set_redis_expire	.\interface_c.h	/^int set_redis_expire(const char* key, int expire);$/;"	p	signature:(const char* key, int expire)
+set_redis_value	.\interface_c.cpp	/^int set_redis_value(const char* key, const char* value)$/;"	f	signature:(const char* key, const char* value)
+set_redis_value	.\interface_c.h	/^int set_redis_value(const char* key, const char* value);$/;"	p	signature:(const char* key, const char* value)
+set_value	.\redis.cpp	/^int CRedis::set_value(const char* key, const char* value)$/;"	f	class:CRedis	signature:(const char* key, const char* value)
+set_value	.\redis.h	/^    int set_value(const char* key, const char* value);$/;"	p	class:CRedis	access:public	signature:(const char* key, const char* value)
+signal_process	.\main.cpp	/^signal_process()$/;"	f	file:	signature:()
+sinsert	.\net.cpp	56;"	d	file:
+slack	.\mtimer.h	/^	int slack;$/;"	m	struct:timer_list	access:public
+socklen_t	.\wtypedef.h	/^	typedef int socklen_t;$/;"	t
+spin_lock	.\mtimer.c	15;"	d	file:
+spin_lock_init	.\mtimer.c	21;"	d	file:
+spin_lock_irq	.\mtimer.c	26;"	d	file:
+spin_lock_irqrestore	.\mtimer.c	18;"	d	file:
+spin_lock_irqsave	.\mtimer.c	23;"	d	file:
+spin_unlock	.\mtimer.c	16;"	d	file:
+spin_unlock_irq	.\mtimer.c	27;"	d	file:
+spin_unlock_irqrestore	.\mtimer.c	19;"	d	file:
+spin_unlock_irqsave	.\mtimer.c	24;"	d	file:
+start_server	.\net.cpp	/^Net::start_server()$/;"	f	class:Net	signature:()
+start_server	.\net.h	/^	bool start_server();$/;"	p	class:Net	access:public	signature:()
+start_timer	.\interface_c.cpp	/^int start_timer(unsigned long timer_id, int time)$/;"	f	signature:(unsigned long timer_id, int time)
+start_timer	.\interface_c.h	/^int start_timer(unsigned long timer_id, int time);$/;"	p	signature:(unsigned long timer_id, int time)
+start_timer	.\timer.c	/^int  start_timer(int sec, int usec, struct time_ev* ev)$/;"	f	signature:(int sec, int usec, struct time_ev* ev)
+start_timer	.\timer.c	/^int start_timer(int sec, int usec, struct time_ev* ev)$/;"	f	signature:(int sec, int usec, struct time_ev* ev)
+start_timer	.\timer.h	/^int  start_timer(int sec, int usec, struct time_ev* ev);$/;"	p	signature:(int sec, int usec, struct time_ev* ev)
+stimer_add	.\mtimer.c	/^stimer_add(stimer_t * timer)$/;"	f	signature:(stimer_t * timer)
+stimer_add	.\mtimer.h	/^static int  stimer_add(stimer_t * timer);$/;"	p	signature:(stimer_t * timer)
+stimer_base_cleanup	.\mtimer.c	/^EXPORT void stimer_base_cleanup()$/;"	f
+stimer_base_cleanup	.\mtimer.h	/^static void stimer_base_cleanup();$/;"	p	signature:()
+stimer_base_collect	.\mtimer.c	/^EXPORT void stimer_base_collect(timer_base_t* base)$/;"	f	signature:(timer_base_t* base)
+stimer_base_collect	.\mtimer.h	/^static void stimer_base_collect(timer_base_t*);$/;"	p	signature:(timer_base_t*)
+stimer_base_set	.\mtimer.c	/^EXPORT void stimer_base_set(stimer_t* timer, timer_base_t* base)$/;"	f	signature:(stimer_t* timer, timer_base_t* base)
+stimer_base_set	.\mtimer.h	/^static void stimer_base_set(stimer_t* timer, timer_base_t*);$/;"	p	signature:(stimer_t* timer, timer_base_t*)
+stimer_cleanup	.\mtimer.c	/^EXPORT void stimer_cleanup(timer_base_t* base)$/;"	f	signature:(timer_base_t* base)
+stimer_cleanup	.\mtimer.h	/^static void stimer_cleanup(timer_base_t*);$/;"	p	signature:(timer_base_t*)
+stimer_collect	.\mtimer.c	/^EXPORT void stimer_collect()$/;"	f
+stimer_collect	.\mtimer.h	/^static void stimer_collect();$/;"	p	signature:()
+stimer_del	.\mtimer.c	/^stimer_del(stimer_t * timer)$/;"	f	signature:(stimer_t * timer)
+stimer_del	.\mtimer.h	/^static int  stimer_del(stimer_t * timer);$/;"	p	signature:(stimer_t * timer)
+stimer_init	.\mtimer.c	/^EXPORT timer_base_t* stimer_init()$/;"	f
+stimer_init	.\mtimer.h	/^static timer_base_t* stimer_init();$/;"	p	signature:()
+stimer_mod	.\mtimer.c	/^stimer_mod(stimer_t * timer, unsigned long expires)$/;"	f	signature:(stimer_t * timer, unsigned long expires)
+stimer_mod	.\mtimer.h	/^static void stimer_mod(stimer_t * timer, unsigned long expires);$/;"	p	signature:(stimer_t * timer, unsigned long expires)
+stimer_pending	.\mtimer.h	57;"	d
+stimer_set	.\mtimer.c	/^EXPORT void stimer_set(stimer_t* timer, unsigned long expires, void (*fn) (void*), void* ctx)$/;"	f	signature:(stimer_t* timer, unsigned long expires, void (*fn) (void*), void* ctx)
+stimer_set	.\mtimer.h	/^static void stimer_set(stimer_t* timer, unsigned long expires, void (*fn) (void*), void* ctx);$/;"	p	signature:(stimer_t* timer, unsigned long expires, void (*fn) (void*), void* ctx)
+stimer_t	.\mtimer.h	/^} stimer_t;$/;"	t	typeref:struct:timer_list
+stimer_valid	.\mtimer.h	/^static inline int stimer_valid(const stimer_t * timer)$/;"	f	signature:(const stimer_t * timer)
+stop_server	.\net.cpp	/^Net::stop_server()$/;"	f	class:Net	signature:()
+stop_server	.\net.h	/^	void stop_server();$/;"	p	class:Net	access:public	signature:()
+stop_timer	.\interface_c.cpp	/^int stop_timer(unsigned long timer_id)$/;"	f	signature:(unsigned long timer_id)
+stop_timer	.\interface_c.h	/^int stop_timer(unsigned long timer_id);$/;"	p	signature:(unsigned long timer_id)
+stop_timer	.\timer.c	/^int  stop_timer(struct time_ev* ev)$/;"	f	signature:(struct time_ev* ev)
+stop_timer	.\timer.c	/^int stop_timer(struct time_ev* ev)$/;"	f	signature:(struct time_ev* ev)
+stop_timer	.\timer.h	/^int  stop_timer(struct time_ev* ev);$/;"	p	signature:(struct time_ev* ev)
+sys_free	.\plex.h	/^PLEX_STATIC PLEX_INLINE void sys_free(void* ctx, void* ptr)$/;"	f	signature:(void* ctx, void* ptr)
+sys_malloc	.\plex.h	/^PLEX_STATIC PLEX_INLINE void* sys_malloc(void* ctx, size_t size)$/;"	f	signature:(void* ctx, size_t size)
+t_base	.\mtimer.c	/^static struct tvec_base* t_base = 0;$/;"	v	typeref:struct:tvec_base	file:
+time_after	.\mtimer.h	12;"	d
+time_after_eq	.\mtimer.h	15;"	d
+time_before	.\mtimer.h	13;"	d
+time_before_eq	.\mtimer.h	16;"	d
+time_ev	.\timer.h	/^struct time_ev {$/;"	s
+time_ev::callback	.\timer.h	/^	void (*callback)(void* ptr);$/;"	m	struct:time_ev	access:public
+time_ev::ptr	.\timer.h	/^	void* ptr;$/;"	m	struct:time_ev	access:public
+time_ev::time_id	.\timer.h	/^	unsigned long time_id; \/\/ modify by austin 2012\/6\/27 $/;"	m	struct:time_ev	access:public
+time_ev::timer	.\timer.h	/^	void* timer;$/;"	m	struct:time_ev	access:public
+time_id	.\timer.h	/^	unsigned long time_id; \/\/ modify by austin 2012\/6\/27 $/;"	m	struct:time_ev	access:public
+timer	.\timer.h	/^	void* timer;$/;"	m	struct:time_ev	access:public
+timer_base_t	.\mtimer.h	/^typedef struct tvec_base timer_base_t;$/;"	t	typeref:struct:tvec_base
+timer_jiffies	.\mtimer.c	/^	unsigned long timer_jiffies;$/;"	m	struct:tvec_base	file:	access:public
+timer_list	.\interface_c.cpp	/^extern map<unsigned long , TimerEvent*> timer_list;$/;"	x
+timer_list	.\mtimer.h	/^typedef struct timer_list {$/;"	s
+timer_list	.\timer_event.cpp	/^map<unsigned long , TimerEvent*> timer_list;$/;"	v
+timer_list::base	.\mtimer.h	/^    timer_base_t *base;$/;"	m	struct:timer_list	access:public
+timer_list::ctx	.\mtimer.h	/^    void* ctx;$/;"	m	struct:timer_list	access:public
+timer_list::entry	.\mtimer.h	/^	struct list_head entry;$/;"	m	struct:timer_list	typeref:struct:timer_list::list_head	access:public
+timer_list::expires	.\mtimer.h	/^	unsigned long expires;$/;"	m	struct:timer_list	access:public
+timer_list::function	.\mtimer.h	/^	void (*function)(void*);$/;"	m	struct:timer_list	access:public
+timer_list::slack	.\mtimer.h	/^	int slack;$/;"	m	struct:timer_list	access:public
+timer_plex	.\timer.c	/^	plex_t timer_plex;$/;"	v
+tolua_Error	.\tolua++.h	/^struct tolua_Error$/;"	s
+tolua_Error	.\tolua++.h	/^typedef struct tolua_Error tolua_Error;$/;"	t	typeref:struct:tolua_Error
+tolua_Error::array	.\tolua++.h	/^	int array;$/;"	m	struct:tolua_Error	access:public
+tolua_Error::index	.\tolua++.h	/^	int index;$/;"	m	struct:tolua_Error	access:public
+tolua_Error::type	.\tolua++.h	/^	const char* type;$/;"	m	struct:tolua_Error	access:public
+tolua_array	.\tolua++.h	/^TOLUA_API void tolua_array (lua_State* L,const char* name, lua_CFunction get, lua_CFunction set);$/;"	p	signature:(lua_State* L,const char* name, lua_CFunction get, lua_CFunction set)
+tolua_beginmodule	.\tolua++.h	/^TOLUA_API void tolua_beginmodule (lua_State* L, const char* name);$/;"	p	signature:(lua_State* L, const char* name)
+tolua_cclass	.\tolua++.h	/^TOLUA_API void tolua_cclass (lua_State* L, const char* lname, const char* name, const char* base, lua_CFunction col);$/;"	p	signature:(lua_State* L, const char* lname, const char* name, const char* base, lua_CFunction col)
+tolua_class	.\tolua++.h	/^TOLUA_API void tolua_class (lua_State* L, const char* name, const char* base);$/;"	p	signature:(lua_State* L, const char* name, const char* base)
+tolua_constant	.\tolua++.h	/^TOLUA_API void tolua_constant (lua_State* L, const char* name, lua_Number value);$/;"	p	signature:(lua_State* L, const char* name, lua_Number value)
+tolua_copy	.\tolua++.h	/^TOLUA_API void* tolua_copy (lua_State* L, void* value, unsigned int size);$/;"	p	signature:(lua_State* L, void* value, unsigned int size)
+tolua_default_collect	.\tolua++.h	/^TOLUA_API int tolua_default_collect (lua_State* tolua_S);$/;"	p	signature:(lua_State* tolua_S)
+tolua_dobuffer	.\tolua++.h	/^TOLUA_API void tolua_dobuffer(lua_State* L, char* B, unsigned int size, const char* name);$/;"	p	signature:(lua_State* L, char* B, unsigned int size, const char* name)
+tolua_endmodule	.\tolua++.h	/^TOLUA_API void tolua_endmodule (lua_State* L);$/;"	p	signature:(lua_State* L)
+tolua_error	.\tolua++.h	/^TOLUA_API void tolua_error (lua_State* L, const char* msg, tolua_Error* err);$/;"	p	signature:(lua_State* L, const char* msg, tolua_Error* err)
+tolua_fast_isa	.\tolua++.h	/^TOLUA_API int tolua_fast_isa(lua_State *L, int mt_indexa, int mt_indexb, int super_index);$/;"	p	signature:(lua_State *L, int mt_indexa, int mt_indexb, int super_index)
+tolua_function	.\tolua++.h	/^TOLUA_API void tolua_function (lua_State* L, const char* name, lua_CFunction func);$/;"	p	signature:(lua_State* L, const char* name, lua_CFunction func)
+tolua_getfieldboolean	.\tolua++.h	/^TOLUA_API int tolua_getfieldboolean (lua_State* L, int lo, int index, int def);$/;"	p	signature:(lua_State* L, int lo, int index, int def)
+tolua_interface_client_close_socket00	.\interface.cpp	/^static int tolua_interface_client_close_socket00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_client_close_socket00	.\interface.h	/^static int tolua_interface_client_close_socket00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_client_connect_server00	.\interface.cpp	/^static int tolua_interface_client_connect_server00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_client_connect_server00	.\interface.h	/^static int tolua_interface_client_connect_server00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_client_connect_server01	.\interface.cpp	/^static int tolua_interface_client_connect_server01(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_client_connect_server01	.\interface.h	/^static int tolua_interface_client_connect_server01(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_log_debug00	.\interface.cpp	/^static int tolua_interface_log_debug00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_log_debug00	.\interface.h	/^static int tolua_interface_log_debug00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_log_error00	.\interface.cpp	/^static int tolua_interface_log_error00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_log_error00	.\interface.h	/^static int tolua_interface_log_error00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_log_info00	.\interface.cpp	/^static int tolua_interface_log_info00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_log_info00	.\interface.h	/^static int tolua_interface_log_info00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_mysql_connect_mysql00	.\interface.cpp	/^static int tolua_interface_mysql_connect_mysql00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_mysql_connect_mysql00	.\interface.h	/^static int tolua_interface_mysql_connect_mysql00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_mysql_query00	.\interface.cpp	/^static int tolua_interface_mysql_query00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_mysql_query00	.\interface.h	/^static int tolua_interface_mysql_query00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_open	.\interface.cpp	/^TOLUA_API int  tolua_interface_open (lua_State* tolua_S);$/;"	p	file:	signature:(lua_State* tolua_S)
+tolua_interface_open	.\interface.cpp	/^TOLUA_API int tolua_interface_open (lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_open	.\interface.h	/^TOLUA_API int  tolua_interface_open (lua_State* tolua_S);$/;"	p	signature:(lua_State* tolua_S)
+tolua_interface_open	.\interface.h	/^TOLUA_API int tolua_interface_open (lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_open	.\main.cpp	/^TOLUA_API int  tolua_interface_open (lua_State* tolua_S);$/;"	p	file:	signature:(lua_State* tolua_S)
+tolua_interface_packet_send_buffer00	.\interface.cpp	/^static int tolua_interface_packet_send_buffer00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_packet_send_buffer00	.\interface.h	/^static int tolua_interface_packet_send_buffer00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_packet_send_packet00	.\interface.cpp	/^static int tolua_interface_packet_send_packet00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_packet_send_packet00	.\interface.h	/^static int tolua_interface_packet_send_packet00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_packet_send_raw_packet00	.\interface.cpp	/^static int tolua_interface_packet_send_raw_packet00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_packet_send_raw_packet00	.\interface.h	/^static int tolua_interface_packet_send_raw_packet00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_packet_transfer00	.\interface.cpp	/^static int tolua_interface_packet_transfer00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_packet_transfer00	.\interface.h	/^static int tolua_interface_packet_transfer00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_packet_transfer_raw00	.\interface.cpp	/^static int tolua_interface_packet_transfer_raw00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_packet_transfer_raw00	.\interface.h	/^static int tolua_interface_packet_transfer_raw00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_packet_write_begin00	.\interface.cpp	/^static int tolua_interface_packet_write_begin00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_packet_write_begin00	.\interface.h	/^static int tolua_interface_packet_write_begin00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_packet_write_binary00	.\interface.cpp	/^static int tolua_interface_packet_write_binary00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_packet_write_binary00	.\interface.h	/^static int tolua_interface_packet_write_binary00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_packet_write_byte00	.\interface.cpp	/^static int tolua_interface_packet_write_byte00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_packet_write_byte00	.\interface.h	/^static int tolua_interface_packet_write_byte00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_packet_write_end00	.\interface.cpp	/^static int tolua_interface_packet_write_end00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_packet_write_end00	.\interface.h	/^static int tolua_interface_packet_write_end00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_packet_write_int00	.\interface.cpp	/^static int tolua_interface_packet_write_int00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_packet_write_int00	.\interface.h	/^static int tolua_interface_packet_write_int00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_packet_write_short00	.\interface.cpp	/^static int tolua_interface_packet_write_short00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_packet_write_short00	.\interface.h	/^static int tolua_interface_packet_write_short00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_packet_write_string00	.\interface.cpp	/^static int tolua_interface_packet_write_string00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_packet_write_string00	.\interface.h	/^static int tolua_interface_packet_write_string00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_packet_write_uint00	.\interface.cpp	/^static int tolua_interface_packet_write_uint00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_packet_write_uint00	.\interface.h	/^static int tolua_interface_packet_write_uint00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_redis_Dequeue00	.\interface.cpp	/^static int tolua_interface_redis_Dequeue00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_redis_Dequeue00	.\interface.h	/^static int tolua_interface_redis_Dequeue00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_redis_Enqueue00	.\interface.cpp	/^static int tolua_interface_redis_Enqueue00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_redis_Enqueue00	.\interface.h	/^static int tolua_interface_redis_Enqueue00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_redis_IsActived00	.\interface.cpp	/^static int tolua_interface_redis_IsActived00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_redis_IsActived00	.\interface.h	/^static int tolua_interface_redis_IsActived00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_redis_S_IsMember00	.\interface.cpp	/^static int tolua_interface_redis_S_IsMember00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_redis_S_IsMember00	.\interface.h	/^static int tolua_interface_redis_S_IsMember00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_redis_S_IsMember01	.\interface.cpp	/^static int tolua_interface_redis_S_IsMember01(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_redis_S_IsMember01	.\interface.h	/^static int tolua_interface_redis_S_IsMember01(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_redis_connect_redis00	.\interface.cpp	/^static int tolua_interface_redis_connect_redis00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_redis_connect_redis00	.\interface.h	/^static int tolua_interface_redis_connect_redis00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_redis_get_redis_value00	.\interface.cpp	/^static int tolua_interface_redis_get_redis_value00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_redis_get_redis_value00	.\interface.h	/^static int tolua_interface_redis_get_redis_value00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_redis_set_redis_expire00	.\interface.cpp	/^static int tolua_interface_redis_set_redis_expire00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_redis_set_redis_expire00	.\interface.h	/^static int tolua_interface_redis_set_redis_expire00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_redis_set_redis_value00	.\interface.cpp	/^static int tolua_interface_redis_set_redis_value00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_redis_set_redis_value00	.\interface.h	/^static int tolua_interface_redis_set_redis_value00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_server_close_socket00	.\interface.cpp	/^static int tolua_interface_server_close_socket00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_server_close_socket00	.\interface.h	/^static int tolua_interface_server_close_socket00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_server_create_listener00	.\interface.cpp	/^static int tolua_interface_server_create_listener00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_server_create_listener00	.\interface.h	/^static int tolua_interface_server_create_listener00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_timer_clear_timer00	.\interface.cpp	/^static int tolua_interface_timer_clear_timer00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_timer_clear_timer00	.\interface.h	/^static int tolua_interface_timer_clear_timer00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_timer_create_timer00	.\interface.cpp	/^static int tolua_interface_timer_create_timer00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_timer_create_timer00	.\interface.h	/^static int tolua_interface_timer_create_timer00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_timer_remain_timer00	.\interface.cpp	/^static int tolua_interface_timer_remain_timer00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_timer_remain_timer00	.\interface.h	/^static int tolua_interface_timer_remain_timer00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_timer_reset_timer00	.\interface.cpp	/^static int tolua_interface_timer_reset_timer00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_timer_reset_timer00	.\interface.h	/^static int tolua_interface_timer_reset_timer00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_timer_start_timer00	.\interface.cpp	/^static int tolua_interface_timer_start_timer00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_timer_start_timer00	.\interface.h	/^static int tolua_interface_timer_start_timer00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_timer_stop_timer00	.\interface.cpp	/^static int tolua_interface_timer_stop_timer00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_timer_stop_timer00	.\interface.h	/^static int tolua_interface_timer_stop_timer00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_interface_uuid_NewUUID00	.\interface.cpp	/^static int tolua_interface_uuid_NewUUID00(lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_interface_uuid_NewUUID00	.\interface.h	/^static int tolua_interface_uuid_NewUUID00(lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_isboolean	.\tolua++.h	/^TOLUA_API int tolua_isboolean (lua_State* L, int lo, int def, tolua_Error* err);$/;"	p	signature:(lua_State* L, int lo, int def, tolua_Error* err)
+tolua_isbooleanarray	.\tolua++.h	/^TOLUA_API int tolua_isbooleanarray$/;"	p	signature:(lua_State* L, int lo, int dim, int def, tolua_Error* err)
+tolua_iscppstring	.\tolua++.h	30;"	d
+tolua_iscppstringarray	.\tolua++.h	32;"	d
+tolua_isnoobj	.\tolua++.h	/^TOLUA_API int tolua_isnoobj (lua_State* L, int lo, tolua_Error* err);$/;"	p	signature:(lua_State* L, int lo, tolua_Error* err)
+tolua_isnumber	.\tolua++.h	/^TOLUA_API int tolua_isnumber (lua_State* L, int lo, int def, tolua_Error* err);$/;"	p	signature:(lua_State* L, int lo, int def, tolua_Error* err)
+tolua_isnumberarray	.\tolua++.h	/^TOLUA_API int tolua_isnumberarray$/;"	p	signature:(lua_State* L, int lo, int dim, int def, tolua_Error* err)
+tolua_isstring	.\tolua++.h	/^TOLUA_API int tolua_isstring (lua_State* L, int lo, int def, tolua_Error* err);$/;"	p	signature:(lua_State* L, int lo, int def, tolua_Error* err)
+tolua_isstringarray	.\tolua++.h	/^TOLUA_API int tolua_isstringarray$/;"	p	signature:(lua_State* L, int lo, int dim, int def, tolua_Error* err)
+tolua_istable	.\tolua++.h	/^TOLUA_API int tolua_istable (lua_State* L, int lo, int def, tolua_Error* err);$/;"	p	signature:(lua_State* L, int lo, int def, tolua_Error* err)
+tolua_istablearray	.\tolua++.h	/^TOLUA_API int tolua_istablearray$/;"	p	signature:(lua_State* L, int lo, int dim, int def, tolua_Error* err)
+tolua_isuserdata	.\tolua++.h	/^TOLUA_API int tolua_isuserdata (lua_State* L, int lo, int def, tolua_Error* err);$/;"	p	signature:(lua_State* L, int lo, int def, tolua_Error* err)
+tolua_isuserdataarray	.\tolua++.h	/^TOLUA_API int tolua_isuserdataarray$/;"	p	signature:(lua_State* L, int lo, int dim, int def, tolua_Error* err)
+tolua_isusertable	.\tolua++.h	/^TOLUA_API int tolua_isusertable (lua_State* L, int lo, const char* type, int def, tolua_Error* err);$/;"	p	signature:(lua_State* L, int lo, const char* type, int def, tolua_Error* err)
+tolua_isusertype	.\tolua++.h	/^TOLUA_API int tolua_isusertype (lua_State* L, int lo, const char* type, int def, tolua_Error* err);$/;"	p	signature:(lua_State* L, int lo, const char* type, int def, tolua_Error* err)
+tolua_isusertypearray	.\tolua++.h	/^TOLUA_API int tolua_isusertypearray$/;"	p	signature:(lua_State* L, int lo, const char* type, int dim, int def, tolua_Error* err)
+tolua_isvalue	.\tolua++.h	/^TOLUA_API int tolua_isvalue (lua_State* L, int lo, int def, tolua_Error* err);$/;"	p	signature:(lua_State* L, int lo, int def, tolua_Error* err)
+tolua_isvaluearray	.\tolua++.h	/^TOLUA_API int tolua_isvaluearray$/;"	p	signature:(lua_State* L, int lo, int dim, int def, tolua_Error* err)
+tolua_isvaluenil	.\tolua++.h	/^TOLUA_API int tolua_isvaluenil (lua_State* L, int lo, tolua_Error* err);$/;"	p	signature:(lua_State* L, int lo, tolua_Error* err)
+tolua_module	.\tolua++.h	/^TOLUA_API void tolua_module (lua_State* L, const char* name, int hasvar);$/;"	p	signature:(lua_State* L, const char* name, int hasvar)
+tolua_open	.\tolua++.h	/^TOLUA_API void tolua_open (lua_State* L);$/;"	p	signature:(lua_State* L)
+tolua_outside	.\tolua++.h	175;"	d
+tolua_owned	.\tolua++.h	179;"	d
+tolua_pushboolean	.\tolua++.h	/^TOLUA_API void tolua_pushboolean (lua_State* L, int value);$/;"	p	signature:(lua_State* L, int value)
+tolua_pushcppstring	.\tolua++.h	29;"	d
+tolua_pushfieldboolean	.\tolua++.h	/^TOLUA_API void tolua_pushfieldboolean (lua_State* L, int lo, int index, int v);$/;"	p	signature:(lua_State* L, int lo, int index, int v)
+tolua_pushfieldcppstring	.\tolua++.h	33;"	d
+tolua_pushfieldnumber	.\tolua++.h	/^TOLUA_API void tolua_pushfieldnumber (lua_State* L, int lo, int index, lua_Number v);$/;"	p	signature:(lua_State* L, int lo, int index, lua_Number v)
+tolua_pushfieldstring	.\tolua++.h	/^TOLUA_API void tolua_pushfieldstring (lua_State* L, int lo, int index, const char* v);$/;"	p	signature:(lua_State* L, int lo, int index, const char* v)
+tolua_pushfielduserdata	.\tolua++.h	/^TOLUA_API void tolua_pushfielduserdata (lua_State* L, int lo, int index, void* v);$/;"	p	signature:(lua_State* L, int lo, int index, void* v)
+tolua_pushfieldusertype	.\tolua++.h	/^TOLUA_API void tolua_pushfieldusertype (lua_State* L, int lo, int index, void* v, const char* type);$/;"	p	signature:(lua_State* L, int lo, int index, void* v, const char* type)
+tolua_pushfieldusertype_and_takeownership	.\tolua++.h	/^TOLUA_API void tolua_pushfieldusertype_and_takeownership (lua_State* L, int lo, int index, void* v, const char* type);$/;"	p	signature:(lua_State* L, int lo, int index, void* v, const char* type)
+tolua_pushfieldvalue	.\tolua++.h	/^TOLUA_API void tolua_pushfieldvalue (lua_State* L, int lo, int index, int v);$/;"	p	signature:(lua_State* L, int lo, int index, int v)
+tolua_pushnumber	.\tolua++.h	/^TOLUA_API void tolua_pushnumber (lua_State* L, lua_Number value);$/;"	p	signature:(lua_State* L, lua_Number value)
+tolua_pushstring	.\tolua++.h	/^TOLUA_API void tolua_pushstring (lua_State* L, const char* value);$/;"	p	signature:(lua_State* L, const char* value)
+tolua_pushuserdata	.\tolua++.h	/^TOLUA_API void tolua_pushuserdata (lua_State* L, void* value);$/;"	p	signature:(lua_State* L, void* value)
+tolua_pushusertype	.\tolua++.h	/^TOLUA_API void tolua_pushusertype (lua_State* L, void* value, const char* type);$/;"	p	signature:(lua_State* L, void* value, const char* type)
+tolua_pushusertype_and_takeownership	.\tolua++.h	/^TOLUA_API void tolua_pushusertype_and_takeownership(lua_State* L, void* value, const char* type);$/;"	p	signature:(lua_State* L, void* value, const char* type)
+tolua_pushvalue	.\tolua++.h	/^TOLUA_API void tolua_pushvalue (lua_State* L, int lo);$/;"	p	signature:(lua_State* L, int lo)
+tolua_reg_types	.\interface.cpp	/^static void tolua_reg_types (lua_State* tolua_S)$/;"	f	file:	signature:(lua_State* tolua_S)
+tolua_reg_types	.\interface.h	/^static void tolua_reg_types (lua_State* tolua_S)$/;"	f	signature:(lua_State* tolua_S)
+tolua_register_gc	.\tolua++.h	/^TOLUA_API int tolua_register_gc (lua_State* L, int lo);$/;"	p	signature:(lua_State* L, int lo)
+tolua_toboolean	.\tolua++.h	/^TOLUA_API int tolua_toboolean (lua_State* L, int narg, int def);$/;"	p	signature:(lua_State* L, int narg, int def)
+tolua_tocppstring	.\tolua++.h	/^static inline const char* tolua_tocppstring (lua_State* L, int narg, const char* def) {$/;"	f	signature:(lua_State* L, int narg, const char* def)
+tolua_tocppstring	.\tolua++.h	152;"	d
+tolua_tofieldcppstring	.\tolua++.h	/^static inline const char* tolua_tofieldcppstring (lua_State* L, int lo, int index, const char* def) {$/;"	f	signature:(lua_State* L, int lo, int index, const char* def)
+tolua_tofieldcppstring	.\tolua++.h	153;"	d
+tolua_tofieldnumber	.\tolua++.h	/^TOLUA_API lua_Number tolua_tofieldnumber (lua_State* L, int lo, int index, lua_Number def);$/;"	p	signature:(lua_State* L, int lo, int index, lua_Number def)
+tolua_tofieldstring	.\tolua++.h	/^TOLUA_API const char* tolua_tofieldstring (lua_State* L, int lo, int index, const char* def);$/;"	p	signature:(lua_State* L, int lo, int index, const char* def)
+tolua_tofielduserdata	.\tolua++.h	/^TOLUA_API void* tolua_tofielduserdata (lua_State* L, int lo, int index, void* def);$/;"	p	signature:(lua_State* L, int lo, int index, void* def)
+tolua_tofieldusertype	.\tolua++.h	/^TOLUA_API void* tolua_tofieldusertype (lua_State* L, int lo, int index, void* def);$/;"	p	signature:(lua_State* L, int lo, int index, void* def)
+tolua_tofieldvalue	.\tolua++.h	/^TOLUA_API int tolua_tofieldvalue (lua_State* L, int lo, int index, int def);$/;"	p	signature:(lua_State* L, int lo, int index, int def)
+tolua_tonumber	.\tolua++.h	/^TOLUA_API lua_Number tolua_tonumber (lua_State* L, int narg, lua_Number def);$/;"	p	signature:(lua_State* L, int narg, lua_Number def)
+tolua_tostring	.\tolua++.h	/^TOLUA_API const char* tolua_tostring (lua_State* L, int narg, const char* def);$/;"	p	signature:(lua_State* L, int narg, const char* def)
+tolua_touserdata	.\tolua++.h	/^TOLUA_API void* tolua_touserdata (lua_State* L, int narg, void* def);$/;"	p	signature:(lua_State* L, int narg, void* def)
+tolua_tousertype	.\tolua++.h	/^TOLUA_API void* tolua_tousertype (lua_State* L, int narg, void* def);$/;"	p	signature:(lua_State* L, int narg, void* def)
+tolua_tovalue	.\tolua++.h	/^TOLUA_API int tolua_tovalue (lua_State* L, int narg, int def);$/;"	p	signature:(lua_State* L, int narg, int def)
+tolua_typename	.\tolua++.h	/^TOLUA_API const char* tolua_typename (lua_State* L, int lo);$/;"	p	signature:(lua_State* L, int lo)
+tolua_usertype	.\tolua++.h	/^TOLUA_API void tolua_usertype (lua_State* L, const char* type);$/;"	p	signature:(lua_State* L, const char* type)
+tolua_variable	.\tolua++.h	/^TOLUA_API void tolua_variable (lua_State* L, const char* name, lua_CFunction get, lua_CFunction set);$/;"	p	signature:(lua_State* L, const char* name, lua_CFunction get, lua_CFunction set)
+trace_message	.\protocal.cpp	/^CProtocal::trace_message()$/;"	f	class:CProtocal	signature:()
+trace_message	.\protocal.h	/^    static void trace_message();$/;"	p	class:CProtocal	access:public	signature:()
+transfer	.\interface_c.cpp	/^int transfer(int fd)$/;"	f	signature:(int fd)
+transfer	.\interface_c.h	/^int  transfer(int fd);$/;"	p	signature:(int fd)
+transfer_raw	.\interface_c.cpp	/^int transfer_raw(int fd)$/;"	f	signature:(int fd)
+transfer_raw	.\interface_c.h	/^int  transfer_raw(int fd);$/;"	p	signature:(int fd)
+travel	.\timer.c	/^int travel(ELE* pELE, void* key)$/;"	f	signature:(ELE* pELE, void* key)
+travel_p	.\llist.h	/^list_travel_p travel_p;$/;"	v
+tv1	.\mtimer.c	/^	struct tvec_root tv1;$/;"	m	struct:tvec_base	typeref:struct:tvec_base::tvec_root	file:	access:public
+tv2	.\mtimer.c	/^	struct tvec tv2;$/;"	m	struct:tvec_base	typeref:struct:tvec_base::tvec	file:	access:public
+tv3	.\mtimer.c	/^	struct tvec tv3;$/;"	m	struct:tvec_base	typeref:struct:tvec_base::tvec	file:	access:public
+tv4	.\mtimer.c	/^	struct tvec tv4;$/;"	m	struct:tvec_base	typeref:struct:tvec_base::tvec	file:	access:public
+tv5	.\mtimer.c	/^	struct tvec tv5;$/;"	m	struct:tvec_base	typeref:struct:tvec_base::tvec	file:	access:public
+tvec	.\mtimer.c	/^struct tvec {$/;"	s	file:
+tvec::vec	.\mtimer.c	/^	struct list_head vec[TVN_SIZE];$/;"	m	struct:tvec	typeref:struct:tvec::list_head	file:	access:public
+tvec_base	.\mtimer.c	/^struct tvec_base {$/;"	s	file:
+tvec_base::lock	.\mtimer.c	/^	int lock;$/;"	m	struct:tvec_base	file:	access:public
+tvec_base::next_timer	.\mtimer.c	/^	unsigned long next_timer;$/;"	m	struct:tvec_base	file:	access:public
+tvec_base::running_timer	.\mtimer.c	/^	struct timer_list *running_timer;$/;"	m	struct:tvec_base	typeref:struct:tvec_base::timer_list	file:	access:public
+tvec_base::timer_jiffies	.\mtimer.c	/^	unsigned long timer_jiffies;$/;"	m	struct:tvec_base	file:	access:public
+tvec_base::tv1	.\mtimer.c	/^	struct tvec_root tv1;$/;"	m	struct:tvec_base	typeref:struct:tvec_base::tvec_root	file:	access:public
+tvec_base::tv2	.\mtimer.c	/^	struct tvec tv2;$/;"	m	struct:tvec_base	typeref:struct:tvec_base::tvec	file:	access:public
+tvec_base::tv3	.\mtimer.c	/^	struct tvec tv3;$/;"	m	struct:tvec_base	typeref:struct:tvec_base::tvec	file:	access:public
+tvec_base::tv4	.\mtimer.c	/^	struct tvec tv4;$/;"	m	struct:tvec_base	typeref:struct:tvec_base::tvec	file:	access:public
+tvec_base::tv5	.\mtimer.c	/^	struct tvec tv5;$/;"	m	struct:tvec_base	typeref:struct:tvec_base::tvec	file:	access:public
+tvec_root	.\mtimer.c	/^struct tvec_root {$/;"	s	file:
+tvec_root::vec	.\mtimer.c	/^	struct list_head vec[TVR_SIZE];$/;"	m	struct:tvec_root	typeref:struct:tvec_root::list_head	file:	access:public
+type	.\connectpool.h	/^		filedtype_t type;$/;"	m	struct:CMysqlStore::typeset_t	access:public
+type	.\tolua++.h	/^	const char* type;$/;"	m	struct:tolua_Error	access:public
+typeset_t	.\connectpool.cpp	/^CMysqlStore::typeset_t::typeset_t()$/;"	f	class:CMysqlStore::typeset_t	signature:()
+typeset_t	.\connectpool.h	/^		typeset_t();	$/;"	p	struct:CMysqlStore::typeset_t	access:public	signature:()
+typeset_t	.\connectpool.h	/^	struct typeset_t$/;"	s	class:CMysqlStore	access:private
+u_char	.\wtypedef.h	/^typedef unsigned char   u_char;$/;"	t
+u_int	.\wtypedef.h	/^typedef unsigned int    u_int;$/;"	t
+u_long	.\wtypedef.h	/^typedef unsigned long   u_long;$/;"	t
+u_short	.\wtypedef.h	/^typedef unsigned short  u_short;$/;"	t
+vec	.\mtimer.c	/^	struct list_head vec[TVN_SIZE];$/;"	m	struct:tvec	typeref:struct:tvec::list_head	file:	access:public
+vec	.\mtimer.c	/^	struct list_head vec[TVR_SIZE];$/;"	m	struct:tvec_root	typeref:struct:tvec_root::list_head	file:	access:public
+version	.\main.cpp	/^version()$/;"	f	file:	signature:()
+what	.\connectpool.cpp	/^const char * CSql_error::what() const throw ()$/;"	f	class:CSql_error	signature:() const
+what	.\connectpool.h	/^  virtual const char * what() const throw ();$/;"	p	class:CSql_error	access:public	signature:() const
+write_access	.\log.cpp	/^void write_access(int access, const char* rsp_buf, const char* fmt, ...)$/;"	f	signature:(int access, const char* rsp_buf, const char* fmt, ...)
+write_begin	.\interface_c.cpp	/^void write_begin(short cmd)$/;"	f	signature:(short cmd)
+write_begin	.\interface_c.h	/^void write_begin(short cmd);$/;"	p	signature:(short cmd)
+write_binary	.\interface_c.cpp	/^void write_binary(char *buf, int len)$/;"	f	signature:(char *buf, int len)
+write_binary	.\interface_c.h	/^void write_binary(char *buf, int len);$/;"	p	signature:(char *buf, int len)
+write_byte	.\interface_c.cpp	/^void write_byte(unsigned char value)$/;"	f	signature:(unsigned char value)
+write_byte	.\interface_c.h	/^void write_byte(unsigned char value);$/;"	p	signature:(unsigned char value)
+write_end	.\interface_c.cpp	/^void write_end()$/;"	f	signature:()
+write_end	.\interface_c.h	/^void write_end();$/;"	p	signature:()
+write_int	.\interface_c.cpp	/^void write_int(int value)$/;"	f	signature:(int value)
+write_int	.\interface_c.h	/^void write_int(int value);$/;"	p	signature:(int value)
+write_log	.\log.cpp	/^void write_log (int level, const char *filename, const char *funcname, int lineno, const char *format, ...)$/;"	f	signature:(int level, const char *filename, const char *funcname, int lineno, const char *format, ...)
+write_log	.\log.cpp	/^void write_log (int, const char*, const char *, int, const char *, ...) {}$/;"	f	signature:(int, const char*, const char *, int, const char *, ...)
+write_log	.\log.h	/^static inline void write_log (int n, const char *a, const char *b, int c, const char *d, ...) {}$/;"	f	signature:(int n, const char *a, const char *b, int c, const char *d, ...)
+write_short	.\interface_c.cpp	/^void write_short(short value)$/;"	f	signature:(short value)
+write_short	.\interface_c.h	/^void write_short(short value);$/;"	p	signature:(short value)
+write_string	.\interface_c.cpp	/^void write_string(char* value)$/;"	f	signature:(char* value)
+write_string	.\interface_c.h	/^void write_string(char* value);$/;"	p	signature:(char* value)
+write_uint	.\interface_c.cpp	/^void write_uint(unsigned long value)$/;"	f	signature:(unsigned long value)
+write_uint	.\interface_c.h	/^void write_uint(unsigned long value);$/;"	p	signature:(unsigned long value)
+~CConnect	.\connectpool.cpp	/^CConnect::~CConnect()$/;"	f	class:CConnect	signature:()
+~CConnect	.\connectpool.h	/^	virtual ~CConnect();$/;"	p	class:CConnect	access:public	signature:()
+~CDataStore	.\connectpool.cpp	/^CDataStore::~CDataStore()$/;"	f	class:CDataStore	signature:()
+~CDataStore	.\connectpool.h	/^	virtual ~CDataStore();$/;"	p	class:CDataStore	access:public	signature:()
+~CMysql	.\mysql_part.cpp	/^CMysql::~CMysql()$/;"	f	class:CMysql	signature:()
+~CMysql	.\mysql_part.h	/^    ~CMysql();$/;"	p	class:CMysql	access:public	signature:()
+~CMysqlConnect	.\connectpool.cpp	/^CMysqlConnect::~CMysqlConnect()$/;"	f	class:CMysqlConnect	signature:()
+~CMysqlConnect	.\connectpool.h	/^	virtual ~CMysqlConnect();$/;"	p	class:CMysqlConnect	access:public	signature:()
+~CMysqlStore	.\connectpool.cpp	/^CMysqlStore::~CMysqlStore()$/;"	f	class:CMysqlStore	signature:()
+~CMysqlStore	.\connectpool.h	/^	virtual ~CMysqlStore();$/;"	p	class:CMysqlStore	access:public	signature:()
+~CProtocal	.\protocal.cpp	/^CProtocal::~CProtocal()$/;"	f	class:CProtocal	signature:()
+~CProtocal	.\protocal.h	/^    ~CProtocal();$/;"	p	class:CProtocal	access:public	signature:()
+~CRedis	.\redis.cpp	/^CRedis::~CRedis()$/;"	f	class:CRedis	signature:()
+~CRedis	.\redis.h	/^    ~CRedis();$/;"	p	class:CRedis	access:public	signature:()
+~CSql_error	.\connectpool.cpp	/^CSql_error::~CSql_error() throw ()$/;"	f	class:CSql_error	signature:()
+~CSql_error	.\connectpool.h	/^  virtual ~CSql_error() throw ();$/;"	p	class:CSql_error	access:public	signature:()
+~Net	.\net.cpp	/^Net::~Net() $/;"	f	class:Net	signature:()
+~Net	.\net.h	/^	~Net();$/;"	p	class:Net	access:public	signature:()
+~PacketBase	.\PacketBase.h	/^	virtual ~PacketBase(void){}$/;"	f	class:PacketBase	access:public	signature:(void)
+~PacketParser	.\PacketParser.h	/^	virtual ~PacketParser(void){}$/;"	f	class:PacketParser	access:public	signature:(void)
+~SocketHandler	.\socket.cpp	/^SocketHandler::~SocketHandler() $/;"	f	class:SocketHandler	signature:()
+~SocketHandler	.\socket.h	/^	~SocketHandler();$/;"	p	class:SocketHandler	access:public	signature:()
+~TimerEvent	.\timer_event.cpp	/^TimerEvent::~TimerEvent(void)$/;"	f	class:TimerEvent	signature:(void)
+~TimerEvent	.\timer_event.h	/^	~TimerEvent(void);$/;"	p	class:TimerEvent	access:public	signature:(void)
