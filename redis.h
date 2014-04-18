@@ -19,10 +19,10 @@ public:
 
 	int S_IsMember(const char* key, const char* value);
 	int S_IsMember(const char* key, const int value);
-    int HashSetRedisValue(const char* key, const int field, const char* value);
-    int HashGetRedisValue(const char* key, const int field);
-    int DelRedisValue(const char* key);
-    int DelRedisHashValue(const char* key, const int field);
+    int HSet(const char* key, const int field, const char* value);
+    int HGet(const char* key, const int field);
+    int Del(const char* key);
+    int HDel(const char* key, const int field);
     
 	bool IsActived();
 private:

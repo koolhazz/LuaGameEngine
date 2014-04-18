@@ -26,7 +26,7 @@ static int  cur_file_pos    = 0;
 extern bool is_daemon;
 void init_log (const char *app, const char *dir, int max_num, int max_size)
 {
-    strncpy(appname, app, sizeof(appname)-1);
+    strncpy(appname, app, sizeof(appname) - 1);
 
     if(dir) {
         strncpy (log_dir, dir, sizeof (log_dir) - 1);
