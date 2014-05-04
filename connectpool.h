@@ -23,8 +23,7 @@
 
 using namespace std;
 
-class CSql_error : public std::runtime_error
-{
+class CSql_error : public std::runtime_error {
 private:
 	std::string m_err;
 public:
@@ -39,8 +38,7 @@ public:
   virtual const char * what() const throw ();
 };
 
-class CConnect
-{
+class CConnect {
 private:
 	//
 protected:
@@ -78,8 +76,7 @@ public:
 };
 
 
-class CMysqlConnect : public CConnect
-{
+class CMysqlConnect : public CConnect {
 private:
 	//一个连接
 	MYSQL *m_conn;
@@ -119,8 +116,7 @@ public:
 
 };
 
-class CDataStore
-{
+class CDataStore {
 private:
 	//
 protected:
@@ -174,8 +170,7 @@ public:
 };
 
 
-class CMysqlStore : public CDataStore
-{
+class CMysqlStore : public CDataStore {
 private:
 	//指向  mysql 的连接指针
 	MYSQL * m_connptr;

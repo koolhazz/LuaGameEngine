@@ -20,8 +20,8 @@
 
 #define LUA_GAME_ENGINE_VERSION 		"1.4.2b201312101700"
 #define LUA_GAME_ENGINE_VERSION_MAJOR 	1
-#define LUA_GAME_ENGINE_VERSION_MINOR 	4
-#define LUA_GAME_ENGINE_VERSION_BUGFIX 	2
+#define LUA_GAME_ENGINE_VERSION_MINOR 	5
+#define LUA_GAME_ENGINE_VERSION_BUGFIX 	1
 
 extern "C"
 {
@@ -175,11 +175,6 @@ main(int argc, char ** argv)
     
     lua_setglobal(L, COMMAND_ARGS);    
 
-    //初始化日志文件
-
-
-    //log_info("Initing\n");
-
 	if (is_daemon) {
         if ( -1 == daemon(1, 0)) {
             fprintf(stdout, "%s\n", "daemon error.");
@@ -197,7 +192,10 @@ main(int argc, char ** argv)
 	__pidfile();
 	__version();
 
-	CProtocal::init();
+	if (CProtocal::init() == -1) {
+		log_error("CProtocal::init() failed.");
+		return -1;
+	}
 
     if(!net.init()) {
         log_error("init server failed");

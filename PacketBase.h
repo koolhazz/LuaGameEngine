@@ -19,8 +19,7 @@ typedef unsigned char       BYTE;
 #define HEADER_SIZE_9		9
 
 template <int _buffer_size>
-class PacketBase
-{
+class PacketBase {
 public:
 	PacketBase(void){}
 	virtual ~PacketBase(void){}
@@ -244,7 +243,7 @@ protected:
 	{
 		if(nPos > 0 || nPos+nLen < PACKET_HEADER_SIZE)
 		{
-			memcpy(m_strBuf+nPos, pIn, nLen) ;
+			memcpy(m_strBuf+nPos, pIn, nLen);
 		}
 	}
 };

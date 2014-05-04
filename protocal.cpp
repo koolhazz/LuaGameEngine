@@ -4,6 +4,18 @@
 /* the Lua interpreter */
 extern lua_State* L;
 
+static inline message_t*
+__new_message()
+{
+	message_t* p = (message_t*)malloc(sizeof *p);
+
+	if (p) {
+		memset(p, 0, sizeof *p);
+	}
+
+	return p;
+}
+
 CProtocal::CProtocal()
 {
 }
@@ -12,12 +24,13 @@ CProtocal::~CProtocal()
 {
 }
 
-int CProtocal::message_count = 0;
-MessageMap_t CProtocal::message_table = MessageMap_t();
+message_map_t CProtocal::messages = message_map_t();
 
 int 
 CProtocal::init()
 {
+	message_t *m;
+
     luaL_openlibs(L);
     // Load file.
     if(luaL_dofile(L, "script/protocal.lua")) {
@@ -27,30 +40,35 @@ CProtocal::init()
 
     lua_getglobal(L, "protocal_define_table");
     lua_pushnil(L);
-    Message message;
     while(lua_next(L, -2) != 0) {
+		m = __new_message();
+
+		if (m == NULL) {
+			log_error("new message failed.");
+			return -1;
+		}
+		
         lua_pushnil(L);
         lua_next(L, -2);    //cmd
-        message.cmd = lua_tonumber(L, -1);
+        m->cmd = (unsigned short)lua_tonumber(L, -1);
         lua_pop(L, 1);
 
         lua_next(L, -2);    //format
-        strcpy(message.format, lua_tostring(L, -1));
+        strcpy(m->format, lua_tostring(L, -1));
         lua_pop(L, 1);
         
         lua_next(L, -2);    //desc
-        strcpy(message.desc, lua_tostring(L, -1));
+        strcpy(m->desc, lua_tostring(L, -1));
         lua_pop(L, 1);
         
         lua_next(L, -2);    //callback
-        strcpy(message.call_back, lua_tostring(L, -1));
+        strcpy(m->handler, lua_tostring(L, -1));
         lua_pop(L, 1);
 
         lua_next(L, -2);
         lua_pop(L, 1);
         
-        message_table[message.cmd] = message;
-
+        messages[m->cmd] = m;
     }
 
 	trace_message();
@@ -61,23 +79,23 @@ CProtocal::init()
 void 
 CProtocal::trace_message()
 {
-    MessageMapItr_t iter;
+    message_map_itr_t iter;
 	
-    for(iter = message_table.begin(); iter != message_table.end(); iter++) {
+    for(iter = messages.begin(); iter != messages.end(); iter++) {
         log_debug("cmd: [%#x] Format: [%s] desc: [%s] callback: [%s]", 
-			iter->second.cmd, iter->second.format, iter->second.desc, iter->second.call_back);
+			iter->second->cmd, iter->second->format, iter->second->desc, iter->second->handler);
     }
 
 }
 
-Message 
+message_t* 
 CProtocal::get_message(unsigned short cmd)
 {
-    MessageMapItr_t iter = message_table.find(cmd);
-    if(iter != message_table.end()) {
+    message_map_itr_t iter = messages.find(cmd);
+    if(iter != messages.end()) {
         return iter->second;
     }
 	
-	return Message();     //return default message
+	return NULL;     //return default message
 }
 
