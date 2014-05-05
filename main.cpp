@@ -2,7 +2,7 @@
 #include "timer.h"
 #include "timer_event.h"
 #include "log.h"
-#include "protocal.h"
+#include "protocol.h"
 #include "getopt.h"
 #include "daemonize.h"
 #include "lua_interface.h"
@@ -192,7 +192,8 @@ main(int argc, char ** argv)
 	__pidfile();
 	__version();
 
-	if (CProtocal::init() == -1) {
+	if (message_init() == -1) {
+	// if (CProtocal::init() == -1) {
 		log_error("CProtocal::init() failed.");
 		return -1;
 	}

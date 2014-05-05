@@ -1,4 +1,4 @@
-#include "protocal.h"
+#include "protocol.h"
 #include "log.h"
 
 /* the Lua interpreter */
@@ -16,21 +16,28 @@ __new_message()
 	return p;
 }
 
-CProtocal::CProtocal()
+message_map_t* messages = NULL;
+
+static int
+__new_messages(message_map_t** mm)
 {
+	*mm = new message_map_t();
+
+	return *mm == NULL ? -1 : 0;
 }
 
-CProtocal::~CProtocal()
-{
-}
-
-message_map_t CProtocal::messages = message_map_t();
-
-int 
-CProtocal::init()
+int
+message_init()
 {
 	message_t *m;
 
+	(void)__new_messages(&messages);
+
+	if (messages == NULL) {
+		log_error("new messages failed.");
+		return -1;
+	}
+	
     luaL_openlibs(L);
     // Load file.
     if(luaL_dofile(L, "script/protocal.lua")) {
@@ -68,34 +75,33 @@ CProtocal::init()
         lua_next(L, -2);
         lua_pop(L, 1);
         
-        messages[m->cmd] = m;
+        (*messages)[m->cmd] = m;
     }
 
-	trace_message();
+	message_trace();
 
-	return 0;
+	return 0;	
 }
 
-void 
-CProtocal::trace_message()
+void
+message_trace()
 {
     message_map_itr_t iter;
 	
-    for(iter = messages.begin(); iter != messages.end(); iter++) {
+    for(iter = messages->begin(); iter != messages->end(); iter++) {
         log_debug("cmd: [%#x] Format: [%s] desc: [%s] callback: [%s]", 
 			iter->second->cmd, iter->second->format, iter->second->desc, iter->second->handler);
-    }
-
+    }	
 }
 
-message_t* 
-CProtocal::get_message(unsigned short cmd)
+message_t*
+message_get(unsigned short cmd)
 {
-    message_map_itr_t iter = messages.find(cmd);
-    if(iter != messages.end()) {
+    message_map_itr_t iter = messages->find(cmd);
+    if(iter != messages->end()) {
         return iter->second;
     }
 	
-	return NULL;     //return default message
+	return NULL;     //return default message	
 }
 

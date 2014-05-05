@@ -64,7 +64,7 @@ set(SRC
 	mtimer.c
 	mysql_part.cpp
 	net.cpp
-	protocal.cpp
+	protocol.cpp
 	redis.cpp
 	socket.cpp
 	timer.c

@@ -1,7 +1,7 @@
 #include "socket.h"
 #include "log.h"
 #include "lua_interface.h"
-#include "protocal.h"
+#include "protocol.h"
 
 #include <stdio.h>
 #include <string.h>
@@ -408,7 +408,7 @@ int SocketHandler::OnPacketComplete(NETInputPacket *pPacket)
 	}
 
 	short cmd =	pPacket->GetCmdType();	
-	message_t* message = CProtocal::get_message(cmd);
+	message_t* message = message_get(cmd); //CProtocal::get_message(cmd);
 	if (message == NULL) {
 		log_error("can't find the message:0x%x\n", cmd);
 		return -1;

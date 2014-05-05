@@ -1,7 +1,8 @@
-#ifndef __PROTOCAL_H_
-#define __PROTOCAL_H_
+#ifndef __PROTOCOL_H_
+#define __PROTOCOL_H_
 
-extern "C" {
+extern "C" 
+{
 #include <lua.h>
 #include <lualib.h>
 #include <lauxlib.h>
@@ -10,8 +11,6 @@ extern "C" {
 #include <string.h>
 #include <map>
 using namespace std;
-
-typedef int (*CALLBACK_FUNC)(const char* format, ...);      //命令处理回调函数
 
 typedef struct message_s message_t;
 struct message_s {
@@ -24,19 +23,16 @@ struct message_s {
 typedef map<unsigned short, message_t*> message_map_t;
 typedef message_map_t::iterator 		message_map_itr_t;
 
+extern int
+message_init();
 
-class CProtocal {
-public:
-    CProtocal();
-    ~CProtocal();
+extern void
+message_trace();
 
-public:
-	static int init();
-    static void trace_message();
-    static message_t* get_message(unsigned short cmd);
-public:
-    static message_map_t messages;
-};
+extern message_t* 
+message_get(unsigned short cmd);
+
+extern message_map_t* messages;
 
 #endif
 
