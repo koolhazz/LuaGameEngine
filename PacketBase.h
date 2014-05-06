@@ -10,9 +10,9 @@ using namespace std;
 typedef unsigned char       BYTE;
 
 #ifdef TCP_BUFFER_SIZE
-#define	ICHAT_TCP_DEFAULT_BUFFER	TCP_BUFFER_SIZE//8192
+#define	ICHAT_TCP_DEFAULT_BUFFER	TCP_BUFFER_SIZE
 #else
-	#define	ICHAT_TCP_DEFAULT_BUFFER	8192
+#define	ICHAT_TCP_DEFAULT_BUFFER	8 * 1024
 #endif
 
 #define HEADER_SIZE_14		14
@@ -26,8 +26,7 @@ public:
 
 	char *packet_buf(void)	{return m_strBuf;}
 	int packet_size(void)	{return m_nPacketSize;}
-	enum
-	{
+	enum {
 #if HEADER_SIZE == 9
 #warning("header_size == 9")
 		PACKET_HEADER_SIZE = 9,
@@ -53,7 +52,7 @@ protected:
 		_reset();
 		memcpy(m_strBuf, pInBuf, nLen);
 		m_nPacketSize = nLen;
-		assert(m_nPacketSize>PACKET_HEADER_SIZE);
+		assert(m_nPacketSize > PACKET_HEADER_SIZE);
 		return true;
 	}
 	////////////////////////////////////////////////////////////////////////////////

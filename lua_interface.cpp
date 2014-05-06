@@ -7,9 +7,9 @@
 
 extern "C"
 {
-	#include <lua.h>
-	#include <lualib.h>
-	#include <lauxlib.h>
+#include <lua.h>
+#include <lualib.h>
+#include <lauxlib.h>
 }
 
 extern lua_State* L;
@@ -86,8 +86,7 @@ call_lua (const char *func, const char *sig, ...)
            break;
  
         case 's':  /* string result */
-            if (!lua_isstring(L, nres))
-            {
+            if (!lua_isstring(L, nres)) {
                 log_error("wrong result type");
                 return -1;
             }   

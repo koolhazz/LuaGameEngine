@@ -18,10 +18,15 @@
 #include <signal.h>
 
 
-#define LUA_GAME_ENGINE_VERSION 		"1.4.2b201312101700"
+#define LUA_GAME_ENGINE_VERSION 		"1.5.1b101"
 #define LUA_GAME_ENGINE_VERSION_MAJOR 	1
 #define LUA_GAME_ENGINE_VERSION_MINOR 	5
 #define LUA_GAME_ENGINE_VERSION_BUGFIX 	1
+
+#define show_help()	do {												\
+	printf("By AustinChen\n");											\
+	printf("usage: gameserver -h ip -p port -l level -s sid -d \n");	\
+} while(0);
 
 extern "C"
 {
@@ -128,6 +133,13 @@ __pidfile()
 	}
 }
 
+static void
+__help()
+{
+	printf("By AustinChen\n");
+	printf("usage: gameserver -h ip -p port -l level -s sid -d \n");
+}
+
 lua_State* 		L;
 CMysql 			mysql_handle;
 CRedis 			redis_handle;
@@ -150,6 +162,11 @@ main(int argc, char ** argv)
 
 	now = time(NULL);
 
+	if (argc == 1) {
+		show_help();
+		return 0;
+	}
+
     L = lua_open();     /* initialize Lua */
     luaL_openlibs(L);   /* load Lua base libraries */
     tolua_interface_open(L);
@@ -170,6 +187,9 @@ main(int argc, char ** argv)
                 lua_pushstring(L, optarg);    
                 lua_rawset(L, -3);
             }
+        } else {
+	        printf("%s\n", LUA_GAME_ENGINE_VERSION);
+	        return 0;
         }
     }   
     
@@ -194,7 +214,7 @@ main(int argc, char ** argv)
 
 	if (message_init() == -1) {
 	// if (CProtocal::init() == -1) {
-		log_error("CProtocal::init() failed.");
+		log_error("message_init failed.");
 		return -1;
 	}
 

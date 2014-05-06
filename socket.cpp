@@ -105,9 +105,13 @@ int SocketHandler::handle_read()
 	// log_debug("nrecved: %d", nrecved);
 	
 	if (nrecved == 0) {
+		log_error("connection closed.");
 		return -1;
 	} else if (nrecved == -1) {
-		if (errno != EINTR || errno != EAGAIN ) return -1;
+		if (errno != EINTR || errno != EAGAIN ) {
+			log_error("recv error: %d", errno);
+			return -1;	
+		}
 
 		return 0; 
 	}
@@ -420,6 +424,7 @@ int SocketHandler::OnPacketComplete(NETInputPacket *pPacket)
 	int ret = 0;
 	if (strcmp(message->format, "") == 0) {
 		if(call_lua(message->handler, ">d", &ret) == -1) {
+			log_error("call_lua error.");
             return -1;
         }
         

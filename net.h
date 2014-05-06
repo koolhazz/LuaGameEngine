@@ -24,7 +24,6 @@
 #define SOCKET_ERROR -1
 #define	__INIT_NET_ENVIR__
 
-
 using namespace std;
 
 typedef struct lge_server_stat_s lge_server_stat_t;

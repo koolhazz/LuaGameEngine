@@ -28,7 +28,7 @@ public:
 		m_subVersion = SERVER_PACKET_DEFAULT_SUBVER;
 		reset();
 	}
-	virtual ~PacketParser(void){}
+	virtual ~PacketParser(void) {}
 	// 返回Packet
 	virtual int OnPacketComplete(INPUT_PACKET *) = 0;
 	// 处理PACKET数据
@@ -61,7 +61,10 @@ public:
 			if (m_nStatus == REQ_ERROR) return ret;
 
 			if(m_nStatus == REQ_DONE) {
-				if(OnPacketComplete(&m_Packet) == -1) return -1;
+				if (OnPacketComplete(&m_Packet) == -1) {
+					log_error("OnPacketComplete error.");
+					return -1;	
+				}
 
 				this->reset();
 			}
