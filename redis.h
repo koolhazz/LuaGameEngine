@@ -19,17 +19,16 @@ public:
 
 	int S_IsMember(const char* key, const char* value);
 	int S_IsMember(const char* key, const int value);
-
-	int HSet(const char* key, const int field, const char* value);
-	int HGet(const char* key, const int field);
-	int HDel(const char* key, const int field);
-	
+    int HSet(const char* key, const int field, const char* value);
+    int HGet(const char* key, const int field);
     int Del(const char* key);
+    int HDel(const char* key, const int field);
     
 	bool IsActived();
 private:
     redisContext*	m_redis;	
     redisReply*		m_reply;	
+
 };
 
 #endif

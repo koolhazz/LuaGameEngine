@@ -43,9 +43,3 @@ tw_insert(time_wheel_t* t, int len, SocketHandler* s)
 	return 0;
 }
 
-int
-tw_shink(time_scale_t* sc)
-{
-	time_scale_t(*sc).swap(*sc); /* 临时对象交换空间 */
-}
-

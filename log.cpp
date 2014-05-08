@@ -24,36 +24,32 @@ static int  max_file_size   = DEFAULT_FILE_SIZE;
 static int  cur_file_pos    = 0;
 
 extern bool is_daemon;
+
 void init_log (const char *app, const char *dir, int max_num, int max_size)
 {
-    strncpy(appname, app, sizeof(appname)-1);
+    strncpy(appname, app, sizeof(appname) - 1);
 
     if(dir) {
         strncpy (log_dir, dir, sizeof (log_dir) - 1);
     }
     mkdir(log_dir, 0777);
-    if(access(log_dir, W_OK|X_OK) < 0)
-    {
+    if(access(log_dir, W_OK|X_OK) < 0) {
         log_error("logdir(%s): Not writable", log_dir);
     }
 
-    if(max_num > 0)
-        max_file_num = max_num;
+    if(max_num > 0) max_file_num = max_num;
     
-    if(max_size > 0)
-        max_file_size = max_size;
+    if(max_size > 0) max_file_size = max_size;
 }
 
 void set_log_level(int l)
 {
-    if(l>=0)
-        __log_level__ = l > 4 ? l : 4;
+    if(l>=0) __log_level__ = l > 4 ? l : 4;
 }
 
 void write_access(int access, const char* rsp_buf, const char* fmt, ...)
 {
-    if (0 == access)
-        return;
+    if (0 == access) return;
 
     char  rspinfo[MAX_PATH_LEN] = {'\0'};
     int   rsplen                = 0;

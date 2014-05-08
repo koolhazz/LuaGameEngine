@@ -11,16 +11,15 @@
 
 using namespace std;
 
-class CMemcachedHandler 
-{
+class CMemcachedHandler {
 public:
 	CMemcachedHandler(const string& host);
 	~CMemcachedHandler();
 	string Get(string& key);
 	int Set(const string& key, const string& value);
 private:
-	memcached_st* memc_;
-	string host_;
+	memcached_st* 	memc_;
+	string 			host_;
 };
 
 #endif

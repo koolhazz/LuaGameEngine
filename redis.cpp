@@ -66,13 +66,13 @@ int CRedis::get_value(const char* key)
     {
         int result = 0;
 
-		//log_debug("m_reply->type:%d\n", m_reply->type);
+		log_debug("m_reply->type:%d\n", m_reply->type);
 			
-        if(1 == m_reply->type)
-        {
+        if (1 == m_reply->type) {
            lua_pushstring(L, m_reply->str); 
            lua_setglobal(L, REDIS_RESULT); 
         }
+        
         freeReplyObject(m_reply);
 		m_reply = NULL;
 		
@@ -236,10 +236,9 @@ CRedis::S_IsMember(const char* key, const int value)
 	return -1;	
 }
 
-int 
-CRedis::HSet(const char* key, const int field, const char* value)
+int CRedis::HSet(const char* key,const int field, const char* value)
 {
-    m_reply = reinterpret_cast<redisReply*>(redisCommand(m_redis, "HSET %s %d %s", key, field, value));
+    m_reply = reinterpret_cast<redisReply*>(redisCommand(m_redis, "HSET %s %d %s", key,field,value));
 
     if(m_reply) {
         log_debug("HashSetRedisValue:m_reply->type:%d\n", m_reply->type);
@@ -252,10 +251,9 @@ CRedis::HSet(const char* key, const int field, const char* value)
     return 0;
 }
 
-int 
-CRedis::HGet(const char* key, const int field)
+int CRedis::HGet(const char* key, const int field)
 {
-    m_reply = reinterpret_cast<redisReply*>(redisCommand(m_redis, "HGET %s %d", key, field));
+    m_reply = reinterpret_cast<redisReply*>(redisCommand(m_redis, "HGET %s %d ", key, field));
     int result = -1;
     
     if(m_reply) {
@@ -263,11 +261,8 @@ CRedis::HGet(const char* key, const int field)
 			lua_pushstring(L, m_reply->str);
 			lua_setglobal(L, REDIS_RESULT);
 			result = 0;
-        } else {
-        	lua_pushstring(L, "");
-        	lua_setglobal(L, REDIS_RESULT);
         }
-        
+
 		freeReplyObject(m_reply);
 		m_reply = NULL;
 
@@ -277,10 +272,9 @@ CRedis::HGet(const char* key, const int field)
     return -1;
 }
 
-int 
-CRedis::Del(const char* key)
+int CRedis::Del(const char* key)
 {
-    m_reply = reinterpret_cast<redisReply*>(redisCommand(m_redis, "DEL %s", key));
+    m_reply = reinterpret_cast<redisReply*>(redisCommand(m_redis, "DEL %s ", key));
     if(m_reply) {
 
 		freeReplyObject(m_reply);
@@ -292,8 +286,7 @@ CRedis::Del(const char* key)
     return 0;
 }
 
-int 
-CRedis::HDel(const char* key, const int field)
+int CRedis::HDel(const char* key,const int field)
 {
     m_reply = reinterpret_cast<redisReply*>(redisCommand(m_redis, "HDEL %s %d ", key,field));
     if(m_reply)

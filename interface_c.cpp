@@ -317,25 +317,25 @@ int S_IsMember(const char* key, const int value)
 int 
 HSet(const char* key, const int field,const char* value)
 {
-	return redis_handle.HashSetRedisValue(key,field,value);
+	return redis_handle.HSet(key,field,value);
 }
 
 int 
 HGet(const char* key,const int field)
 {
-	return redis_handle.HashGetRedisValue(key,field);
+	return redis_handle.HGet(key,field);
 }
 
 int 
 Del(const char* key)
 {
-	return redis_handle.DelRedisValue(key);
+	return redis_handle.Del(key);
 }
 
 int 
 HDel(const char* key,const int field)
 {
-	return redis_handle.DelRedisHashValue(key,field);
+	return redis_handle.HDel(key,field);
 }
 
 typedef struct {

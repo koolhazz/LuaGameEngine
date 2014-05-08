@@ -1,12 +1,11 @@
 #ifndef _LLIST_H_
 #define _LLIST_H_
 
-
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-typedef struct {
+typedef struct{
 	int i;
 	int j;
 	void* k;

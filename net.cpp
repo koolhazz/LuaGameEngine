@@ -11,8 +11,8 @@
 #include <netinet/tcp.h>
 #include <time.h>
 
-#define EVENT_TOTAL_COUNT	256	
-#define CHECK_POINT_TIMES   10
+#define EVENT_TOTAL_COUNT 256	
+#define CHECK_POINT_TIMES 10
 
 extern int now;  /* 缓存当前系统时间，减少time的调用 */
 extern time_wheel_t* g_tw;

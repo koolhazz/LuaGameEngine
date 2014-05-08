@@ -25,8 +25,6 @@ tw_wheeling(time_wheel_t* t, int len);
 extern int
 tw_insert(time_wheel_t* t, int len, SocketHandler* s);
 
-/* 释放空间 */
-extern int
-tw_shink(time_scale_t* s);
+
 
 #endif 

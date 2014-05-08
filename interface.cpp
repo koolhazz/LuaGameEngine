@@ -1,6 +1,6 @@
 /*
 ** Lua binding: interface
-** Generated automatically by tolua++-1.0.92 on Tue Dec  3 11:46:24 2013.
+** Generated automatically by tolua++-1.0.92 on Tue Apr  8 10:57:10 2014.
 */
 
 #ifndef __cplusplus
@@ -1147,9 +1147,9 @@ tolua_lerror:
 }
 #endif //#ifndef TOLUA_DISABLE
 
-/* function: HashSetRedisValue */
-#ifndef TOLUA_DISABLE_tolua_interface_redis_HashSetRedisValue00
-static int tolua_interface_redis_HashSetRedisValue00(lua_State* tolua_S)
+/* function: HSet */
+#ifndef TOLUA_DISABLE_tolua_interface_redis_HSet00
+static int tolua_interface_redis_HSet00(lua_State* tolua_S)
 {
 #ifndef TOLUA_RELEASE
  tolua_Error tolua_err;
@@ -1167,22 +1167,22 @@ static int tolua_interface_redis_HashSetRedisValue00(lua_State* tolua_S)
   const int field = ((const int)  tolua_tonumber(tolua_S,2,0));
   const char* value = ((const char*)  tolua_tostring(tolua_S,3,0));
   {
-   int tolua_ret = (int)  HashSetRedisValue(key,field,value);
+   int tolua_ret = (int)  HSet(key,field,value);
    tolua_pushnumber(tolua_S,(lua_Number)tolua_ret);
   }
  }
  return 1;
 #ifndef TOLUA_RELEASE
  tolua_lerror:
- tolua_error(tolua_S,"#ferror in function 'HashSetRedisValue'.",&tolua_err);
+ tolua_error(tolua_S,"#ferror in function 'HSet'.",&tolua_err);
  return 0;
 #endif
 }
 #endif //#ifndef TOLUA_DISABLE
 
-/* function: HashGetRedisValue */
-#ifndef TOLUA_DISABLE_tolua_interface_redis_HashGetRedisValue00
-static int tolua_interface_redis_HashGetRedisValue00(lua_State* tolua_S)
+/* function: HGet */
+#ifndef TOLUA_DISABLE_tolua_interface_redis_HGet00
+static int tolua_interface_redis_HGet00(lua_State* tolua_S)
 {
 #ifndef TOLUA_RELEASE
  tolua_Error tolua_err;
@@ -1198,22 +1198,53 @@ static int tolua_interface_redis_HashGetRedisValue00(lua_State* tolua_S)
   const char* key = ((const char*)  tolua_tostring(tolua_S,1,0));
   const int field = ((const int)  tolua_tonumber(tolua_S,2,0));
   {
-   int tolua_ret = (int)  HashGetRedisValue(key,field);
+   int tolua_ret = (int)  HGet(key,field);
    tolua_pushnumber(tolua_S,(lua_Number)tolua_ret);
   }
  }
  return 1;
 #ifndef TOLUA_RELEASE
  tolua_lerror:
- tolua_error(tolua_S,"#ferror in function 'HashGetRedisValue'.",&tolua_err);
+ tolua_error(tolua_S,"#ferror in function 'HGet'.",&tolua_err);
  return 0;
 #endif
 }
 #endif //#ifndef TOLUA_DISABLE
 
-/* function: DelRedisValue */
-#ifndef TOLUA_DISABLE_tolua_interface_redis_DelRedisValue00
-static int tolua_interface_redis_DelRedisValue00(lua_State* tolua_S)
+/* function: HDel */
+#ifndef TOLUA_DISABLE_tolua_interface_redis_HDel00
+static int tolua_interface_redis_HDel00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isstring(tolua_S,1,0,&tolua_err) ||
+     !tolua_isnumber(tolua_S,2,0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,3,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  const char* key = ((const char*)  tolua_tostring(tolua_S,1,0));
+  const int field = ((const int)  tolua_tonumber(tolua_S,2,0));
+  {
+   int tolua_ret = (int)  HDel(key,field);
+   tolua_pushnumber(tolua_S,(lua_Number)tolua_ret);
+  }
+ }
+ return 1;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'HDel'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* function: Del */
+#ifndef TOLUA_DISABLE_tolua_interface_redis_Del00
+static int tolua_interface_redis_Del00(lua_State* tolua_S)
 {
 #ifndef TOLUA_RELEASE
  tolua_Error tolua_err;
@@ -1227,45 +1258,14 @@ static int tolua_interface_redis_DelRedisValue00(lua_State* tolua_S)
  {
   const char* key = ((const char*)  tolua_tostring(tolua_S,1,0));
   {
-   int tolua_ret = (int)  DelRedisValue(key);
+   int tolua_ret = (int)  Del(key);
    tolua_pushnumber(tolua_S,(lua_Number)tolua_ret);
   }
  }
  return 1;
 #ifndef TOLUA_RELEASE
  tolua_lerror:
- tolua_error(tolua_S,"#ferror in function 'DelRedisValue'.",&tolua_err);
- return 0;
-#endif
-}
-#endif //#ifndef TOLUA_DISABLE
-
-/* function: DelRedisHashValue */
-#ifndef TOLUA_DISABLE_tolua_interface_redis_DelRedisHashValue00
-static int tolua_interface_redis_DelRedisHashValue00(lua_State* tolua_S)
-{
-#ifndef TOLUA_RELEASE
- tolua_Error tolua_err;
- if (
-     !tolua_isstring(tolua_S,1,0,&tolua_err) ||
-     !tolua_isnumber(tolua_S,2,0,&tolua_err) ||
-     !tolua_isnoobj(tolua_S,3,&tolua_err)
- )
-  goto tolua_lerror;
- else
-#endif
- {
-  const char* key = ((const char*)  tolua_tostring(tolua_S,1,0));
-  const int field = ((const int)  tolua_tonumber(tolua_S,2,0));
-  {
-   int tolua_ret = (int)  DelRedisHashValue(key,field);
-   tolua_pushnumber(tolua_S,(lua_Number)tolua_ret);
-  }
- }
- return 1;
-#ifndef TOLUA_RELEASE
- tolua_lerror:
- tolua_error(tolua_S,"#ferror in function 'DelRedisHashValue'.",&tolua_err);
+ tolua_error(tolua_S,"#ferror in function 'Del'.",&tolua_err);
  return 0;
 #endif
 }
@@ -1527,10 +1527,10 @@ TOLUA_API int tolua_interface_open (lua_State* tolua_S)
    tolua_function(tolua_S,"IsActived",tolua_interface_redis_IsActived00);
    tolua_function(tolua_S,"S_IsMember",tolua_interface_redis_S_IsMember00);
    tolua_function(tolua_S,"S_IsMember",tolua_interface_redis_S_IsMember01);
-   tolua_function(tolua_S,"HashSetRedisValue",tolua_interface_redis_HashSetRedisValue00);
-   tolua_function(tolua_S,"HashGetRedisValue",tolua_interface_redis_HashGetRedisValue00);
-   tolua_function(tolua_S,"DelRedisValue",tolua_interface_redis_DelRedisValue00);
-   tolua_function(tolua_S,"DelRedisHashValue",tolua_interface_redis_DelRedisHashValue00);
+   tolua_function(tolua_S,"HSet",tolua_interface_redis_HSet00);
+   tolua_function(tolua_S,"HGet",tolua_interface_redis_HGet00);
+   tolua_function(tolua_S,"HDel",tolua_interface_redis_HDel00);
+   tolua_function(tolua_S,"Del",tolua_interface_redis_Del00);
   tolua_endmodule(tolua_S);
   tolua_module(tolua_S,"uuid",0);
   tolua_beginmodule(tolua_S,"uuid");
