@@ -31,7 +31,7 @@ message_init()
 {
 	message_t *m;
 
-	(void)__new_messages(&messages);
+	__new_messages((message_map_t**)&messages);
 
 	if (messages == NULL) {
 		log_error("new messages failed.");

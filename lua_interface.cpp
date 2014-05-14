@@ -15,7 +15,7 @@ extern "C"
 extern lua_State* L;
 
 int 
-call_lua (const char *func, const char *sig, ...) 
+call_lua(const char *func, const char *sig, ...) 
 {
     va_list vl;
     int narg, nres;   /* number of arguments and results */

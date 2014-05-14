@@ -28,7 +28,7 @@ using namespace std;
 
 typedef struct lge_server_stat_s lge_server_stat_t;
 struct lge_server_stat_s {
-	unsigned int cnts; /* 当前handler的数量 */
+	unsigned int cnts; 		/* 当前handler的数量 */
 	unsigned int free_cnts; /* 空闲handler的数量 */
 };
 

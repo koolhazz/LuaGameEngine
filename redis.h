@@ -28,7 +28,6 @@ public:
 private:
     redisContext*	m_redis;	
     redisReply*		m_reply;	
-
 };
 
 #endif

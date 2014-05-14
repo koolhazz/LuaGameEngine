@@ -129,7 +129,6 @@ CRedis::Enqueue(const char* queue, const char* value)
 	return -1;
 }
 
-
 int
 CRedis::Dequeue(const char* queue)
 {
@@ -154,27 +153,22 @@ CRedis::Dequeue(const char* queue)
 	return -1;
 }
 
-
 bool
 CRedis::IsActived()
 {
-	if (m_redis == NULL)
-	{
+	if (m_redis == NULL) {
 		return false;
 	}
 
 	m_reply = static_cast<redisReply*>(redisCommand(m_redis, "ping"));
 
-	if (m_reply)
-	{
+	if (m_reply) {
 		//log_debug("m_reply->type:%d\n", m_reply->type);
 		
-		if (m_reply->type == 5)
-		{
+		if (m_reply->type == 5) {
 			//log_debug("m_reply->str:%s\n", m_reply->str);
 			
-			if(strcmp("PONG", m_reply->str) == 0)
-			{
+			if(strcmp("PONG", m_reply->str) == 0) {
 				freeReplyObject(m_reply);
 				m_reply = NULL;
 				
@@ -195,12 +189,10 @@ CRedis::S_IsMember(const char* key, const char* value)
 {
 	m_reply = static_cast<redisReply*>(redisCommand(m_redis, "sismember %s %s", key, value));
 
-	if (m_reply)
-	{
+	if (m_reply) {
 		int result = 0;
 
-		if (m_reply->type == 3)
-		{
+		if (m_reply->type == 3) {
 			result = m_reply->integer == 1 ? 1 : 0;
 		}
 
@@ -218,12 +210,10 @@ CRedis::S_IsMember(const char* key, const int value)
 {
 	m_reply = static_cast<redisReply*>(redisCommand(m_redis, "sismember %s %d", key, value));
 
-	if (m_reply)
-	{
+	if (m_reply) {
 		int result = 0;
 
-		if (m_reply->type == 3)
-		{
+		if (m_reply->type == 3) {
 			result = m_reply->integer == 1 ? 1 : 0;
 		}
 
@@ -289,14 +279,14 @@ int CRedis::Del(const char* key)
 int CRedis::HDel(const char* key,const int field)
 {
     m_reply = reinterpret_cast<redisReply*>(redisCommand(m_redis, "HDEL %s %d ", key,field));
-    if(m_reply)
-    {
+    if(m_reply) {
         log_debug("DelRedisHashValue:m_reply->type:%d\n", m_reply->type);
 		freeReplyObject(m_reply);
 		m_reply = NULL;
 		
 		return 1;
     }
+    
     return 0;
 }
 
