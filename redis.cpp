@@ -11,6 +11,8 @@ extern "C"
 #include <lauxlib.h>
 }
 
+#define __nil(L, V) lua_pushnil(L);lua_setglobal(L, V)
+#define nil() __nil(L, REDIS_RESULT)
 
 extern lua_State* L;
 
@@ -78,6 +80,8 @@ int CRedis::get_value(const char* key)
 		
         return result;
     }
+
+    nil();
     return 0;
 }
 
@@ -150,6 +154,8 @@ CRedis::Dequeue(const char* queue)
 		return result;
 	}
 
+	nil();
+	 
 	return -1;
 }
 
@@ -238,6 +244,7 @@ int CRedis::HSet(const char* key,const int field, const char* value)
 		
 		return 1;
     }
+
     return 0;
 }
 
@@ -258,6 +265,8 @@ int CRedis::HGet(const char* key, const int field)
 
 		return result;
     }
+
+	nil();
     
     return -1;
 }

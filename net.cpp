@@ -14,8 +14,8 @@
 #define EVENT_TOTAL_COUNT 256	
 #define CHECK_POINT_TIMES 10
 
-extern int now;  /* 缓存当前系统时间，减少time的调用 */
-extern time_wheel_t* g_tw;
+extern int 				now;  /* 缓存当前系统时间，减少time的调用 */
+extern time_wheel_t		*g_tw;
 
 static inline int 
 __set_linger_socket(int fd) 
@@ -307,6 +307,7 @@ Net::handle_accept()
 {
 	int conn_fd;
 	int ret;
+	
 	while(1) {
 		if ((conn_fd = accept(m_listen_fd, NULL, NULL)) == -1) {
 			return -1;

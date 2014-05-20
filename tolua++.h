@@ -33,7 +33,7 @@ extern "C" {
 #define tolua_pushfieldcppstring(L,lo,idx,s) tolua_pushfieldstring(L, lo, idx, s.c_str())
 
 #ifndef TEMPLATE_BIND
- #define TEMPLATE_BIND(p)
+#define TEMPLATE_BIND(p)
 #endif
 
 #define TOLUA_TEMPLATE_BIND(p)
