@@ -400,7 +400,7 @@ Net::connect_server(const char* ip, const int port, bool encrypt, int conn_flag)
 	memset(&remote, 0, sizeof(remote));
 	remote.sin_family 		 = AF_INET;
 	remote.sin_port   		 = htons(port);
-	remote.sin_addr.s_addr = inet_addr(ip);
+	remote.sin_addr.s_addr 	 = inet_addr(ip);
 
 	if (0 != connect(fd, (struct sockaddr*)&remote, sizeof(remote))) {
 		log_error("Error: Connect Faile connect(): %s\n", strerror(errno));
