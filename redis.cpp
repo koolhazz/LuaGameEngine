@@ -68,7 +68,7 @@ int CRedis::get_value(const char* key)
     {
         int result = 0;
 
-		log_debug("m_reply->type:%d\n", m_reply->type);
+		//log_debug("m_reply->type:%d\n", m_reply->type);
 			
         if (1 == m_reply->type) {
            lua_pushstring(L, m_reply->str); 
@@ -289,7 +289,7 @@ int CRedis::HDel(const char* key,const int field)
 {
     m_reply = reinterpret_cast<redisReply*>(redisCommand(m_redis, "HDEL %s %d ", key,field));
     if(m_reply) {
-        log_debug("DelRedisHashValue:m_reply->type:%d\n", m_reply->type);
+        //log_debug("DelRedisHashValue:m_reply->type:%d\n", m_reply->type);
 		freeReplyObject(m_reply);
 		m_reply = NULL;
 		

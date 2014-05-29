@@ -116,8 +116,6 @@ int SocketHandler::handle_read()
 		return 0; 
 	}
 	
-	//log_debug("TGW Begin.");
-	
 	//判断接受tgw跳转包头
 	if (nrecved == 56) {
 		string tgw(_recvbuf, nrecved);
@@ -133,8 +131,6 @@ int SocketHandler::handle_read()
 		}
 	}
 	
-	//log_debug("TGW End.");
-		
 	if(_is_parse_proto) {
 		int ret = OnParser(_recvbuf, nrecved);
 		

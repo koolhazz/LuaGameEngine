@@ -13,7 +13,7 @@ class SocketHandler;
 
 typedef std::set<SocketHandler*> 	time_scale_t;
 typedef time_scale_t::iterator 		time_scale_itr_t;
-typedef time_scale_t* 				time_wheel_t[15];
+typedef time_scale_t* 				time_wheel_t[TIME_WHEEL_SIZE];
 
 extern int
 tw_create(time_wheel_t** t, int len);

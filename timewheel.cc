@@ -3,7 +3,8 @@
 int
 tw_create(time_wheel_t** t, int len)
 {
-	*t = (time_scale_t* (*)[15])malloc(sizeof(time_wheel_t));
+	*t = (time_scale_t* (*)[TIME_WHEEL_SIZE])malloc(sizeof(time_wheel_t)); 
+	// (time_wheel_t*)malloc(sizeof(time_wheel_t));
 
 	for (int i = 0; i < len; i++) {
 		*((**t) + i) = new time_scale_t;
