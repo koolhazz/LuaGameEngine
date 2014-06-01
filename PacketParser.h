@@ -3,12 +3,12 @@
 #include "log.h"
 
 enum PACKETVER {
-	SERVER_PACKET_DEFAULT_VER = 1,
-	SERVER_PACKET_DEFAULT_SUBVER = 1,
-    SERVER_PACKET_DEFAULT_SUBCMD = 0,
-    SERVER_PACKET_DEFAULT_SEQ = 1,
-    SERVER_PACKET_DEFAULT_SOURCETYPE = 1,
-    SERVER_PACKET_MAX_COMMAND = 65535
+	SERVER_PACKET_DEFAULT_VER 			= 1,
+	SERVER_PACKET_DEFAULT_SUBVER 		= 1,
+    SERVER_PACKET_DEFAULT_SUBCMD 		= 0,
+    SERVER_PACKET_DEFAULT_SEQ 			= 1,
+    SERVER_PACKET_DEFAULT_SOURCETYPE 	= 1,
+    SERVER_PACKET_MAX_COMMAND 			= 65535
 };
 
 typedef unsigned char BYTE;
@@ -19,8 +19,7 @@ typedef unsigned char BYTE;
 
 // 包解析器
 template <class INPUT_PACKET>
-class PacketParser
-{
+class PacketParser {
 public:
 	PacketParser(void)
 	{
@@ -29,7 +28,7 @@ public:
 		m_subVersion = SERVER_PACKET_DEFAULT_SUBVER;
 		reset();
 	}
-	virtual ~PacketParser(void){}
+	virtual ~PacketParser(void) {}
 	// 返回Packet
 	virtual int OnPacketComplete(INPUT_PACKET *) = 0;
 	// 处理PACKET数据
@@ -39,31 +38,33 @@ public:
 		int ndx = 0;
 
 		while (ndx < length && m_nStatus != REQ_ERROR) {//可能会同时来两个包 
-			switch(m_nStatus)
-			{
-			case REQ_REQUEST:
-			case REQ_HEADER:
-				if(!read_header(data, length, ndx)) break;
-				
-				ret = parse_header();
-				
-				if(ret != 0) {
-					m_nStatus = REQ_ERROR;
+			switch(m_nStatus) {
+				case REQ_REQUEST:
+				case REQ_HEADER:
+					if(!read_header(data, length, ndx)) break;
+					
+					ret = parse_header();
+					
+					if(ret != 0) {
+						m_nStatus = REQ_ERROR;
+						break;
+					} else {
+						m_nStatus = REQ_BODY;
+					}
+				case REQ_BODY:
+					if (parse_body(data, length, ndx)) m_nStatus = REQ_DONE;
 					break;
-				} else {
-					m_nStatus = REQ_BODY;
-				}
-			case REQ_BODY:
-				if (parse_body(data, length, ndx)) m_nStatus = REQ_DONE;
-				break;
-			default:
-				return -1;
+				default:
+					return -1;
 			}
 
 			if (m_nStatus == REQ_ERROR) return ret;
 
 			if(m_nStatus == REQ_DONE) {
-				if(OnPacketComplete(&m_Packet) == -1) return -1;
+				if (OnPacketComplete(&m_Packet) == -1) {
+					log_error("OnPacketComplete error.");
+					return -1;	
+				}
 
 				this->reset();
 			}
@@ -114,8 +115,7 @@ private:
 	// 解析Packet头信息
 	int parse_header(void) //0:成功 -1:包错误 -2:命令范围错误 -3:版本错误 -4:长度错误
 	{
-		if(m_pBuf[2] != 'B' || m_pBuf[3] != 'Y')
-			return -1;
+		if(m_pBuf[2] != 'B' || m_pBuf[3] != 'Y') return -1;
 
 		unsigned short nCmdType = cast_uint16(m_Packet.GetCmdType());
 		if(nCmdType <= 0 || nCmdType >= SERVER_PACKET_MAX_COMMAND) return -2;

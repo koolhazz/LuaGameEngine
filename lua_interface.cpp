@@ -5,7 +5,7 @@
 #include "log.h"
 
 
-extern "C" 
+extern "C"
 {
 #include <lua.h>
 #include <lualib.h>
@@ -15,7 +15,7 @@ extern "C"
 extern lua_State* L;
 
 int 
-call_lua (const char *func, const char *sig, ...) 
+call_lua(const char *func, const char *sig, ...) 
 {
     va_list vl;
     int narg, nres;   /* number of arguments and results */
@@ -86,8 +86,7 @@ call_lua (const char *func, const char *sig, ...)
            break;
  
         case 's':  /* string result */
-            if (!lua_isstring(L, nres))
-            {
+            if (!lua_isstring(L, nres)) {
                 log_error("wrong result type");
                 return -1;
             }   

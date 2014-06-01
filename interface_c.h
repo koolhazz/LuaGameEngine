@@ -1,4 +1,3 @@
-
 #define MYSQL_RESULT_SET    "global_result_set"
 #define COMMAND_ARGS        "global_command_args"
 #define REDIS_RESULT        "global_redis_result"
@@ -65,10 +64,9 @@ int HDel(const char* key, const int field);
 
 int Del(const char* key);
 
-
-
 //uuid
-void NewUUID();
+void 
+NewUUID();
 
 //time wheel
 

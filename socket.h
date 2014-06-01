@@ -69,20 +69,15 @@ public:
 	int send_packet(NETOutputPacket *pPacket);
 	void build_package(NETOutputPacket* pOutPack, short nCmdType, const char* pszFmt, ...);
 private:
-	int  _fd;
-	char _recvbuf[RECV_BUFFER];
-	char _sendbuf[RECV_BUFFER]; /* 发送缓冲 */
-	
-	bool _is_encrypt;
-	bool _is_parse_proto;	//是否由Server解析协议
-	int  _conn_flag;		//连接标识, 通过flag来区别连接类型, 如为0表示客户端连接，可用其他数字区别大厅，后端连接
-
-	bool _is_closed;
-
-	lgs_event_t* _read;
-	lgs_event_t* _write;
-
-	int	_live_time;
+	int  			_fd;
+	char 			_recvbuf[RECV_BUFFER];
+	bool 			_is_encrypt;
+	bool 			_is_parse_proto;	//是否由Server解析协议
+	int  			_conn_flag;		//连接标识, 通过flag来区别连接类型, 如为0表示客户端连接，可用其他数字区别大厅，后端连接
+	bool 			_is_closed;
+	lgs_event_t		*_read;
+	lgs_event_t		*_write;
+	int				_live_time;
 };
 
 #endif

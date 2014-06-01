@@ -11,11 +11,11 @@
 #include <netinet/tcp.h>
 #include <time.h>
 
-#define EVENT_TOTAL_COUNT	256	
-#define CHECK_POINT_TIMES   10
+#define EVENT_TOTAL_COUNT 256	
+#define CHECK_POINT_TIMES 10
 
-extern int now;  /* 缓存当前系统时间，减少time的调用 */
-extern time_wheel_t* g_tw;
+extern int 				now;  /* 缓存当前系统时间，减少time的调用 */
+extern time_wheel_t		*g_tw;
 
 static inline int 
 __set_linger_socket(int fd) 
@@ -307,6 +307,7 @@ Net::handle_accept()
 {
 	int conn_fd;
 	int ret;
+	
 	while(1) {
 		if ((conn_fd = accept(m_listen_fd, NULL, NULL)) == -1) {
 			return -1;
@@ -399,7 +400,7 @@ Net::connect_server(const char* ip, const int port, bool encrypt, int conn_flag)
 	memset(&remote, 0, sizeof(remote));
 	remote.sin_family 		 = AF_INET;
 	remote.sin_port   		 = htons(port);
-	remote.sin_addr.s_addr = inet_addr(ip);
+	remote.sin_addr.s_addr 	 = inet_addr(ip);
 
 	if (0 != connect(fd, (struct sockaddr*)&remote, sizeof(remote))) {
 		log_error("Error: Connect Faile connect(): %s\n", strerror(errno));

@@ -2,10 +2,11 @@
 #include <stdio.h>
 #include "timer.h"
 #include "llist.h"	
-#include "mtimer.c"
-#include "plex.h"
 
-plex_t timer_plex;
+
+	#include "mtimer.c"
+	#include "plex.h"
+	plex_t timer_plex;
 
 
 // 初始化定时器

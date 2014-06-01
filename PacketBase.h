@@ -12,15 +12,14 @@ typedef unsigned char       BYTE;
 #ifdef TCP_BUFFER_SIZE
 #define	ICHAT_TCP_DEFAULT_BUFFER	TCP_BUFFER_SIZE
 #else
-#define	ICHAT_TCP_DEFAULT_BUFFER	8192
+#define	ICHAT_TCP_DEFAULT_BUFFER	8 * 1024
 #endif
 
 #define HEADER_SIZE_14		14
 #define HEADER_SIZE_9		9
 
 template <int _buffer_size>
-class PacketBase
-{
+class PacketBase {
 public:
 	PacketBase(void){}
 	virtual ~PacketBase(void){}
@@ -31,7 +30,7 @@ public:
 #if HEADER_SIZE == 9
 #warning("header_size == 9")
 		PACKET_HEADER_SIZE = 9,
-#else
+#else 
 #warning("header_size == 14")
 		PACKET_HEADER_SIZE = 14,
 #endif
@@ -53,7 +52,7 @@ protected:
 		_reset();
 		memcpy(m_strBuf, pInBuf, nLen);
 		m_nPacketSize = nLen;
-		assert(m_nPacketSize>PACKET_HEADER_SIZE);
+		assert(m_nPacketSize > PACKET_HEADER_SIZE);
 		return true;
 	}
 	////////////////////////////////////////////////////////////////////////////////
@@ -243,7 +242,7 @@ protected:
 	{
 		if(nPos > 0 || nPos+nLen < PACKET_HEADER_SIZE)
 		{
-			memcpy(m_strBuf+nPos, pIn, nLen) ;
+			memcpy(m_strBuf+nPos, pIn, nLen);
 		}
 	}
 };

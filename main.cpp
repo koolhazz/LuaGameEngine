@@ -2,7 +2,7 @@
 #include "timer.h"
 #include "timer_event.h"
 #include "log.h"
-#include "protocal.h"
+#include "protocol.h"
 #include "getopt.h"
 #include "daemonize.h"
 #include "lua_interface.h"
@@ -14,13 +14,19 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sched.h>
+#include <unistd.h>
 #include <signal.h>
 
 
-#define LUA_GAME_ENGINE_VERSION 		"1.4.2b201312101700"
+#define LUA_GAME_ENGINE_VERSION 		"1.5.1b101"
 #define LUA_GAME_ENGINE_VERSION_MAJOR 	1
-#define LUA_GAME_ENGINE_VERSION_MINOR 	4
-#define LUA_GAME_ENGINE_VERSION_BUGFIX 	2
+#define LUA_GAME_ENGINE_VERSION_MINOR 	5
+#define LUA_GAME_ENGINE_VERSION_BUGFIX 	1
+
+#define show_help()	do {												\
+	printf("By AustinChen\n");											\
+	printf("usage: gameserver -h ip -p port -l level -s sid -d \n");	\
+} while(0);
 
 extern "C"
 {
@@ -109,7 +115,7 @@ __version()
 static void
 __pidfile()
 {
-	int fd = open(PidPath, O_CREAT | O_RDWR | O_TRUNC, 00666);
+	int fd = open(PidPath, O_CREAT | O_RDWR, 00666);
 
 	if (fd <= 0) {
 		log_error("create pidfile failed.");
@@ -125,6 +131,13 @@ __pidfile()
 	if (ret <= 0) {
 		log_error("write pid failed. %d %d", ret, errno);
 	}
+}
+
+static void
+__help()
+{
+	printf("By AustinChen\n");
+	printf("usage: gameserver -h ip -p port -l level -s sid -d \n");
 }
 
 lua_State* 		L;
@@ -149,6 +162,11 @@ main(int argc, char ** argv)
 
 	now = time(NULL);
 
+	if (argc == 1) {
+		show_help();
+		return 0;
+	}
+
     L = lua_open();     /* initialize Lua */
     luaL_openlibs(L);   /* load Lua base libraries */
     tolua_interface_open(L);
@@ -169,15 +187,13 @@ main(int argc, char ** argv)
                 lua_pushstring(L, optarg);    
                 lua_rawset(L, -3);
             }
+        } else {
+	        printf("%s\n", LUA_GAME_ENGINE_VERSION);
+	        return 0;
         }
     }   
     
     lua_setglobal(L, COMMAND_ARGS);    
-
-    //初始化日志文件
-
-
-    //log_info("Initing\n");
 
 	if (is_daemon) {
         if ( -1 == daemon(1, 0)) {
@@ -196,7 +212,11 @@ main(int argc, char ** argv)
 	__pidfile();
 	__version();
 
-	CProtocal::init();
+	if (message_init() == -1) {
+	// if (CProtocal::init() == -1) {
+		log_error("message_init failed.");
+		return -1;
+	}
 
     if(!net.init()) {
         log_error("init server failed");

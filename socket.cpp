@@ -1,7 +1,7 @@
 #include "socket.h"
 #include "log.h"
 #include "lua_interface.h"
-#include "protocal.h"
+#include "protocol.h"
 
 #include <stdio.h>
 #include <string.h>
@@ -25,8 +25,7 @@ NETInputPacket in_package;
 extern int now;
 
 //鍙戦€佸瓧鑺傛槧灏勮〃
-BYTE SocketHandler::m_SendByteMap[256]=				
-{
+BYTE SocketHandler::m_SendByteMap[256]=	{
 	0x70,0x2F,0x40,0x5F,0x44,0x8E,0x6E,0x45,0x7E,0xAB,0x2C,0x1F,0xB4,0xAC,0x9D,0x91,
 	0x0D,0x36,0x9B,0x0B,0xD4,0xC4,0x39,0x74,0xBF,0x23,0x16,0x14,0x06,0xEB,0x04,0x3E,
 	0x12,0x5C,0x8B,0xBC,0x61,0x63,0xF6,0xA5,0xE1,0x65,0xD8,0xF5,0x5A,0x07,0xF0,0x13,
@@ -46,8 +45,7 @@ BYTE SocketHandler::m_SendByteMap[256]=
 };
 
 //鎺ユ敹瀛楄妭鏄犲皠琛?
-BYTE SocketHandler::m_RecvByteMap[256]=				
-{
+BYTE SocketHandler::m_RecvByteMap[256]=	{
 	0x51,0xA1,0x9E,0xB0,0x1E,0x83,0x1C,0x2D,0xE9,0x77,0x3D,0x13,0x93,0x10,0x45,0xFF,
 	0x6D,0xC9,0x20,0x2F,0x1B,0x82,0x1A,0x7D,0xF5,0xCF,0x52,0xA8,0xD2,0xA4,0xB4,0x0B,
 	0x31,0x97,0x57,0x19,0x34,0xDF,0x5B,0x41,0x58,0x49,0xAA,0x5F,0x0A,0xEF,0x88,0x01,
@@ -107,14 +105,16 @@ int SocketHandler::handle_read()
 	// log_debug("nrecved: %d", nrecved);
 	
 	if (nrecved == 0) {
+		log_error("connection closed.");
 		return -1;
 	} else if (nrecved == -1) {
-		if (errno != EINTR || errno != EAGAIN ) return -1;
+		if (errno != EINTR || errno != EAGAIN ) {
+			log_error("recv error: %d", errno);
+			return -1;	
+		}
 
 		return 0; 
 	}
-	
-	//log_debug("TGW Begin.");
 	
 	//判断接受tgw跳转包头
 	if (nrecved == 56) {
@@ -131,13 +131,11 @@ int SocketHandler::handle_read()
 		}
 	}
 	
-	//log_debug("TGW End.");
-		
 	if(_is_parse_proto) {
 		int ret = OnParser(_recvbuf, nrecved);
 		
 		if(ret != 0) {
-			log_debug("parser error.\n");
+			log_debug("parser error: %d", ret);
 			return -1;
 		}
 	} else {
@@ -410,8 +408,8 @@ int SocketHandler::OnPacketComplete(NETInputPacket *pPacket)
 	}
 
 	short cmd =	pPacket->GetCmdType();	
-	Message message = CProtocal::get_message(cmd);
-	if (message.cmd == 0) {
+	message_t* message = message_get(cmd); //CProtocal::get_message(cmd);
+	if (message == NULL) {
 		log_error("can't find the message:0x%x\n", cmd);
 		return -1;
 	} else {
@@ -420,16 +418,17 @@ int SocketHandler::OnPacketComplete(NETInputPacket *pPacket)
 	}
 	
 	int ret = 0;
-	if (strcmp(message.format, "") == 0) {
-		if(call_lua(message.call_back, ">d", &ret) == -1) {
+	if (strcmp(message->format, "") == 0) {
+		if(call_lua(message->handler, ">d", &ret) == -1) {
+			log_error("call_lua error.");
             return -1;
         }
         
 		return ret;
 	}
 
-	const char* p = message.format;
-    lua_getglobal(L, message.call_back);  /* get function */
+	const char* p = message->format;
+    lua_getglobal(L, message->handler);  /* get function */
  
 	//lua_pushhandled(L, this);
 	lua_pushnumber(L, _fd);
@@ -514,13 +513,13 @@ int SocketHandler::OnPacketComplete(NETInputPacket *pPacket)
 	/* do the call */
     if (lua_pcall(L, narg, 1, 0) != 0)  /* do the call */
 	{
-		log_error("error running function `%s': %s", message.call_back, lua_tostring(L, -1));
+		log_error("error running function `%s': %s", message->handler, lua_tostring(L, -1));
 		return -1;
 	}
 
     ret = (int)lua_tonumber(L, -1);
     lua_pop(L,-1);
-	//TRACE("call lua function:%s, return = %d\n", message.call_back, ret);
+	//TRACE("call lua function:%s, return = %d\n", message.handler, ret);
 	return ret;
 }
 
@@ -600,9 +599,6 @@ SocketHandler::clean(bool IsClosefd)
 	_is_parse_proto = true;
 	_conn_flag = CONNECTION_TYPE_CLIENT;
 	_live_time = 0;
-	_read->active = 0;
-	_write->active = 0;
-	
 	reset();
 }
 

@@ -235,32 +235,41 @@ int remain_timer(unsigned long timer_id)
 }
 
 
-int create_listener(int port)
+int 
+create_listener(int port)
 {
 	return net.create_listener(port);	
 }
 
-int connect_server(char* ip, int port)
+int 
+connect_server(char* ip, int port)
 {
 	return connect_server(ip, port, true, 1);
 }
 
-int connect_server(char* ip, int port, bool is_encrypt, int conn_flag)
+int 
+connect_server(char* ip, int port, bool is_encrypt, int conn_flag)
 {
 	return net.connect_server(ip, port, is_encrypt, conn_flag);
 }
 
-int close_socket(int fd)
+int 
+close_socket(int fd)
 {
-	log_debug("FD: %d\n", fd);
+	log_debug("close socket by server: %d", fd);
 
 	::close(fd);
-	net.CloseHandler(fd);
+	//net.CloseHandler(fd);
 
 	return 0;
 }
 
-int connect_mysql(const char* host, const char* user, const char* password, const char* dbname, unsigned int port)
+int 
+connect_mysql(const char* host, 
+			  const char* user, 
+			  const char* password, 
+			  const char* dbname, 
+			  unsigned int port)
 {
     return mysql_handle.connect_mysql(host, user, password, dbname, port);
 }
@@ -299,17 +308,20 @@ int Dequeue(const char* queue)
 	return redis_handle.Dequeue(queue);
 }
 
-bool IsActived()
+bool 
+IsActived()
 {
 	return redis_handle.IsActived();
 }
 
-int S_IsMember(const char* key, const char* value)
+int 
+S_IsMember(const char* key, const char* value)
 {
 	return redis_handle.S_IsMember(key, value);
 }
 
-int S_IsMember(const char* key, const int value)
+int 
+S_IsMember(const char* key, const int value)
 {
 	return redis_handle.S_IsMember(key, value);
 }
@@ -317,25 +329,25 @@ int S_IsMember(const char* key, const int value)
 int 
 HSet(const char* key, const int field,const char* value)
 {
-	return redis_handle.HashSetRedisValue(key,field,value);
+	return redis_handle.HSet(key,field,value);
 }
 
 int 
 HGet(const char* key,const int field)
 {
-	return redis_handle.HashGetRedisValue(key,field);
+	return redis_handle.HGet(key,field);
 }
 
 int 
 Del(const char* key)
 {
-	return redis_handle.DelRedisValue(key);
+	return redis_handle.Del(key);
 }
 
 int 
 HDel(const char* key,const int field)
 {
-	return redis_handle.DelRedisHashValue(key,field);
+	return redis_handle.HDel(key,field);
 }
 
 typedef struct {

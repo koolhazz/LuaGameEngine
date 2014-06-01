@@ -10,7 +10,7 @@ __BEGIN_DECLS
 #include <stdio.h>
 
 #define DEFAULT_FILE_NUM    10
-#define DEFAULT_FILE_SIZE   50*1024*1024
+#define DEFAULT_FILE_SIZE   50 * 1024 * 1024
 
 #if CLIENTAPI
 #define __log_level__ 4

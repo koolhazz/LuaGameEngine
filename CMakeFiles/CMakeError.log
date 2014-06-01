@@ -1,0 +1,34 @@
+Determining if the function BZ2_bzCompressInit exists in the /usr/lib64/libbz2.so failed with the following output:
+Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1271813852/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1271813852.dir/build.make CMakeFiles/cmTryCompileExec1271813852.dir/build
+gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1271813852.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g;-O2;-Wall  -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit   -o CMakeFiles/cmTryCompileExec1271813852.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-2.8/Modules/CheckFunctionExists.c
+cc: no input files
+/bin/sh: -O2: command not found
+/bin/sh: -Wall: command not found
+gmake[1]: *** [CMakeFiles/cmTryCompileExec1271813852.dir/CheckFunctionExists.c.o] Error 127
+gmake[1]: Leaving directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec1271813852/fast] Error 2
+
+
+Determining if the function BZ2_bzCompressInit exists in the /usr/lib64/libbz2.so failed with the following output:
+Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1547399641/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1547399641.dir/build.make CMakeFiles/cmTryCompileExec1547399641.dir/build
+gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1547399641.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g;-O2;-Wall  -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit   -o CMakeFiles/cmTryCompileExec1547399641.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-2.8/Modules/CheckFunctionExists.c
+cc: no input files
+/bin/sh: -O2: command not found
+/bin/sh: -Wall: command not found
+gmake[1]: *** [CMakeFiles/cmTryCompileExec1547399641.dir/CheckFunctionExists.c.o] Error 127
+gmake[1]: Leaving directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec1547399641/fast] Error 2
+
+

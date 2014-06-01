@@ -1,0 +1,679 @@
+The system is: Linux - 2.6.18-308.24.1.el5 - x86_64
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/2.8.10.2/CompilerIdCXX/a.out"
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/2.8.10.2/CompilerIdC/a.out"
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec4223930428/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec4223930428.dir/build.make CMakeFiles/cmTryCompileExec4223930428.dir/build
+gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec4223930428.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec4223930428.dir/testCXXCompiler.cxx.o -c /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTryCompileExec4223930428
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4223930428.dir/link.txt --verbose=1
+/usr/bin/c++          CMakeFiles/cmTryCompileExec4223930428.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec4223930428 -rdynamic 
+gmake[1]: Leaving directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2944364812/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2944364812.dir/build.make CMakeFiles/cmTryCompileExec2944364812.dir/build
+gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec2944364812.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec2944364812.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTryCompileExec2944364812
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2944364812.dir/link.txt --verbose=1
+/usr/bin/c++        -v CMakeFiles/cmTryCompileExec2944364812.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec2944364812 -rdynamic  
+Using built-in specs.
+Target: x86_64-redhat-linux
+Configured with: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-libgcj-multifile --enable-languages=c,c++,objc,obj-c++,java,fortran,ada --enable-java-awt=gtk --disable-dssi --disable-plugin --with-java-home=/usr/lib/jvm/java-1.4.2-gcj-1.4.2.0/jre --with-cpu=generic --host=x86_64-redhat-linux
+Thread model: posix
+gcc version 4.1.2 20080704 (Red Hat 4.1.2-52)
+ /usr/libexec/gcc/x86_64-redhat-linux/4.1.2/collect2 --eh-frame-hdr -m elf_x86_64 --hash-style=gnu -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec2944364812 /usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.1.2/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/4.1.2 -L/usr/lib/gcc/x86_64-redhat-linux/4.1.2 -L/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 CMakeFiles/cmTryCompileExec2944364812.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/4.1.2/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crtn.o
+gmake[1]: Leaving directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:/usr/bin/gmake "cmTryCompileExec2944364812/fast"]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2944364812.dir/build.make CMakeFiles/cmTryCompileExec2944364812.dir/build]
+  ignore line: [gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec2944364812.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTryCompileExec2944364812.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTryCompileExec2944364812]
+  ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2944364812.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++        -v CMakeFiles/cmTryCompileExec2944364812.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec2944364812 -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [Target: x86_64-redhat-linux]
+  ignore line: [Configured with: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-libgcj-multifile --enable-languages=c,c++,objc,obj-c++,java,fortran,ada --enable-java-awt=gtk --disable-dssi --disable-plugin --with-java-home=/usr/lib/jvm/java-1.4.2-gcj-1.4.2.0/jre --with-cpu=generic --host=x86_64-redhat-linux]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 4.1.2 20080704 (Red Hat 4.1.2-52)]
+  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/4.1.2/collect2 --eh-frame-hdr -m elf_x86_64 --hash-style=gnu -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec2944364812 /usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.1.2/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/4.1.2 -L/usr/lib/gcc/x86_64-redhat-linux/4.1.2 -L/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 CMakeFiles/cmTryCompileExec2944364812.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/4.1.2/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crtn.o]
+    arg [/usr/libexec/gcc/x86_64-redhat-linux/4.1.2/collect2] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec2944364812] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/4.1.2/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.1.2] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.1.2]
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.1.2] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.1.2]
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [CMakeFiles/cmTryCompileExec2944364812.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/usr/lib/gcc/x86_64-redhat-linux/4.1.2/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crtn.o] ==> ignore
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  collapse dir [/usr/lib/gcc/x86_64-redhat-linux/4.1.2] ==> [/usr/lib/gcc/x86_64-redhat-linux/4.1.2]
+  collapse dir [/usr/lib/gcc/x86_64-redhat-linux/4.1.2] ==> [/usr/lib/gcc/x86_64-redhat-linux/4.1.2]
+  collapse dir [/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64] ==> [/usr/lib64]
+  collapse dir [/lib/../lib64] ==> [/lib64]
+  collapse dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  implicit libs: [stdc++;m;c]
+  implicit dirs: [/usr/lib/gcc/x86_64-redhat-linux/4.1.2;/usr/lib64;/lib64]
+
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3353715226/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3353715226.dir/build.make CMakeFiles/cmTryCompileExec3353715226.dir/build
+gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3353715226.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3353715226.dir/testCCompiler.c.o   -c /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTryCompileExec3353715226
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3353715226.dir/link.txt --verbose=1
+/usr/bin/cc         CMakeFiles/cmTryCompileExec3353715226.dir/testCCompiler.c.o  -o cmTryCompileExec3353715226 -rdynamic 
+gmake[1]: Leaving directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec614256471/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec614256471.dir/build.make CMakeFiles/cmTryCompileExec614256471.dir/build
+gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec614256471.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec614256471.dir/CMakeCCompilerABI.c.o   -c /usr/local/share/cmake-2.8/Modules/CMakeCCompilerABI.c
+Linking C executable cmTryCompileExec614256471
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec614256471.dir/link.txt --verbose=1
+/usr/bin/cc       -v CMakeFiles/cmTryCompileExec614256471.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec614256471 -rdynamic  
+Using built-in specs.
+Target: x86_64-redhat-linux
+Configured with: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-libgcj-multifile --enable-languages=c,c++,objc,obj-c++,java,fortran,ada --enable-java-awt=gtk --disable-dssi --disable-plugin --with-java-home=/usr/lib/jvm/java-1.4.2-gcj-1.4.2.0/jre --with-cpu=generic --host=x86_64-redhat-linux
+Thread model: posix
+gcc version 4.1.2 20080704 (Red Hat 4.1.2-52)
+ /usr/libexec/gcc/x86_64-redhat-linux/4.1.2/collect2 --eh-frame-hdr -m elf_x86_64 --hash-style=gnu -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec614256471 /usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.1.2/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/4.1.2 -L/usr/lib/gcc/x86_64-redhat-linux/4.1.2 -L/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 CMakeFiles/cmTryCompileExec614256471.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/4.1.2/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crtn.o
+gmake[1]: Leaving directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:/usr/bin/gmake "cmTryCompileExec614256471/fast"]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTryCompileExec614256471.dir/build.make CMakeFiles/cmTryCompileExec614256471.dir/build]
+  ignore line: [gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building C object CMakeFiles/cmTryCompileExec614256471.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTryCompileExec614256471.dir/CMakeCCompilerABI.c.o   -c /usr/local/share/cmake-2.8/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTryCompileExec614256471]
+  ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec614256471.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc       -v CMakeFiles/cmTryCompileExec614256471.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec614256471 -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [Target: x86_64-redhat-linux]
+  ignore line: [Configured with: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-libgcj-multifile --enable-languages=c,c++,objc,obj-c++,java,fortran,ada --enable-java-awt=gtk --disable-dssi --disable-plugin --with-java-home=/usr/lib/jvm/java-1.4.2-gcj-1.4.2.0/jre --with-cpu=generic --host=x86_64-redhat-linux]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 4.1.2 20080704 (Red Hat 4.1.2-52)]
+  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/4.1.2/collect2 --eh-frame-hdr -m elf_x86_64 --hash-style=gnu -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTryCompileExec614256471 /usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.1.2/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/4.1.2 -L/usr/lib/gcc/x86_64-redhat-linux/4.1.2 -L/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 CMakeFiles/cmTryCompileExec614256471.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/4.1.2/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crtn.o]
+    arg [/usr/libexec/gcc/x86_64-redhat-linux/4.1.2/collect2] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTryCompileExec614256471] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/4.1.2/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.1.2] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.1.2]
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.1.2] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.1.2]
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [CMakeFiles/cmTryCompileExec614256471.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/4.1.2/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64/crtn.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  collapse dir [/usr/lib/gcc/x86_64-redhat-linux/4.1.2] ==> [/usr/lib/gcc/x86_64-redhat-linux/4.1.2]
+  collapse dir [/usr/lib/gcc/x86_64-redhat-linux/4.1.2] ==> [/usr/lib/gcc/x86_64-redhat-linux/4.1.2]
+  collapse dir [/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../lib64] ==> [/usr/lib64]
+  collapse dir [/lib/../lib64] ==> [/lib64]
+  collapse dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  implicit libs: [c]
+  implicit dirs: [/usr/lib/gcc/x86_64-redhat-linux/4.1.2;/usr/lib64;/lib64]
+
+
+Determining if the function BZ2_bzCompressInit exists in the /usr/lib64/libbz2.so passed with the following output:
+Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec561794489/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec561794489.dir/build.make CMakeFiles/cmTryCompileExec561794489.dir/build
+gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec561794489.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit   -o CMakeFiles/cmTryCompileExec561794489.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec561794489
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec561794489.dir/link.txt --verbose=1
+/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit    CMakeFiles/cmTryCompileExec561794489.dir/CheckFunctionExists.c.o  -o cmTryCompileExec561794489 -rdynamic -lbz2 
+gmake[1]: Leaving directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+
+
+Determining if the function BZ2_bzCompressInit exists in the /usr/lib64/libbz2.so passed with the following output:
+Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2376383798/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2376383798.dir/build.make CMakeFiles/cmTryCompileExec2376383798.dir/build
+gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2376383798.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit   -o CMakeFiles/cmTryCompileExec2376383798.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2376383798
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2376383798.dir/link.txt --verbose=1
+/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit    CMakeFiles/cmTryCompileExec2376383798.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2376383798 -rdynamic -lbz2 
+gmake[1]: Leaving directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+
+
+Determining if the function BZ2_bzCompressInit exists in the /usr/lib64/libbz2.so passed with the following output:
+Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec714724266/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec714724266.dir/build.make CMakeFiles/cmTryCompileExec714724266.dir/build
+gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec714724266.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit   -o CMakeFiles/cmTryCompileExec714724266.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec714724266
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec714724266.dir/link.txt --verbose=1
+/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit    CMakeFiles/cmTryCompileExec714724266.dir/CheckFunctionExists.c.o  -o cmTryCompileExec714724266 -rdynamic -lbz2 
+gmake[1]: Leaving directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+
+
+Determining if the function BZ2_bzCompressInit exists in the /usr/lib64/libbz2.so passed with the following output:
+Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1043586447/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1043586447.dir/build.make CMakeFiles/cmTryCompileExec1043586447.dir/build
+gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1043586447.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit   -o CMakeFiles/cmTryCompileExec1043586447.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1043586447
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1043586447.dir/link.txt --verbose=1
+/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit    CMakeFiles/cmTryCompileExec1043586447.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1043586447 -rdynamic -lbz2 
+gmake[1]: Leaving directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+
+
+Determining if the function BZ2_bzCompressInit exists in the /usr/lib64/libbz2.so passed with the following output:
+Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2764195124/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2764195124.dir/build.make CMakeFiles/cmTryCompileExec2764195124.dir/build
+gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2764195124.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit   -o CMakeFiles/cmTryCompileExec2764195124.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2764195124
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2764195124.dir/link.txt --verbose=1
+/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit    CMakeFiles/cmTryCompileExec2764195124.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2764195124 -rdynamic -lbz2 
+gmake[1]: Leaving directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+
+
+Determining if the function BZ2_bzCompressInit exists in the /usr/lib64/libbz2.so passed with the following output:
+Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2690296497/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2690296497.dir/build.make CMakeFiles/cmTryCompileExec2690296497.dir/build
+gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2690296497.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit   -o CMakeFiles/cmTryCompileExec2690296497.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2690296497
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2690296497.dir/link.txt --verbose=1
+/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit    CMakeFiles/cmTryCompileExec2690296497.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2690296497 -rdynamic -lbz2 
+gmake[1]: Leaving directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+
+
+Determining if the function BZ2_bzCompressInit exists in the /usr/lib64/libbz2.so passed with the following output:
+Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1988942093/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1988942093.dir/build.make CMakeFiles/cmTryCompileExec1988942093.dir/build
+gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1988942093.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit   -o CMakeFiles/cmTryCompileExec1988942093.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1988942093
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1988942093.dir/link.txt --verbose=1
+/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit    CMakeFiles/cmTryCompileExec1988942093.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1988942093 -rdynamic -lbz2 
+gmake[1]: Leaving directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+
+
+Determining if the function BZ2_bzCompressInit exists in the /usr/lib64/libbz2.so passed with the following output:
+Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3616948718/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3616948718.dir/build.make CMakeFiles/cmTryCompileExec3616948718.dir/build
+gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3616948718.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit   -o CMakeFiles/cmTryCompileExec3616948718.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3616948718
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3616948718.dir/link.txt --verbose=1
+/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit    CMakeFiles/cmTryCompileExec3616948718.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3616948718 -rdynamic -lbz2 
+gmake[1]: Leaving directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+
+
+Determining if the function BZ2_bzCompressInit exists in the /usr/lib64/libbz2.so passed with the following output:
+Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3590845070/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3590845070.dir/build.make CMakeFiles/cmTryCompileExec3590845070.dir/build
+gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3590845070.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O2 -Wall  -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit   -o CMakeFiles/cmTryCompileExec3590845070.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3590845070
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3590845070.dir/link.txt --verbose=1
+/usr/bin/cc   -g -O2 -Wall  -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit    CMakeFiles/cmTryCompileExec3590845070.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3590845070 -rdynamic -lbz2 
+gmake[1]: Leaving directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+
+
+Determining if the function BZ2_bzCompressInit exists in the /usr/lib64/libbz2.so passed with the following output:
+Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2916746141/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2916746141.dir/build.make CMakeFiles/cmTryCompileExec2916746141.dir/build
+gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2916746141.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O2 -Wall  -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit   -o CMakeFiles/cmTryCompileExec2916746141.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2916746141
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2916746141.dir/link.txt --verbose=1
+/usr/bin/cc    -g -O2 -Wall  -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit    CMakeFiles/cmTryCompileExec2916746141.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2916746141 -rdynamic -lbz2 
+gmake[1]: Leaving directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+
+
+Determining if the function BZ2_bzCompressInit exists in the /usr/lib64/libbz2.so passed with the following output:
+Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2573069728/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2573069728.dir/build.make CMakeFiles/cmTryCompileExec2573069728.dir/build
+gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2573069728.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O2 -Wall  -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit   -o CMakeFiles/cmTryCompileExec2573069728.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2573069728
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2573069728.dir/link.txt --verbose=1
+/usr/bin/cc    -g -O2 -Wall  -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit    CMakeFiles/cmTryCompileExec2573069728.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2573069728 -rdynamic -lbz2 
+gmake[1]: Leaving directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+
+
+Determining if the function BZ2_bzCompressInit exists in the /usr/lib64/libbz2.so passed with the following output:
+Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3153155662/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3153155662.dir/build.make CMakeFiles/cmTryCompileExec3153155662.dir/build
+gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3153155662.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O2 -Wall  -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit   -o CMakeFiles/cmTryCompileExec3153155662.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3153155662
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3153155662.dir/link.txt --verbose=1
+/usr/bin/cc    -g -O2 -Wall  -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit    CMakeFiles/cmTryCompileExec3153155662.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3153155662 -rdynamic -lbz2 
+gmake[1]: Leaving directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+
+
+Determining if the function BZ2_bzCompressInit exists in the /usr/lib64/libbz2.so passed with the following output:
+Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec827101146/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec827101146.dir/build.make CMakeFiles/cmTryCompileExec827101146.dir/build
+gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec827101146.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O2 -Wall  -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit   -o CMakeFiles/cmTryCompileExec827101146.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec827101146
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec827101146.dir/link.txt --verbose=1
+/usr/bin/cc    -g -O2 -Wall  -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit    CMakeFiles/cmTryCompileExec827101146.dir/CheckFunctionExists.c.o  -o cmTryCompileExec827101146 -rdynamic -lbz2 
+gmake[1]: Leaving directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+
+
+Determining if the function BZ2_bzCompressInit exists in the /usr/lib64/libbz2.so passed with the following output:
+Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1899690467/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1899690467.dir/build.make CMakeFiles/cmTryCompileExec1899690467.dir/build
+gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1899690467.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O2 -Wall  -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit   -o CMakeFiles/cmTryCompileExec1899690467.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1899690467
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1899690467.dir/link.txt --verbose=1
+/usr/bin/cc    -g -O2 -Wall  -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit    CMakeFiles/cmTryCompileExec1899690467.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1899690467 -rdynamic -lbz2 
+gmake[1]: Leaving directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+
+
+Determining if the function BZ2_bzCompressInit exists in the /usr/lib64/libbz2.so passed with the following output:
+Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3909832098/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3909832098.dir/build.make CMakeFiles/cmTryCompileExec3909832098.dir/build
+gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3909832098.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O2 -Wall -Wl,-E  -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit   -o CMakeFiles/cmTryCompileExec3909832098.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-2.8/Modules/CheckFunctionExists.c
+cc: -E: linker input file unused because linking not done
+Linking C executable cmTryCompileExec3909832098
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3909832098.dir/link.txt --verbose=1
+/usr/bin/cc    -g -O2 -Wall -Wl,-E  -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit    CMakeFiles/cmTryCompileExec3909832098.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3909832098 -rdynamic -lbz2 
+gmake[1]: Leaving directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+
+
+Determining if the function BZ2_bzCompressInit exists in the /usr/lib64/libbz2.so passed with the following output:
+Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec152945234/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec152945234.dir/build.make CMakeFiles/cmTryCompileExec152945234.dir/build
+gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec152945234.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O2 -Wall -Wl,-E  -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit   -o CMakeFiles/cmTryCompileExec152945234.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-2.8/Modules/CheckFunctionExists.c
+cc: -E: linker input file unused because linking not done
+Linking C executable cmTryCompileExec152945234
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec152945234.dir/link.txt --verbose=1
+/usr/bin/cc    -g -O2 -Wall -Wl,-E  -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit    CMakeFiles/cmTryCompileExec152945234.dir/CheckFunctionExists.c.o  -o cmTryCompileExec152945234 -rdynamic -lbz2 
+gmake[1]: Leaving directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+
+
+Determining if the function BZ2_bzCompressInit exists in the /usr/lib64/libbz2.so passed with the following output:
+Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1114176357/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1114176357.dir/build.make CMakeFiles/cmTryCompileExec1114176357.dir/build
+gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1114176357.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O2 -Wall -Wl,-E  -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit   -o CMakeFiles/cmTryCompileExec1114176357.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-2.8/Modules/CheckFunctionExists.c
+cc: -E: linker input file unused because linking not done
+Linking C executable cmTryCompileExec1114176357
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1114176357.dir/link.txt --verbose=1
+/usr/bin/cc    -g -O2 -Wall -Wl,-E  -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit    CMakeFiles/cmTryCompileExec1114176357.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1114176357 -rdynamic -lbz2 
+gmake[1]: Leaving directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+
+
+Determining if the function BZ2_bzCompressInit exists in the /usr/lib64/libbz2.so passed with the following output:
+Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3242084425/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3242084425.dir/build.make CMakeFiles/cmTryCompileExec3242084425.dir/build
+gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3242084425.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O2 -Wall -Wl,-E  -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit   -o CMakeFiles/cmTryCompileExec3242084425.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-2.8/Modules/CheckFunctionExists.c
+cc: -E: linker input file unused because linking not done
+Linking C executable cmTryCompileExec3242084425
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3242084425.dir/link.txt --verbose=1
+/usr/bin/cc    -g -O2 -Wall -Wl,-E  -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit    CMakeFiles/cmTryCompileExec3242084425.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3242084425 -rdynamic -lbz2 
+gmake[1]: Leaving directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+
+
+Determining if the function BZ2_bzCompressInit exists in the /usr/lib64/libbz2.so passed with the following output:
+Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2528659976/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2528659976.dir/build.make CMakeFiles/cmTryCompileExec2528659976.dir/build
+gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2528659976.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O2 -Wall -Wl,-E  -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit   -o CMakeFiles/cmTryCompileExec2528659976.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-2.8/Modules/CheckFunctionExists.c
+cc: -E: linker input file unused because linking not done
+Linking C executable cmTryCompileExec2528659976
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2528659976.dir/link.txt --verbose=1
+/usr/bin/cc    -g -O2 -Wall -Wl,-E  -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit    CMakeFiles/cmTryCompileExec2528659976.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2528659976 -rdynamic -lbz2 
+gmake[1]: Leaving directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+
+
+Determining if the function BZ2_bzCompressInit exists in the /usr/lib64/libbz2.so passed with the following output:
+Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec126788402/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec126788402.dir/build.make CMakeFiles/cmTryCompileExec126788402.dir/build
+gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec126788402.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O2 -Wall -Wl,-E  -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit   -o CMakeFiles/cmTryCompileExec126788402.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-2.8/Modules/CheckFunctionExists.c
+cc: -E: linker input file unused because linking not done
+Linking C executable cmTryCompileExec126788402
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec126788402.dir/link.txt --verbose=1
+/usr/bin/cc    -g -O2 -Wall -Wl,-E  -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit    CMakeFiles/cmTryCompileExec126788402.dir/CheckFunctionExists.c.o  -o cmTryCompileExec126788402 -rdynamic -lbz2 
+gmake[1]: Leaving directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+
+
+Determining if the function BZ2_bzCompressInit exists in the /usr/lib64/libbz2.so passed with the following output:
+Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2788771790/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2788771790.dir/build.make CMakeFiles/cmTryCompileExec2788771790.dir/build
+gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2788771790.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O2 -Wall -Wl,-E  -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit   -o CMakeFiles/cmTryCompileExec2788771790.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-2.8/Modules/CheckFunctionExists.c
+cc: -E: linker input file unused because linking not done
+Linking C executable cmTryCompileExec2788771790
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2788771790.dir/link.txt --verbose=1
+/usr/bin/cc    -g -O2 -Wall -Wl,-E  -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit    CMakeFiles/cmTryCompileExec2788771790.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2788771790 -rdynamic -lbz2 
+gmake[1]: Leaving directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+
+
+Determining if the function BZ2_bzCompressInit exists in the /usr/lib64/libbz2.so passed with the following output:
+Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec4259792181/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec4259792181.dir/build.make CMakeFiles/cmTryCompileExec4259792181.dir/build
+gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4259792181.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O2 -Wall -Wl,-E  -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit   -o CMakeFiles/cmTryCompileExec4259792181.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-2.8/Modules/CheckFunctionExists.c
+cc: -E: linker input file unused because linking not done
+Linking C executable cmTryCompileExec4259792181
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4259792181.dir/link.txt --verbose=1
+/usr/bin/cc    -g -O2 -Wall -Wl,-E  -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit    CMakeFiles/cmTryCompileExec4259792181.dir/CheckFunctionExists.c.o  -o cmTryCompileExec4259792181 -rdynamic -lbz2 
+gmake[1]: Leaving directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+
+
+Determining if the function BZ2_bzCompressInit exists in the /usr/lib64/libbz2.so passed with the following output:
+Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1741234264/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1741234264.dir/build.make CMakeFiles/cmTryCompileExec1741234264.dir/build
+gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1741234264.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O2 -Wall   -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit   -o CMakeFiles/cmTryCompileExec1741234264.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1741234264
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1741234264.dir/link.txt --verbose=1
+/usr/bin/cc    -g -O2 -Wall   -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit    CMakeFiles/cmTryCompileExec1741234264.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1741234264 -rdynamic -lbz2 
+gmake[1]: Leaving directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+
+
+Determining if the function BZ2_bzCompressInit exists in the /usr/lib64/libbz2.so passed with the following output:
+Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2439944738/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2439944738.dir/build.make CMakeFiles/cmTryCompileExec2439944738.dir/build
+gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2439944738.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O2 -Wall   -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit   -o CMakeFiles/cmTryCompileExec2439944738.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2439944738
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2439944738.dir/link.txt --verbose=1
+/usr/bin/cc    -g -O2 -Wall   -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit    CMakeFiles/cmTryCompileExec2439944738.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2439944738 -rdynamic -lbz2 
+gmake[1]: Leaving directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+
+
+Determining if the function BZ2_bzCompressInit exists in the /usr/lib64/libbz2.so passed with the following output:
+Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1047096544/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1047096544.dir/build.make CMakeFiles/cmTryCompileExec1047096544.dir/build
+gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1047096544.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O2 -Wall   -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit   -o CMakeFiles/cmTryCompileExec1047096544.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1047096544
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1047096544.dir/link.txt --verbose=1
+/usr/bin/cc    -g -O2 -Wall   -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit    CMakeFiles/cmTryCompileExec1047096544.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1047096544 -rdynamic -lbz2 
+gmake[1]: Leaving directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+
+
+Determining if the function BZ2_bzCompressInit exists in the /usr/lib64/libbz2.so passed with the following output:
+Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3696999704/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3696999704.dir/build.make CMakeFiles/cmTryCompileExec3696999704.dir/build
+gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3696999704.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O2 -Wall   -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit   -o CMakeFiles/cmTryCompileExec3696999704.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3696999704
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3696999704.dir/link.txt --verbose=1
+/usr/bin/cc    -g -O2 -Wall   -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit    CMakeFiles/cmTryCompileExec3696999704.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3696999704 -rdynamic -lbz2 
+gmake[1]: Leaving directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+
+
+Determining if the function BZ2_bzCompressInit exists in the /usr/lib64/libbz2.so passed with the following output:
+Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec336628994/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec336628994.dir/build.make CMakeFiles/cmTryCompileExec336628994.dir/build
+gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec336628994.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O2 -Wall   -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit   -o CMakeFiles/cmTryCompileExec336628994.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec336628994
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec336628994.dir/link.txt --verbose=1
+/usr/bin/cc    -g -O2 -Wall   -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit    CMakeFiles/cmTryCompileExec336628994.dir/CheckFunctionExists.c.o  -o cmTryCompileExec336628994 -rdynamic -lbz2 
+gmake[1]: Leaving directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+
+
+Determining if the function BZ2_bzCompressInit exists in the /usr/lib64/libbz2.so passed with the following output:
+Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec747157549/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec747157549.dir/build.make CMakeFiles/cmTryCompileExec747157549.dir/build
+gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec747157549.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O2 -Wall   -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit   -o CMakeFiles/cmTryCompileExec747157549.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec747157549
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec747157549.dir/link.txt --verbose=1
+/usr/bin/cc    -g -O2 -Wall   -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit    CMakeFiles/cmTryCompileExec747157549.dir/CheckFunctionExists.c.o  -o cmTryCompileExec747157549 -rdynamic -lbz2 
+gmake[1]: Leaving directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+
+
+Determining if the function BZ2_bzCompressInit exists in the /usr/lib64/libbz2.so passed with the following output:
+Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec284599394/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec284599394.dir/build.make CMakeFiles/cmTryCompileExec284599394.dir/build
+gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec284599394.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O2 -Wall   -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit   -o CMakeFiles/cmTryCompileExec284599394.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec284599394
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec284599394.dir/link.txt --verbose=1
+/usr/bin/cc    -g -O2 -Wall   -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit    CMakeFiles/cmTryCompileExec284599394.dir/CheckFunctionExists.c.o  -o cmTryCompileExec284599394 -rdynamic -lbz2 
+gmake[1]: Leaving directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+
+
+Determining if the function BZ2_bzCompressInit exists in the /usr/lib64/libbz2.so passed with the following output:
+Change Dir: /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3033031050/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3033031050.dir/build.make CMakeFiles/cmTryCompileExec3033031050.dir/build
+gmake[1]: Entering directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3033031050.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O2 -Wall   -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit   -o CMakeFiles/cmTryCompileExec3033031050.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3033031050
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3033031050.dir/link.txt --verbose=1
+/usr/bin/cc    -g -O2 -Wall   -DCHECK_FUNCTION_EXISTS=BZ2_bzCompressInit    CMakeFiles/cmTryCompileExec3033031050.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3033031050 -rdynamic -lbz2 
+gmake[1]: Leaving directory `/home/AustinChen/code/LuaGameEngine-cmake/CMakeFiles/CMakeTmp'
+
+
