@@ -482,6 +482,8 @@ Net::CloseHandler(const int& fd)
 		merase(fd);
 		FreeHandler(p, true);
 		lpush(p);
+	} else {
+		::close(fd); /* 没有找到handler的情况下需要关闭对应socket */
 	}
 }
 
