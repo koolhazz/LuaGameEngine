@@ -14,6 +14,8 @@ extern "C"
 #define __nil(L, V) lua_pushnil(L);lua_setglobal(L, V)
 #define nil() __nil(L, REDIS_RESULT)
 
+#define freeReplay(r) freeReplyObject(r);r = NULL
+
 extern lua_State* L;
 
 CRedis::CRedis()
@@ -142,8 +144,7 @@ CRedis::Dequeue(const char* queue)
 	{
 		int result = 0;
 
-		if (m_reply->type == 1)
-		{
+		if (m_reply->type == 1) {
 			lua_pushstring(L, m_reply->str);
 			lua_setglobal(L, REDIS_RESULT);
 		}

@@ -258,7 +258,7 @@ close_socket(int fd)
 {
 	log_debug("close socket by server: %d", fd);
 
-	//::close(fd);
+	::close(fd);
 	net.CloseHandler(fd);
 
 	return 0;
