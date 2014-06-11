@@ -315,7 +315,7 @@ EXPORT void stimer_base_cleanup()
  * 设置定时�?
  * @param expires 过期时间，单位：微秒。注意是相对时间
  */
-EXPORT void stimer_set(stimer_t* timer, unsigned long expires, void (*fn) (void*), void* ctx)
+EXPORT void stimer_set(stimer_t* timer, unsigned long expires, void (*fn)(void*), void* ctx)
 {
 	timer->entry.next = timer->entry.prev = NULL;
     timer->expires = time(NULL)+ expires;

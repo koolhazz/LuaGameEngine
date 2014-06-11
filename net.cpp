@@ -479,9 +479,10 @@ Net::CloseHandler(const int& fd)
 	SocketHandler* p = it == m_Handlers.end() ? NULL : it->second;
 
 	if (p) {
-		merase(fd);
-		FreeHandler(p, true);
-		lpush(p);
+		handle_close(p);
+		//merase(fd);   2014-06-11, 服务器端关闭有疑问
+		//FreeHandler(p, true);
+		//lpush(p);
 	} else {
 		::close(fd); /* 没有找到handler的情况下需要关闭对应socket */
 	}

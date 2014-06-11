@@ -23,7 +23,7 @@ TimerEvent::~TimerEvent(void)
 void TimerEvent::StartTimer(int sec, int usec)
 {
 	m_timeout = sec;
-	start_timer(sec, usec, &m_ev);
+	start_timer(sec, usec, &m_ev); /* 这里和定时器列表产生关联 */
 }
 
 void TimerEvent::StopTimer()

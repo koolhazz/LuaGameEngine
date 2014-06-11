@@ -303,6 +303,7 @@ int Enqueue(const char* queue, const char* value)
 {
 	return redis_handle.Enqueue(queue, value);
 }
+
 int Dequeue(const char* queue)
 {
 	return redis_handle.Dequeue(queue);

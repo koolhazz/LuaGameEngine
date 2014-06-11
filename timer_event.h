@@ -13,8 +13,7 @@ class TimerEvent;
 typedef tr1::unordered_map<unsigned long, TimerEvent*> 	timer_list_t;
 typedef timer_list_t::iterator							timer_list_itr_t;
 
-class TimerEvent
-{
+class TimerEvent {
 public:
 	TimerEvent();
 	~TimerEvent(void);

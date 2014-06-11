@@ -1,13 +1,10 @@
-
 #include <stdio.h>
 #include "timer.h"
 #include "llist.h"	
 
-
-	#include "mtimer.c"
-	#include "plex.h"
-	plex_t timer_plex;
-
+#include "mtimer.h"
+#include "plex.h"
+plex_t timer_plex;
 
 // 初始化定时器
 void init_timer()
@@ -68,8 +65,7 @@ int remain_timer(struct time_ev* ev)
 {	
 	stimer_t* timer = (stimer_t*)(ev->timer);
 
-	if (NULL == timer)
-	{
+	if (NULL == timer) 	{
 		return 0;
 	}
 
