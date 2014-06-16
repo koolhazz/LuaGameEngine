@@ -23,6 +23,7 @@
 #define INVALID_SOCKET -1
 #define SOCKET_ERROR -1
 #define	__INIT_NET_ENVIR__
+#define nothing
 
 using namespace std;
 
@@ -76,10 +77,10 @@ private:
 
 	/* stat */
 	inline void _stat_hdr_inc() { _server_stat.cnts++; }
-	inline void _stat_hdr_sub() { _server_stat.cnts--; }
+	inline void _stat_hdr_sub() { if (_server_stat.cnts > 0) _server_stat.cnts--; }
 
 	inline void _stat_hdr_free_inc() { _server_stat.free_cnts++; }
-	inline void _stat_hdr_free_sub() { _server_stat.free_cnts--; }
+	inline void _stat_hdr_free_sub() { if (_server_stat.free_cnts > 0) _server_stat.free_cnts--; }
 
 	inline void _log_stat() 
 	{ 
