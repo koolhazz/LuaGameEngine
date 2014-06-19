@@ -46,6 +46,8 @@ endif(gtest_found)
 
 set(name chenbo)
 
+#file(GLOB_RECURSE SRC_LIST *.cpp)
+#message(STATUS ${SRC_LIST})
 
 # 显示环境变量 PATH
 if (name STREQUAL chenbo)
