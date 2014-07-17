@@ -251,12 +251,14 @@ Net::_start()
             if (m_epev_arr[i].events & EPOLLIN && rev->active) {
 				if (s->handle_read() == -1) {
 					handle_close(s);
+					continue;
 				}
 			}
 
 			if (m_epev_arr[i].events & EPOLLOUT && wev->active) {
 				if (s->handle_output() == -1) {
 					handle_close(s);
+					continue;
 				}
 			}
 		}

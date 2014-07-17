@@ -17,15 +17,19 @@
 #include <stdint.h>
 #include <tr1/unordered_set>
 #include <tr1/unordered_map>
-#include <set>
 #include <errno.h>
 
 #define INVALID_SOCKET -1
 #define SOCKET_ERROR -1
-#define	__INIT_NET_ENVIR__
 #define nothing
 
-using namespace std;
+#define __ADD__(v, c) __sync_fetch_and_add(v, c)
+#define __SUB__(v, c) __sync_fetch_and_sub(v, c)
+
+//using namespace std;
+
+using std::tr1::unordered_set;
+using std::tr1::unordered_map;
 
 typedef struct lge_server_stat_s lge_server_stat_t;
 struct lge_server_stat_s {
@@ -60,9 +64,9 @@ public:
 	
 	void CloseHandler(const int& fd);
 
-	typedef tr1::unordered_map<int, SocketHandler*> handler_map_t; /* handler 集合 */
-	typedef handler_map_t::iterator					handler_map_itr_t; 
-	typedef tr1::unordered_set<SocketHandler*>		free_handler_set_t; /* 空闲handler集合 */
+	typedef unordered_map<int, SocketHandler*> 	handler_map_t; /* handler 集合 */
+	typedef handler_map_t::iterator				handler_map_itr_t; 
+	typedef unordered_set<SocketHandler*>		free_handler_set_t; /* 空闲handler集合 */
 
 private:
 	bool _start();
@@ -76,11 +80,11 @@ private:
 				int conn_type = 0);
 
 	/* stat */
-	inline void _stat_hdr_inc() { _server_stat.cnts++; }
-	inline void _stat_hdr_sub() { if (_server_stat.cnts > 0) _server_stat.cnts--; }
+	inline void _stat_hdr_inc() { __ADD__(&_server_stat.cnts, 1); }
+	inline void _stat_hdr_sub() { if (_server_stat.cnts > 0) __SUB__(&_server_stat.cnts, 1); }
 
-	inline void _stat_hdr_free_inc() { _server_stat.free_cnts++; }
-	inline void _stat_hdr_free_sub() { if (_server_stat.free_cnts > 0) _server_stat.free_cnts--; }
+	inline void _stat_hdr_free_inc() { __ADD__(&_server_stat.free_cnts, 1); }
+	inline void _stat_hdr_free_sub() { if (_server_stat.free_cnts > 0) __SUB__(&_server_stat.free_cnts, 1); }
 
 	inline void _log_stat() 
 	{ 
