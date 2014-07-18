@@ -23,13 +23,20 @@ CMysql::connect_mysql(const char* host,
 					  const char* dbname, 
 					  unsigned int port)
 {
-    mysql_conn = new CMysqlConnect(); 
+    mysql_conn = new CMysqlConnect();
+
+	if (mysql_conn == NULL) return -1;
+     
     if(!mysql_conn->Connect(host, user, password, dbname, port, "", "utf8")) {
         log_error("connect mysql failed\n");
         return -1;
     }
 
     mysql_store = new CMysqlStore();
+
+	if (mysql_store == NULL) return -1;
+
+    
 	mysql_store->SetTransAction(mysql_conn);
 
     return 0;

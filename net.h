@@ -21,7 +21,6 @@
 
 #define INVALID_SOCKET -1
 #define SOCKET_ERROR -1
-#define nothing
 
 #define __ADD__(v, c) __sync_fetch_and_add(v, c)
 #define __SUB__(v, c) __sync_fetch_and_sub(v, c)

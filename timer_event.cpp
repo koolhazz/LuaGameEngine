@@ -5,7 +5,8 @@
 void handle_timeout(void* ptr)
 {
 	TimerEvent* sh = (TimerEvent*)ptr;
-	sh->OnTimer(sh->m_ev.time_id);
+
+	if (sh) sh->OnTimer(sh->m_ev.time_id);
 }
 
 unsigned long  TimerEvent::m_increase_id = 0;
@@ -13,7 +14,7 @@ timer_list_t timer_list;
 
 TimerEvent::TimerEvent()
 {
-	m_guid = ++m_increase_id;
+	m_guid = __sync_add_and_fetch(&m_increase_id, 1); //++m_increase_id;
 }
 
 TimerEvent::~TimerEvent(void)

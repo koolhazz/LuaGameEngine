@@ -28,10 +28,10 @@ public:
 	void OnTimer(unsigned long timer_id);
 
 public:
-	time_ev m_ev;
-	int m_timeout;
-	unsigned long m_guid;			//每个TimerEvent的唯一id
-	static unsigned long m_increase_id;	
+	time_ev 				m_ev;
+	int 					m_timeout;
+	unsigned long 			m_guid;			//每个TimerEvent的唯一id
+	static unsigned long 	m_increase_id;	
 };
 
 #endif

@@ -1,12 +1,4 @@
-
 #include "connectpool.h"
-
-// linux 等系统中请加入 -lmysql -I/usr/local/mysql/inlucde
-#ifdef WIN32
-#pragma comment(lib, "libmysql.lib")
-#endif        
-
-
 //CConnPool * CConnPool::m_instance = NULL;
 
 CSql_error::CSql_error():std::runtime_error("Failed query"),m_err()
@@ -78,7 +70,8 @@ bool CMysqlConnect::Connect(const std::string &host,
 	{
 		return false;
 	}
-	int ret = mysql_options(m_conn, MYSQL_OPT_RECONNECT, "1");
+	mysql_options(m_conn, MYSQL_OPT_RECONNECT, "1");
+	
 	if(NULL == mysql_real_connect(m_conn,host.c_str(),
 		user.c_str(),password.c_str(),dbname.c_str(),port,unix_socket.c_str(),
 		CLIENT_MULTI_RESULTS|CLIENT_MULTI_STATEMENTS))
@@ -419,14 +412,14 @@ const std::string CMysqlStore::GetItemString(unsigned long row,
 float CMysqlStore::GetItemFloat(unsigned long row,
 								const unsigned int index)
 {
-	return (float)atof(GetItemValue(row,index).c_str());
+	return atof(GetItemValue(row,index).c_str());
 }
 
 
 float CMysqlStore::GetItemFloat(unsigned long row,
 								const std::string &fieldname)
 {
-	return (float)atof(GetItemValue(row,fieldname).c_str());
+	return atof(GetItemValue(row,fieldname).c_str());
 }
  
 
@@ -468,8 +461,7 @@ bool CMysqlStore::Query(const std::string &dml)
 		MYSQL_FIELD *fieldptr = NULL;
 
 		//取得各字段名和类型
-		while(fieldptr = mysql_fetch_field(m_resultptr))
-		{
+		while((fieldptr = mysql_fetch_field(m_resultptr))) {
 			typeset_t typeset;
 			typeset.index = (unsigned int)m_fieldtype.size();
 			typeset.length = fieldptr->length;

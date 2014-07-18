@@ -42,7 +42,7 @@ private:
 	//
 protected:
     CConnect(const CConnect &);
-    CConnect &operator=(const CConnect &);
+    CConnect& operator=(const CConnect &);
 	//¥ÌŒÛ‘≠“Ú
 	std::string m_err;
 public:

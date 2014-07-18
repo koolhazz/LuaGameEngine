@@ -381,7 +381,7 @@ public:
 			   short nSeq = SERVER_PACKET_DEFAULT_SEQ, 
 			   char cSourceType = SERVER_PACKET_DEFAULT_SOURCETYPE)
 	{
-        if(9 == base::PACKET_HEADER_SIZE) {
+        if (9 == base::PACKET_HEADER_SIZE) {
             base::_begin(nCommand, cVersion, cSubVersion);
         } else {
             base::_begin(nCommand, cVersion, cSubVersion, nSubCmd, nSeq, cSourceType);

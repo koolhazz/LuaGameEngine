@@ -16,8 +16,6 @@ typedef unsigned char BYTE;
 #define cast(T, t)		(T)(t)
 #define cast_uint16(t)	cast(unsigned short, (t))
 
-
-// °ü½âÎöÆ÷
 template <class INPUT_PACKET>
 class PacketParser {
 public:
