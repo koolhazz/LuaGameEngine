@@ -62,7 +62,7 @@ set(SRC
 	log.cpp
 	lua_interface.cpp
 	main.cpp
-	MemcachedHandler.cc
+	mc.cc
 	mtimer.c
 	mysql_part.cpp
 	net.cpp

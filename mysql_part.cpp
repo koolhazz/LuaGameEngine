@@ -35,7 +35,6 @@ CMysql::connect_mysql(const char* host,
     mysql_store = new CMysqlStore();
 
 	if (mysql_store == NULL) return -1;
-
     
 	mysql_store->SetTransAction(mysql_conn);
 

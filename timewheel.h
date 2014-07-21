@@ -3,7 +3,7 @@
 
 #include <set>
 
-using namespace std;
+using std::set;
 
 class SocketHandler;
 

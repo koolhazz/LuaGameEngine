@@ -1,5 +1,5 @@
 $#include "interface_c.h"
-$#include "MemcachedHandler.h"
+$#include "mc.h"
 
 module packet
 {
@@ -86,10 +86,10 @@ module uuid
 
 module mc 
 {
-	class CMemcachedHandler {
+	class mc_handler_t {
 	public:
-	   CMemcachedHandler(const string& host);
-	   ~CMemcachedHandler();
+	   mc_handler_t(const string& host);
+	   ~mc_handler_t();
 	   string Get(string& key);
 	   int Set(const string& key, const string& value);
 	};
