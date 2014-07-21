@@ -60,7 +60,7 @@ set(SRC
 	interface.cpp
 	llist.c
 	log.cpp
-	lua_interface.cpp
+	luaex.cc
 	main.cpp
 	mc.cc
 	mtimer.c

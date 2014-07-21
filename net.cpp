@@ -2,7 +2,7 @@
 #include "timer.h"
 #include "llist.h"
 #include "log.h"
-#include "lua_interface.h"
+#include "luaex.h"
 #include "timewheel.h"
 
 #include <sys/types.h>

@@ -1,5 +1,5 @@
 #include "timer_event.h"
-#include "lua_interface.h"
+#include "luaex.h"
 #include "log.h"
 
 void handle_timeout(void* ptr)
@@ -24,7 +24,7 @@ TimerEvent::~TimerEvent(void)
 void TimerEvent::StartTimer(int sec, int usec)
 {
 	m_timeout = sec;
-	start_timer(sec, usec, &m_ev); /* ÕâÀïºÍ¶¨Ê±Æ÷ÁÐ±í²úÉú¹ØÁª */
+	start_timer(sec, usec, &m_ev); /* ï¿½ï¿½ï¿½ï¿½Í¶ï¿½Ê±ï¿½ï¿½ï¿½Ð±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
 }
 
 void TimerEvent::StopTimer()

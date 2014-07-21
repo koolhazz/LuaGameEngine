@@ -1,6 +1,6 @@
 #include "socket.h"
 #include "log.h"
-#include "lua_interface.h"
+#include "luaex.h"
 #include "protocol.h"
 
 #include <stdio.h>

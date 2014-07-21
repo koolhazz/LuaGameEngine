@@ -4,8 +4,7 @@
 #include "log.h"
 #include "protocol.h"
 #include "getopt.h"
-#include "daemonize.h"
-#include "lua_interface.h"
+#include "luaex.h"
 #include "mysql_part.h"
 #include "redis.h"
 #include "interface_c.h"
@@ -145,7 +144,7 @@ CMysql 			mysql_handle;
 CRedis 			redis_handle;
 bool 			is_daemon = false;
 
-int				now; /* 当前系统时间 */
+int				now; /* 锟斤拷前系统时锟斤拷 */
 time_wheel_t	*g_tw; 
 
 #ifdef BeginHandlerNums
@@ -172,7 +171,7 @@ main(int argc, char ** argv)
     tolua_interface_open(L);
     luaL_dofile (L, "script/server.lua");    /* load the script */
  
-    // 创建一个新的表    
+    // 锟斤拷锟斤拷一锟斤拷锟铰的憋拷    
     lua_newtable(L);    
     int result;
     char* option = "a:b:c:de:f:g:h:i:j:k:l:m:n:o:p:q:r:s:t:u:v:w:x:y:z:";
