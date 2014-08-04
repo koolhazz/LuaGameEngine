@@ -10,6 +10,7 @@
 #include <arpa/inet.h>
 #include <netinet/tcp.h>
 #include <time.h>
+#include <netdb.h>
 
 #define EVENT_TOTAL_COUNT 256	
 #define CHECK_POINT_TIMES 10
@@ -395,15 +396,35 @@ Net::epoll()
 int 
 Net::connect_server(const char* ip, const int port, bool encrypt, int conn_flag)
 {
-	int fd = socket(AF_INET , SOCK_STREAM , 0);
-	if ( 0 > fd) return -1;
+	struct in_addr 		server;
+	int					ret;
+	int 				fd;
+	struct hostent 		*host;
+	struct sockaddr_in 	remote;
 
-	struct sockaddr_in remote;
+	fd = socket(AF_INET , SOCK_STREAM , 0);
+	if (fd < 0) return -1;
+
 	memset(&remote, 0, sizeof(remote));
-	remote.sin_family 		 = AF_INET;
-	remote.sin_port   		 = htons(port);
-	remote.sin_addr.s_addr 	 = inet_addr(ip);
+	remote.sin_family = AF_INET;
+	remote.sin_port = htons(port);
+		
+	ret = inet_aton(ip, &server);
 
+	if (ret == 0) { //ip 为域名
+		host = gethostbyname(ip);
+
+		if (host == NULL) {
+			log_error("ip is invalid");
+
+			return -1;
+		} else {
+			memcpy(&remote.sin_addr, host->h_addr, host->h_length);	
+		}
+	} else { // 正确解析
+		remote.sin_addr.s_addr 	 = server.s_addr;	
+	}
+	
 	if (0 != connect(fd, (struct sockaddr*)&remote, sizeof(remote))) {
 		log_error("Error: Connect Faile connect(): %s\n", strerror(errno));
 		::close(fd); /* 连接失败关闭出现的socket */
@@ -438,7 +459,7 @@ Net::create_listener(int port)
 
 	sockaddr_in addr_in;
 	addr_in.sin_family = AF_INET;
-	addr_in.sin_addr.s_addr = htonl(INADDR_ANY);
+	addr_in.sin_addr.s_addr = INADDR_ANY;
 	addr_in.sin_port = htons(port);
 
 	if (bind(m_listen_fd, (sockaddr*) &addr_in, sizeof(addr_in)) == SOCKET_ERROR) {
