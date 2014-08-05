@@ -15,6 +15,7 @@
 #include <sched.h>
 #include <unistd.h>
 #include <signal.h>
+#include <execinfo.h>
 
 
 #define LUA_GAME_ENGINE_VERSION 		"1.5.1b101"
@@ -88,10 +89,36 @@ __reload_config(int signo)
 }
 
 static void
+__sigsegv_handle(int sig, siginfo_t *info, void *data)
+{
+	void* 				trace[100];
+	char 				**message;
+	int 				trace_sz;
+	struct sigaction 	act;
+
+	trace_sz = backtrace(trace, 100);
+	message = backtrace_symbols(trace, trace_sz);
+	log_debug("-------- STACK TRACE BEGIN");
+
+	for (int i = 1; i < trace_sz; i++) {
+		log_debug(*(message + i));
+	}
+
+	log_debug("-------- STACK TRACE END");
+	
+	sigemptyset(&act.sa_mask);
+	act.sa_flags = SA_NODEFER | SA_ONSTACK | SA_RESETHAND;
+	act.sa_handler = SIG_DFL;
+	sigaction(sig, &act, NULL);
+	kill(getpid(), sig);
+}
+
+static void
 __signal_binding()
 {
 	struct sigaction act;
 	struct sigaction act2;
+	struct sigaction act3;
 	
 	sigemptyset(&act.sa_mask);
 	act.sa_handler = SIG_IGN;
@@ -103,6 +130,11 @@ __signal_binding()
 	act2.sa_handler = __reload_config;
 
 	sigaction(SIGHUP, &act2, NULL);
+
+	sigemptyset(&act3.sa_mask);
+	act3.sa_flags = SA_NODEFER | SA_ONSTACK | SA_RESETHAND | SA_SIGINFO;
+	act3.sa_sigaction = __sigsegv_handle;
+	sigaction(SIGSEGV, &act3, NULL);
 }
 
 static void
