@@ -16,6 +16,7 @@
 #include <unistd.h>
 #include <signal.h>
 #include <execinfo.h>
+#include <ucontext.h>
 
 
 #define LUA_GAME_ENGINE_VERSION 		"1.5.1b101"
@@ -88,6 +89,12 @@ __reload_config(int signo)
 	}
 }
 
+#if __x86_64__ 
+#define EIP(uc) (void*)(uc->uc_mcontext.gregs[REG_RIP])
+#elif __i386__
+#define EIP(uc) (void*)(uc->uc_mcontext.gregs[REG_EIP])
+#endif
+
 static void
 __sigsegv_handle(int sig, siginfo_t *info, void *data)
 {
@@ -95,11 +102,17 @@ __sigsegv_handle(int sig, siginfo_t *info, void *data)
 	char 				**message;
 	int 				trace_sz;
 	struct sigaction 	act;
+	ucontext_t			*uc;
 
 	trace_sz = backtrace(trace, 100);
 	message = backtrace_symbols(trace, trace_sz);
+	uc = (ucontext_t*)data;
+	
+	if (EIP(uc)) {
+		trace[1] = EIP(uc);
+	}
+	
 	log_debug("-------- STACK TRACE BEGIN");
-
 	for (int i = 1; i < trace_sz; i++) {
 		log_debug(*(message + i));
 	}
