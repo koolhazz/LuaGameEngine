@@ -19,10 +19,10 @@
 #include <ucontext.h>
 
 
-#define LUA_GAME_ENGINE_VERSION 		"1.5.1b101"
+#define LUA_GAME_ENGINE_VERSION 		"1.5.2b001"
 #define LUA_GAME_ENGINE_VERSION_MAJOR 	1
 #define LUA_GAME_ENGINE_VERSION_MINOR 	5
-#define LUA_GAME_ENGINE_VERSION_BUGFIX 	1
+#define LUA_GAME_ENGINE_VERSION_BUGFIX 	2
 
 #define show_help()	do {												\
 	printf("By AustinChen\n");											\
@@ -72,7 +72,7 @@ __binding_cpu(void)
 
 	__CPU_SET(num, &mask);
 
-	sched_setaffinity(0,sizeof(cpu_set_t),&mask);	
+	sched_setaffinity(0, sizeof(cpu_set_t), &mask);	
 }
 
 static void
@@ -90,9 +90,9 @@ __reload_config(int signo)
 }
 
 #if __x86_64__ 
-#define EIP(uc) (void*)(uc->uc_mcontext.gregs[REG_RIP])
+#define EIP(uc) (void*)uc->uc_mcontext.gregs[REG_RIP]
 #elif __i386__
-#define EIP(uc) (void*)(uc->uc_mcontext.gregs[REG_EIP])
+#define EIP(uc) (void*)uc->uc_mcontext.gregs[REG_EIP]
 #endif
 
 static void
