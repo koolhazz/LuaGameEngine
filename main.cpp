@@ -159,7 +159,7 @@ __version()
 static void
 __pidfile()
 {
-	int fd = open(PidPath, O_CREAT | O_RDWR, 00666);
+	int fd = open(PidPath, O_CREAT | O_TRUNC | O_RDWR, 00666);
 
 	if (fd <= 0) {
 		log_error("create pidfile failed.");

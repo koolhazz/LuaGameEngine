@@ -112,6 +112,20 @@ __del_event(int efd, int fd)
 	epoll_ctl(efd, EPOLL_CTL_DEL, fd, NULL);
 }
 
+#ifdef _NOTIFY_WORKER_
+static void
+__notify_worker()
+{
+	int ret, value;
+
+	ret = call_lua("notify_worker", ">d", &value);
+
+	if (ret) {
+		log_error("call notify_worker failed.");	
+	}
+}
+#endif
+
 #define FreeHandler(h, b) 	\
 	(h)->clean(b)
 
@@ -209,10 +223,14 @@ Net::_start()
     SocketHandler		*s;
     lgs_event_t 		*rev, *wev;
     unsigned int 		instance;
+#ifdef _TIME_WHEEL_
     time_scale_t		*sc;
     time_scale_itr_t 	itr;
+#endif
 
-    tw_create(&g_tw, TIME_WHEEL_SIZE);
+#ifdef _TIME_WHEEL_
+	tw_create(&g_tw, TIME_WHEEL_SIZE);
+#endif
 
 	while (m_running) {
 		int res = epoll_wait(m_epoll_fd, m_epev_arr, EVENT_TOTAL_COUNT, 100);
@@ -269,6 +287,7 @@ Net::_start()
             run_timer();
             check_times = 0;
 
+#ifdef _TIME_WHEEL_
 			sc = tw_wheeling(g_tw, TIME_WHEEL_SIZE); /* 返回到期的连接集合 */
 			for (itr = sc->begin(); itr != sc->end();) {
 				SocketHandler* p = *itr;
@@ -288,8 +307,15 @@ Net::_start()
 					handle_close(p);
 				}
 			}
-		
+#endif		
+
+#ifdef _NOTIFY_WORKER_
+			__notify_worker();
+#endif
+
+#ifdef _LOG_STAT_
 			_log_stat(); /* 记录服务器状态 */
+#endif
        	}
 	}
 
@@ -333,8 +359,9 @@ Net::handle_accept()
 		
 		__add_event(m_epoll_fd, s);
 
+#ifdef _TIME_WHEEL_
 		tw_insert(g_tw, TIME_WHEEL_SIZE, s);
-
+#endif
 		if (call_lua("handle_accept", "d>d", conn_fd, &ret) == -1) {
 			log_error("call lua->handle_accpet error.");
 			continue;

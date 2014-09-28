@@ -48,13 +48,14 @@ void TimerEvent::SetTimerId(unsigned long timer_id)
 
 //void TimerEvent::OnTimer(int timer_id)
 void TimerEvent::OnTimer(unsigned long timer_id)
-
 {
 	int ret;
 	
 	log_debug("TimerEvent::OnTimer, timer_id = %lu \n", m_ev.time_id);
 	
-	call_lua("handle_timeout", "d>d", m_guid, &ret);
+	ret = call_lua("handle_timeout", "d>d", m_guid, &ret);
+
+	if (ret) log_error("handle_timeout call failed.");
 }
 
 int

@@ -407,7 +407,7 @@ int SocketHandler::OnPacketComplete(NETInputPacket *pPacket)
 		}
 	}
 
-	short cmd =	pPacket->GetCmdType();	
+	unsigned short cmd = pPacket->GetCmdType();
 	message_t* message = message_get(cmd); //CProtocal::get_message(cmd);
 	if (message == NULL) {
 		log_error("can't find the message:0x%x\n", cmd);
@@ -418,7 +418,7 @@ int SocketHandler::OnPacketComplete(NETInputPacket *pPacket)
 	}
 	
 	int ret = 0;
-	if (strcmp(message->format, "") == 0) {
+	if (strcmp(message->format, "") == 0) { /* 没有输入参数的直接这里调用 */
 		if(call_lua(message->handler, ">d", &ret) == -1) {
 			log_error("call_lua error.");
             return -1;
@@ -427,6 +427,7 @@ int SocketHandler::OnPacketComplete(NETInputPacket *pPacket)
 		return ret;
 	}
 
+	/* 有输入参数的这里的调用lua函数 */
 	const char* p = message->format;
     lua_getglobal(L, message->handler);  /* get function */
  

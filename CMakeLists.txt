@@ -81,7 +81,7 @@ link_directories(/usr/local/mysql/lib /home/AustinChen/lib
 add_executable(gameserver ${SRC})
 
 add_definitions(-DHEADER_SIZE=9 -DTCP_BUFFER_SIZE=16384
--DBeginHandlerNums=100) # 设置宏变量
+-DBeginHandlerNums=100 -D_NOTIFY_WORKER_) # 设置宏变量
 #add_definitions(-g -O2 -Wall)
 
 target_link_libraries(gameserver dl m pthread mysqlclient z rt uuid memcached
