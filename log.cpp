@@ -84,7 +84,7 @@ void write_access(int access, const char* rsp_buf, const char* fmt, ...)
     va_start(ap, fmt);
     // restore errno
     errno = savedErrNo;
-    off += vsnprintf(buf+off, LOGSIZE-off-2, fmt, ap);
+    off += vsnprintf(buf+off, LOGSIZE - off - 2, fmt, ap);
     va_end(ap);
 
     if(buf[off-1] != '\n')
@@ -129,7 +129,7 @@ void write_log (int level, const char *filename, const char *funcname, int linen
 	localtime_r(&tv.tv_sec, &tm);
     
     filename = basename(filename);
-    off = snprintf (buf, LOGSIZE-1,
+    off = snprintf(buf, LOGSIZE-1,
             "<%d>[%04d%02d%02d-%02d:%02d:%02d.%03ld] pid[%d]: %s(%d)[%s]: ",
             level,
             tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday,
@@ -142,7 +142,7 @@ void write_log (int level, const char *filename, const char *funcname, int linen
     va_start(ap, format);
     // restore errno
     errno = savedErrNo;
-    n_write= vsnprintf(buf+off, LOGSIZE-off-2, format, ap);
+    n_write= vsnprintf(buf+off, LOGSIZE - off - 2, format, ap);
     va_end(ap);
 
     if(n_write>=LOGSIZE-off-2)

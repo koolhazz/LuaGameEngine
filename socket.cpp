@@ -400,7 +400,7 @@ parser_parmeters(const char* p, NETInputPacket *pPacket,int count, int &narg)
 
 int SocketHandler::OnPacketComplete(NETInputPacket *pPacket)
 {
-	if(_is_encrypt) {
+	if (_is_encrypt) {
 		if(CrevasseBuffer(pPacket) == -1) {
 			log_debug("CrevasseBuffer error.");
 			return -1;

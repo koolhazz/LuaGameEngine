@@ -148,17 +148,17 @@ void write_binary(char* buf, int len)
 
 void error(const char* msg)
 {
-    log_error(msg);
+    log_error("%s", msg);
 }
 
 void info(const char* msg)
 {
-    log_info(msg);
+    log_info("%s", msg);
 }
 
 void debug(const char* msg)
 {
-    log_debug(msg);
+    log_debug("%s", msg);
 }
 
 int create_timer()
